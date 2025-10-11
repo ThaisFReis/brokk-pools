@@ -13,7 +13,7 @@ const iconMap = {
 
 function FeatureCard({ feature }: FeatureCardProps) {
   const animationDelay = `${feature.order * 100}ms`;
-  const Icon = iconMap[feature.icon];
+  const Icon = feature.icon ? iconMap[feature.icon as keyof typeof iconMap] : null;
 
   return (
     <div
@@ -32,10 +32,11 @@ function FeatureCard({ feature }: FeatureCardProps) {
       <div className="absolute -left-20 -top-20 h-40 w-40 rounded-full bg-solana-purple/15 blur-3xl opacity-0 transition-opacity duration-500 group-hover:opacity-100" />
 
       {/* Icon - forged weapon style */}
-      <div className="relative transition-transform duration-500 group-hover:scale-110">
-
-        <Icon className="relative h-10 w-10 text-solana-purple transition-all duration-500" strokeWidth={0.5} />
-      </div>
+      {Icon && (
+        <div className="relative transition-transform duration-500 group-hover:scale-110">
+          <Icon className="relative h-10 w-10 text-solana-purple transition-all duration-500" strokeWidth={0.5} />
+        </div>
+      )}
 
       {/* Title - legendary weapon name */}
       <h3 className="relative text-xl sm:text-2xl font-medium font-body text-gray-200 transition-all duration-500 group-hover:text-gray-100">

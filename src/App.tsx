@@ -1,7 +1,8 @@
-import Hero from './components/Hero';
-import Features from './components/Features';
-import Footer from './components/Footer';
-import Header from './components/Header';
+import { Header } from './components/Header';
+import { Hero } from './components/Hero';
+import { Features } from './components/Features';
+import { Footer } from './components/Footer';
+import { About } from './components/About';
 
 function App() {
   return (
@@ -10,6 +11,7 @@ function App() {
         <Header />
         <Hero />
         <Features />
+        <About />
         <Footer />
       </div>
     </main>

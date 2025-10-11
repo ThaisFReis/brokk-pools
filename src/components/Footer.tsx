@@ -32,55 +32,46 @@ function SocialIcon({ platform }: { platform: SocialPlatform }) {
   return null;
 }
 
-function Footer() {
+export const Footer = () => {
   return (
     <footer
       id="footer"
-      className="relative w-full bg-white/3 shadow-md backdrop-blur-xl px-4 sm:px-6 py-8 sm:py-12"
+      className="relative w-full bg-gradient-to-b from-forge-deepblack/40 to-forge-deepblack/80 backdrop-blur-xl border-t border-forge-steel/10"
     >
       {/* Metallic top edge */}
-      <div className="absolute left-0 top-0 h-[2px] w-full bg-gradient-to-r from-transparent via-forge-steel/40 to-transparent" />
+      <div className="absolute left-0 top-0 h-[1px] w-full bg-gradient-to-r from-transparent via-solana-purple/40 to-transparent" />
 
-      {/* Holographic accent line */}
-      <div className="absolute left-0 top-[2px] h-[1px] w-full bg-gradient-to-r from-transparent via-solana-purple/60 to-transparent" />
+      <div className="relative mx-auto max-w-7xl px-6 py-6">
+        <div className="flex flex-col sm:flex-row items-center justify-between gap-4">
+          {/* Copyright */}
+          <div className="flex items-center gap-2 text-gray-500 text-sm">
+            <span className="font-display">© {new Date().getFullYear()} Brokk Pools</span>
+            <span className="hidden sm:inline text-forge-steel/40">•</span>
+            <span className="hidden sm:inline text-xs">Forged in DeFi</span>
+          </div>
 
-      <div className="relative mx-auto max-w-7xl">
-        {/* Social Links */}
-        <div className="mb-6 sm:mb-8 flex flex-wrap items-center justify-center gap-4 sm:gap-6 md:gap-8">
-          {socialLinks.map((link) => (
-            <a
-              key={link.id}
-              href={link.url}
-              target="_blank"
-              rel="noopener noreferrer"
-              aria-label={link.ariaLabel}
-              className="group flex items-center gap-2 sm:gap-3 text-gray-400 transition-all duration-500 hover:text-gray-100"
-            >
-              <div className="relative overflow-hidden rounded-full bg-gradient-to-br from-forge-metaldark/90 to-forge-deepblack/80 p-2 sm:p-3 shadow-md backdrop-blur-md transition-all duration-500 group-hover:scale-110 group-hover:border-solana-purple/60">
-                {/* Forge glow effect */}
-                <div className="absolute inset-0 rounded-full bg-solana-purple/20 opacity-0 blur-lg transition-opacity duration-500 group-hover:opacity-100" />
-                <div className="absolute inset-0 animate-ember-flicker rounded-full bg-forge-ember/10 opacity-0 blur-md transition-opacity duration-500 group-hover:opacity-60" />
+          {/* Social Links */}
+          <div className="flex items-center gap-3">
+            {socialLinks.map((link) => (
+              <a
+                key={link.id}
+                href={link.url}
+                target="_blank"
+                rel="noopener noreferrer"
+                aria-label={link.ariaLabel}
+                className="group relative"
+              >
+                <div className="relative rounded-full bg-forge-metaldark/40 p-2 transition-all duration-300 hover:bg-forge-metaldark/60 hover:scale-110">
 
-                <div className="relative transition-all duration-500">
-                  <SocialIcon platform={link.platform} />
+                  <div className="relative">
+                    <SocialIcon platform={link.platform} />
+                  </div>
                 </div>
-              </div>
-              <span className="hidden sm:inline font-medium text-sm sm:text-base transition-all duration-300">
-                {link.label}
-              </span>
-            </a>
-          ))}
-        </div>
-
-        {/* Copyright */}
-        <div className="border-t border-forge-steel/20 pt-6 sm:pt-8 text-center">
-          <p className="font-display text-xs sm:text-sm text-gray-500 px-4">
-            © {new Date().getFullYear()} Brokk Pools. Forged in DeFi, Powered by the Gods.
-          </p>
+              </a>
+            ))}
+          </div>
         </div>
       </div>
     </footer>
   );
 }
-
-export default Footer;

@@ -1,7 +1,7 @@
 import { features } from '../content/features';
 import FeatureCard from './FeatureCard';
 
-function Features() {
+export const Features = () => {
   return (
     <section
       id="features"
@@ -29,5 +29,3 @@ function Features() {
     </section>
   );
 }
-
-export default Features;
