@@ -1,7 +1,7 @@
 import { heroContent } from '../content/hero';
 import CTAButton from './CTAButton';
 
-function Hero() {
+export const Hero = () => {
   return (
     <section
       id="hero"
@@ -65,5 +65,3 @@ function Hero() {
     </section>
   );
 }
-
-export default Hero;
