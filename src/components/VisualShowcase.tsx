@@ -1,8 +1,4 @@
-import { lazy, Suspense, useState, useEffect } from 'react';
-import LoadingSpinner from './LoadingSpinner';
-
-// Lazy load the 3D scene to keep initial bundle small
-const Scene3D = lazy(() => import('./Scene3D'));
+import { useEffect } from 'react';
 
 // WebGL detection utility
 function isWebGLAvailable(): boolean {
@@ -20,11 +16,12 @@ function isWebGLAvailable(): boolean {
 // Holographic Analytics Mockup
 function HolographicMockup() {
   return (
-    <div className="flex h-[500px] w-full items-center justify-center">
+    <div className="flex h-[300px] sm:h-[400px] md:h-[500px] w-full items-center justify-center">
       <svg
         viewBox="0 0 800 500"
         className="h-full w-full"
         xmlns="http://www.w3.org/2000/svg"
+        preserveAspectRatio="xMidYMid meet"
       >
         <defs>
           {/* Gradients */}
@@ -223,10 +220,8 @@ function HolographicMockup() {
 }
 
 function VisualShowcase() {
-  const [webGLSupported, setWebGLSupported] = useState<boolean>(true);
-
   useEffect(() => {
-    setWebGLSupported(isWebGLAvailable());
+    isWebGLAvailable();
   }, []);
 
   return (
@@ -243,18 +238,18 @@ function VisualShowcase() {
         {/* Section Title */}
         <h2
           id="visual-title"
-          className="font-title mb-12 text-center text-4xl font-bold drop-shadow-[0_0_25px_rgba(20,241,149,0.6)] md:text-5xl"
+          className="font-title mb-8 sm:mb-12 text-center text-3xl sm:text-4xl md:text-5xl font-bold drop-shadow-[0_0_25px_rgba(20,241,149,0.6)]"
         >
           Holographic Analytics
         </h2>
 
         {/* Description */}
-        <p className="mb-12 text-center text-lg text-gray-400 md:text-xl">
+        <p className="mb-8 sm:mb-12 text-center text-base sm:text-lg md:text-xl text-gray-400 px-4">
           Witness your portfolio forged into interactive holographic data streams — crafted by legendary dwarven algorithms.
         </p>
 
         {/* 3D Scene or Fallback */}
-        <div className="relative overflow-hidden rounded-lg border border-forge-steel/40 bg-gradient-to-br from-forge-metaldark/90 to-forge-deepblack/80 p-8 shadow-[0_8px_32px_rgba(0,0,0,0.8),0_0_50px_rgba(153,69,255,0.4),inset_0_1px_0_rgba(255,255,255,0.03)] backdrop-blur-xl">
+        <div className="relative overflow-hidden rounded-lg border border-forge-steel/40 bg-gradient-to-br from-forge-metaldark/90 to-forge-deepblack/80 p-4 sm:p-6 md:p-8 shadow-[0_8px_32px_rgba(0,0,0,0.8),0_0_50px_rgba(153,69,255,0.4),inset_0_1px_0_rgba(255,255,255,0.03)] backdrop-blur-xl">
           {/* Metallic top edge */}
           <div className="absolute left-0 top-0 h-[2px] w-full bg-gradient-to-r from-transparent via-forge-steel/40 to-transparent" />
 

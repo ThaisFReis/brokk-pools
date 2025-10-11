@@ -3,7 +3,7 @@ import { SocialPlatform } from '../types/SocialLink';
 
 // Simple inline SVG icons to avoid external dependencies
 function SocialIcon({ platform }: { platform: SocialPlatform }) {
-  const iconClass = 'w-6 h-6 fill-current';
+  const iconClass = 'w-5 h-5 sm:w-6 sm:h-6 fill-current';
 
   if (platform === 'x') {
     return (
@@ -36,7 +36,7 @@ function Footer() {
   return (
     <footer
       id="footer"
-      className="relative w-full bg-white/3 shadow-md backdrop-blur-xl px-6 py-12"
+      className="relative w-full bg-white/3 shadow-md backdrop-blur-xl px-4 sm:px-6 py-8 sm:py-12"
     >
       {/* Metallic top edge */}
       <div className="absolute left-0 top-0 h-[2px] w-full bg-gradient-to-r from-transparent via-forge-steel/40 to-transparent" />
@@ -46,7 +46,7 @@ function Footer() {
 
       <div className="relative mx-auto max-w-7xl">
         {/* Social Links */}
-        <div className="mb-8 flex flex-wrap items-center justify-center gap-8">
+        <div className="mb-6 sm:mb-8 flex flex-wrap items-center justify-center gap-4 sm:gap-6 md:gap-8">
           {socialLinks.map((link) => (
             <a
               key={link.id}
@@ -54,9 +54,9 @@ function Footer() {
               target="_blank"
               rel="noopener noreferrer"
               aria-label={link.ariaLabel}
-              className="group flex items-center gap-3 text-gray-400 transition-all duration-500 hover:text-gray-100"
+              className="group flex items-center gap-2 sm:gap-3 text-gray-400 transition-all duration-500 hover:text-gray-100"
             >
-              <div className="relative overflow-hidden rounded-full bg-gradient-to-br from-forge-metaldark/90 to-forge-deepblack/80 p-3 shadow-md backdrop-blur-md transition-all duration-500 group-hover:scale-110 group-hover:border-solana-purple/60">
+              <div className="relative overflow-hidden rounded-full bg-gradient-to-br from-forge-metaldark/90 to-forge-deepblack/80 p-2 sm:p-3 shadow-md backdrop-blur-md transition-all duration-500 group-hover:scale-110 group-hover:border-solana-purple/60">
                 {/* Forge glow effect */}
                 <div className="absolute inset-0 rounded-full bg-solana-purple/20 opacity-0 blur-lg transition-opacity duration-500 group-hover:opacity-100" />
                 <div className="absolute inset-0 animate-ember-flicker rounded-full bg-forge-ember/10 opacity-0 blur-md transition-opacity duration-500 group-hover:opacity-60" />
@@ -65,7 +65,7 @@ function Footer() {
                   <SocialIcon platform={link.platform} />
                 </div>
               </div>
-              <span className="font-medium transition-all duration-300">
+              <span className="hidden sm:inline font-medium text-sm sm:text-base transition-all duration-300">
                 {link.label}
               </span>
             </a>
@@ -73,8 +73,8 @@ function Footer() {
         </div>
 
         {/* Copyright */}
-        <div className="border-t border-forge-steel/20 pt-8 text-center">
-          <p className="font-display text-sm text-gray-500">
+        <div className="border-t border-forge-steel/20 pt-6 sm:pt-8 text-center">
+          <p className="font-display text-xs sm:text-sm text-gray-500 px-4">
             © {new Date().getFullYear()} Brokk Pools. Forged in DeFi, Powered by the Gods.
           </p>
         </div>

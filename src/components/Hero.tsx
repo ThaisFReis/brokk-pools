@@ -28,24 +28,24 @@ function Hero() {
           {/* Title */}
           <h1
             id="hero-title"
-            className="animate-fade-in-delayed font-title text-9xl font-bold leading-tight"
+            className="animate-fade-in-delayed font-title text-4xl sm:text-6xl md:text-7xl lg:text-8xl xl:text-9xl font-bold leading-tight"
           >
             {heroContent.title}
           </h1>
 
           {/* Subtitle */}
-          <p className="max-w-3xl animate-fade-in-delayed font-body text-4xl font-medium leading-relaxed text-gray-300">
+          <p className="max-w-3xl animate-fade-in-delayed font-body text-xl sm:text-2xl md:text-3xl lg:text-4xl font-medium leading-relaxed text-gray-300">
             {heroContent.subtitle}
           </p>
 
           {/* Description */}
-          <p className="max-w-xl animate-fade-in-delayed font-body text-lg leading-relaxed text-gray-300">
+          <p className="max-w-xl animate-fade-in-delayed font-body text-base sm:text-lg leading-relaxed text-gray-300">
             {heroContent.description}
           </p>
         </div>
 
         {/* CTA Button */}
-        <div className="mt-4 flex animate-fade-in-delayed items-center justify-center gap-20">
+        <div className="mt-4 flex flex-col sm:flex-row animate-fade-in-delayed items-center justify-center gap-4 sm:gap-6 md:gap-20">
           <CTAButton
             text={heroContent.cta[0].text}
             href={heroContent.cta[0].href}

@@ -17,7 +17,7 @@ function FeatureCard({ feature }: FeatureCardProps) {
 
   return (
     <div
-      className="group relative flex flex-col items-center gap-4 overflow-hidden rounded-lg bg-gradient-to-br from-forge-metaldark/90 to-forge-deepblack/80 p-8 text-center shadow-md backdrop-blur-xl transition-all duration-500 hover:border-solana-purple/60 hover:shadow-lg"
+      className="group relative flex flex-col items-center gap-4 overflow-hidden rounded-lg bg-gradient-to-br from-forge-metaldark/90 to-forge-deepblack/80 p-6 sm:p-8 text-center shadow-md backdrop-blur-xl transition-all duration-500 hover:border-solana-purple/60 hover:shadow-lg"
       style={{ animationDelay }}
     >
       {/* Metallic top edge highlight */}
@@ -38,12 +38,12 @@ function FeatureCard({ feature }: FeatureCardProps) {
       </div>
 
       {/* Title - legendary weapon name */}
-      <h3 className="relative text-2xl font-medium font-body text-gray-200 transition-all duration-500 group-hover:text-gray-100">
+      <h3 className="relative text-xl sm:text-2xl font-medium font-body text-gray-200 transition-all duration-500 group-hover:text-gray-100">
         {feature.title}
       </h3>
 
       {/* Description */}
-      <p className="relative leading-relaxed text-gray-400 transition-colors duration-300 group-hover:text-gray-300">{feature.description}</p>
+      <p className="relative text-sm sm:text-base leading-relaxed text-gray-400 transition-colors duration-300 group-hover:text-gray-300">{feature.description}</p>
 
       {/* Bottom forge accent - heated metal effect */}
       <div className="absolute bottom-0 left-0 h-[1px] w-0 bg-gradient-to-r from-solana-purple/10 to-solana-purple/60 transition-all duration-700 group-hover:w-full" />
