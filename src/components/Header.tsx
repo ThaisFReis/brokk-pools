@@ -27,16 +27,16 @@ export const Header = () => {
 
         <div className="relative flex items-center justify-between">
           {/* Logo - Left side */}
-          <div className="flex items-center gap-1">
+          <div className="group flex items-center gap-1 transition-transform duration-500 hover:scale-110">
             <Logo
               src={icon}
               alt="Brokk Logo"
               width={20}
               height={20}
-              className="brightness-0 invert"
+              className="brightness-0 invert transition-transform duration-300 group-hover:rotate-12"
             />
-            <a href="#home" className="group relative whitespace-nowrap font-title">
-              <div className="relative z-10 flex flex-col text-[8px] font-bold uppercase leading-none tracking-wider text-gray-300">
+            <a href="#home" className="relative whitespace-nowrap font-title">
+              <div className="relative z-10 flex flex-col text-[8px] font-bold uppercase leading-none tracking-wider text-gray-300 transition-colors duration-300 group-hover:text-gray-100">
                 <span className="relative z-10">BROKK</span>
                 <span className="relative z-10">POOLS</span>
               </div>
