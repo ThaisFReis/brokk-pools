@@ -6,7 +6,9 @@ export default {
       colors: {
         solana: {
           purple: '#9945FF',
-          green: '#14F195',
+          cyan: '#14F195',
+          blue: '#4E44CE',
+          green: '#19FB9B',
           teal: '#00D4AA',
           dark: '#1A1A2E',
           gray: '#060606',
@@ -58,13 +60,18 @@ export default {
           '100%': { transform: 'translateY(-100%) translateX(20px)' },
         },
         forgePulse: {
-          '0%, 100%': { boxShadow: '0 0 30px rgba(153, 69, 255, 0.3), inset 0 0 20px rgba(255, 107, 53, 0.1)' },
-          '50%': { boxShadow: '0 0 50px rgba(153, 69, 255, 0.5), inset 0 0 30px rgba(255, 107, 53, 0.2)' },
+          '0%, 100%': {
+            boxShadow: '0 0 30px rgba(153, 69, 255, 0.3), inset 0 0 20px rgba(255, 107, 53, 0.1)',
+          },
+          '50%': {
+            boxShadow: '0 0 50px rgba(153, 69, 255, 0.5), inset 0 0 30px rgba(255, 107, 53, 0.2)',
+          },
         },
       },
       backgroundImage: {
         'metal-gradient': 'linear-gradient(135deg, #1a1a1a 0%, #0a0a0a 50%, #2a2a2a 100%)',
         'forge-radial': 'radial-gradient(circle, rgba(153,69,255,0.15) 0%, rgba(10,10,10,0) 70%)',
+        'cyberpunk-radial': "radial-gradient(circle at top, #1c1c1c, #000000)",
       },
     },
   },

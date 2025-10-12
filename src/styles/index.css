@@ -13,7 +13,7 @@
     @apply bg-forge-deepblack font-body antialiased;
     margin: 0;
     padding: 0;
-    color: #E8E6E3;
+    color: #e8e6e3;
     background-image:
       radial-gradient(circle at 20% 50%, rgba(153, 69, 255, 0.08) 0%, transparent 50%),
       radial-gradient(circle at 80% 80%, rgba(255, 107, 53, 0.06) 0%, transparent 50%);
@@ -83,12 +83,7 @@
     left: 0;
     width: 2px;
     height: 100%;
-    background: linear-gradient(
-      to bottom,
-      transparent,
-      rgba(153, 69, 255, 0.8),
-      transparent
-    );
+    background: linear-gradient(to bottom, transparent, rgba(153, 69, 255, 0.8), transparent);
     animation: dataStream 3s linear infinite;
   }
 }

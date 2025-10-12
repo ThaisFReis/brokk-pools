@@ -24,28 +24,28 @@ export const Hero = () => {
           <div className="h-2 w-2 animate-pulse rounded-full bg-solana-green" />
           <span className="text-sm">{heroContent.badge}</span>
         </div>
-        <div className='flex flex-col items-center'>
+        <div className="flex flex-col items-center">
           {/* Title */}
           <h1
             id="hero-title"
-            className="animate-fade-in-delayed font-title text-4xl sm:text-6xl md:text-7xl lg:text-8xl xl:text-9xl font-bold leading-tight"
+            className="animate-fade-in-delayed font-title text-4xl font-bold leading-tight sm:text-6xl md:text-7xl lg:text-8xl xl:text-9xl"
           >
             {heroContent.title}
           </h1>
 
           {/* Subtitle */}
-          <p className="max-w-3xl animate-fade-in-delayed font-body text-xl sm:text-2xl md:text-3xl lg:text-4xl font-medium leading-relaxed text-gray-300">
+          <p className="max-w-3xl animate-fade-in-delayed font-body text-xl font-medium leading-relaxed text-gray-300 sm:text-2xl md:text-3xl lg:text-4xl">
             {heroContent.subtitle}
           </p>
 
           {/* Description */}
-          <p className="max-w-xl animate-fade-in-delayed font-body text-base sm:text-lg leading-relaxed text-gray-300">
+          <p className="max-w-xl animate-fade-in-delayed font-body text-base leading-relaxed text-gray-300 sm:text-lg">
             {heroContent.description}
           </p>
         </div>
 
         {/* CTA Button */}
-        <div className="mt-4 flex flex-col sm:flex-row animate-fade-in-delayed items-center justify-center gap-4 sm:gap-6 md:gap-20">
+        <div className="mt-4 flex animate-fade-in-delayed flex-col items-center justify-center gap-4 sm:flex-row sm:gap-6 md:gap-20">
           <CTAButton
             text={heroContent.cta[0].text}
             href={heroContent.cta[0].href}
@@ -64,4 +64,4 @@ export const Hero = () => {
       <div className="absolute right-10 top-10 h-32 w-32 rounded-full bg-solana-green/10 blur-3xl" />
     </section>
   );
-}
+};

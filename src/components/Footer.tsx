@@ -36,18 +36,18 @@ export const Footer = () => {
   return (
     <footer
       id="footer"
-      className="relative w-full bg-gradient-to-b from-forge-deepblack/40 to-forge-deepblack/80 backdrop-blur-xl border-t border-forge-steel/10"
+      className="relative w-full border-t border-forge-steel/10 bg-gradient-to-b from-forge-deepblack/40 to-forge-deepblack/80 backdrop-blur-xl"
     >
       {/* Metallic top edge */}
       <div className="absolute left-0 top-0 h-[1px] w-full bg-gradient-to-r from-transparent via-solana-purple/40 to-transparent" />
 
       <div className="relative mx-auto max-w-7xl px-6 py-6">
-        <div className="flex flex-col sm:flex-row items-center justify-between gap-4">
+        <div className="flex flex-col items-center justify-between gap-4 sm:flex-row">
           {/* Copyright */}
-          <div className="flex items-center gap-2 text-gray-500 text-sm">
+          <div className="flex items-center gap-2 text-sm text-gray-500">
             <span className="font-display">© {new Date().getFullYear()} Brokk Pools</span>
-            <span className="hidden sm:inline text-forge-steel/40">•</span>
-            <span className="hidden sm:inline text-xs">Forged in DeFi</span>
+            <span className="hidden text-forge-steel/40 sm:inline">•</span>
+            <span className="hidden text-xs sm:inline">Forged in DeFi</span>
           </div>
 
           {/* Social Links */}
@@ -61,8 +61,7 @@ export const Footer = () => {
                 aria-label={link.ariaLabel}
                 className="group relative"
               >
-                <div className="relative rounded-full bg-forge-metaldark/40 p-2 transition-all duration-300 hover:bg-forge-metaldark/60 hover:scale-110">
-
+                <div className="relative rounded-full bg-forge-metaldark/40 p-2 transition-all duration-300 hover:scale-110 hover:bg-forge-metaldark/60">
                   <div className="relative">
                     <SocialIcon platform={link.platform} />
                   </div>
@@ -74,4 +73,4 @@ export const Footer = () => {
       </div>
     </footer>
   );
-}
+};

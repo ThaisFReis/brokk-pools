@@ -5,7 +5,7 @@ const aboutStory = [
     id: 'ancient-forge',
     title: 'Ancient Forge',
     description:
-      'In the ancient halls of Svartálfheim, Brokk the dwarf forged legendary artifacts of immeasurable power. His hammer crafted Thor\'s Mjölnir, weapons that shaped the fate of gods.',
+      "In the ancient halls of Svartálfheim, Brokk the dwarf forged legendary artifacts of immeasurable power. His hammer crafted Thor's Mjölnir, weapons that shaped the fate of gods.",
     order: 1,
   },
   {
@@ -26,19 +26,16 @@ const aboutStory = [
 
 export const About = () => {
   return (
-    <section
-      id="about"
-      className="relative w-full px-6 py-20 md:px-12 lg:py-32"
-    >
+    <section id="about" className="relative w-full px-6 py-20 md:px-12 lg:py-32">
       <div className="relative z-10 mx-auto max-w-7xl">
         <h2
           id="about-title"
-          className="mb-16 text-center text-4xl font-bold font-title drop-shadow-md md:text-5xl"
+          className="mb-16 text-center font-title text-4xl font-bold drop-shadow-md md:text-5xl"
         >
           The Legend of Brokk
         </h2>
 
-        <div className="grid gap-6 sm:gap-8 grid-cols-1 sm:grid-cols-2 lg:grid-cols-3">
+        <div className="grid grid-cols-1 gap-6 sm:grid-cols-2 sm:gap-8 lg:grid-cols-3">
           {aboutStory.map((story) => (
             <FeatureCard key={story.id} feature={story} />
           ))}
