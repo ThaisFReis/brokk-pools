@@ -2,26 +2,26 @@ import { Feature } from '../types/Feature';
 
 export const features: Feature[] = [
   {
-    id: 'discover-pools',
-    title: 'Discover Pools',
+    id: 'uncover-alpha',
+    title: 'Uncover Alpha',
     description:
-      'Explore all Orca liquidity pools with real-time analytics, performance metrics, and historical data visualization.',
+      'Explore Orca pools with god-tier analytics, real-time metrics, and vivid historical data.',
     icon: 'analytics',
     order: 1,
   },
   {
-    id: 'your-dashboard',
-    title: 'Your Dashboard',
+    id: 'your-personal-forge',
+    title: 'Your Personal Forge',
     description:
-      'Track your positions, monitor yields, and calculate impermanent loss with precision-forged analytics.',
+      'Track positions, monitor yields, and shield against impermanent loss with your precision-forged dashboard.',
     icon: 'security',
     order: 2,
   },
   {
-    id: 'top-positions',
-    title: 'Top Positions',
+    id: 'learn-from-titans',
+    title: 'Learn from the Titans',
     description:
-      'Discover the highest-performing positions and learn from the masters of DeFi liquidity provision.',
+      "Discover the highest-performing positions and replicate the strategies of DeFi's master smiths.",
     icon: 'yields',
     order: 3,
   },

@@ -1,28 +1,5 @@
 import FeatureCard from './FeatureCard';
-
-const aboutStory = [
-  {
-    id: 'ancient-forge',
-    title: 'Ancient Forge',
-    description:
-      "In the ancient halls of Svartálfheim, Brokk the dwarf forged legendary artifacts of immeasurable power. His hammer crafted Thor's Mjölnir, weapons that shaped the fate of gods.",
-    order: 1,
-  },
-  {
-    id: 'cyberpunk-awakening',
-    title: 'Cyberpunk Awakening',
-    description:
-      'Millennia later, in a future where blockchain and mythology converge, Brokk awakens in a cyberpunk realm. His forge now glows with neon light, his anvil strikes echo across the Solana network.',
-    order: 2,
-  },
-  {
-    id: 'new-masterwork',
-    title: 'The Masterwork',
-    description:
-      'His new mission: forge tools that empower mortals to navigate the decentralized cosmos. Brokk Pools is his masterwork—where data is hammered into wisdom, and liquidity becomes lightning.',
-    order: 3,
-  },
-];
+import { about } from '../content/about';
 
 export const About = () => {
   return (
@@ -35,8 +12,8 @@ export const About = () => {
           The Legend of Brokk
         </h2>
 
-        <div className="grid grid-cols-1 gap-6 sm:grid-cols-2 sm:gap-8 lg:grid-cols-3">
-          {aboutStory.map((story) => (
+        <div className="grid gap-6 sm:gap-8 grid-cols-1 sm:grid-cols-2 lg:grid-cols-3">
+          {about.map((story) => (
             <FeatureCard key={story.id} feature={story} />
           ))}
         </div>
