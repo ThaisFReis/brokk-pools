@@ -1,2 +1,11 @@
 node_modules
 .vercel
+.claude
+.specify/
+.specify/memory
+.specify/scripts
+.specify/templates
+dist/
+CLAUDE.md
+quickstart.md
+specs/

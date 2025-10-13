@@ -9,18 +9,13 @@ export const heroContent: HeroContent = {
   },
   title: 'BROKK POOLS',
   //subtitle:
-    //'Effortlessly manage your Solana assets, provide liquidity, and earn rewards with unparalleled speed and security.',
-  subtitle:
-  "Forge Your Liquidity. Command Your Yield.",
-  description: "Wield the tools of a god-smith to create, optimize, and rebalance your liquidity.",
+  //'Effortlessly manage your Solana assets, provide liquidity, and earn rewards with unparalleled speed and security.',
+  subtitle: 'Forge your liquidity. Master your yield.',
+  description:
+    'Create, optimize, and rebalance your pools with the precision of a blacksmith forging divine tools.',
   badge: 'Forge Your Future on Solana',
   cta: [
-    {text: 'LAUNCH APP',
-    href: '#',
-    ariaLabel: 'Launch Brokk Pools application',},
-    {text: 'LEARN MORE',
-      href: '#',
-      ariaLabel: 'Learn more about Brokk Pools application',}
+    { text: 'LAUNCH APP', href: '#', ariaLabel: 'Launch Brokk Pools application' },
+    { text: 'LEARN MORE', href: '#', ariaLabel: 'Learn more about Brokk Pools application' },
   ],
-
 };

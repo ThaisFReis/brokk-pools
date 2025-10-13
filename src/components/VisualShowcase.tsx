@@ -16,7 +16,7 @@ function isWebGLAvailable(): boolean {
 // Holographic Analytics Mockup
 function HolographicMockup() {
   return (
-    <div className="flex h-[300px] sm:h-[400px] md:h-[500px] w-full items-center justify-center">
+    <div className="flex h-[300px] w-full items-center justify-center sm:h-[400px] md:h-[500px]">
       <svg
         viewBox="0 0 800 500"
         className="h-full w-full"
@@ -38,10 +38,10 @@ function HolographicMockup() {
             <stop offset="100%" stopColor="#FF4500" stopOpacity="0.2" />
           </linearGradient>
           <filter id="hologramGlow">
-            <feGaussianBlur stdDeviation="3" result="coloredBlur"/>
+            <feGaussianBlur stdDeviation="3" result="coloredBlur" />
             <feMerge>
-              <feMergeNode in="coloredBlur"/>
-              <feMergeNode in="SourceGraphic"/>
+              <feMergeNode in="coloredBlur" />
+              <feMergeNode in="SourceGraphic" />
             </feMerge>
           </filter>
         </defs>
@@ -74,7 +74,9 @@ function HolographicMockup() {
 
         {/* Animated bar chart - TVL Analytics */}
         <g transform="translate(50, 300)" filter="url(#hologramGlow)">
-          <text x="0" y="-180" fill="#14F195" fontSize="12" opacity="0.8">TVL ANALYTICS</text>
+          <text x="0" y="-180" fill="#14F195" fontSize="12" opacity="0.8">
+            TVL ANALYTICS
+          </text>
           {[
             { x: 0, height: 120, color: 'url(#purpleGlow)' },
             { x: 40, height: 150, color: 'url(#greenGlow)' },
@@ -111,8 +113,18 @@ function HolographicMockup() {
 
         {/* Circular pool performance gauge */}
         <g transform="translate(400, 250)" filter="url(#hologramGlow)">
-          <text x="-50" y="-150" fill="#9945FF" fontSize="12" opacity="0.8">POOL PERFORMANCE</text>
-          <circle cx="0" cy="0" r="100" fill="none" stroke="#2a2a2a" strokeWidth="20" opacity="0.3"/>
+          <text x="-50" y="-150" fill="#9945FF" fontSize="12" opacity="0.8">
+            POOL PERFORMANCE
+          </text>
+          <circle
+            cx="0"
+            cy="0"
+            r="100"
+            fill="none"
+            stroke="#2a2a2a"
+            strokeWidth="20"
+            opacity="0.3"
+          />
           <circle
             cx="0"
             cy="0"
@@ -132,13 +144,19 @@ function HolographicMockup() {
               repeatCount="indefinite"
             />
           </circle>
-          <text x="-30" y="10" fill="#14F195" fontSize="32" fontWeight="bold">75%</text>
-          <text x="-20" y="30" fill="#9945FF" fontSize="10" opacity="0.6">APY</text>
+          <text x="-30" y="10" fill="#14F195" fontSize="32" fontWeight="bold">
+            75%
+          </text>
+          <text x="-20" y="30" fill="#9945FF" fontSize="10" opacity="0.6">
+            APY
+          </text>
         </g>
 
         {/* Line chart - Price action */}
         <g transform="translate(500, 100)" filter="url(#hologramGlow)">
-          <text x="0" y="-20" fill="#FF6B35" fontSize="12" opacity="0.8">PRICE MOVEMENT</text>
+          <text x="0" y="-20" fill="#FF6B35" fontSize="12" opacity="0.8">
+            PRICE MOVEMENT
+          </text>
           <path
             d="M 0 80 L 30 60 L 60 70 L 90 40 L 120 50 L 150 30 L 180 35"
             fill="none"
@@ -238,18 +256,19 @@ function VisualShowcase() {
         {/* Section Title */}
         <h2
           id="visual-title"
-          className="font-title mb-8 sm:mb-12 text-center text-3xl sm:text-4xl md:text-5xl font-bold drop-shadow-[0_0_25px_rgba(20,241,149,0.6)]"
+          className="mb-8 text-center font-title text-3xl font-bold drop-shadow-[0_0_25px_rgba(20,241,149,0.6)] sm:mb-12 sm:text-4xl md:text-5xl"
         >
           Holographic Analytics
         </h2>
 
         {/* Description */}
-        <p className="mb-8 sm:mb-12 text-center text-base sm:text-lg md:text-xl text-gray-400 px-4">
-          Witness your portfolio forged into interactive holographic data streams — crafted by legendary dwarven algorithms.
+        <p className="mb-8 px-4 text-center text-base text-gray-400 sm:mb-12 sm:text-lg md:text-xl">
+          Witness your portfolio forged into interactive holographic data streams — crafted by
+          legendary dwarven algorithms.
         </p>
 
         {/* 3D Scene or Fallback */}
-        <div className="relative overflow-hidden rounded-lg border border-forge-steel/40 bg-gradient-to-br from-forge-metaldark/90 to-forge-deepblack/80 p-4 sm:p-6 md:p-8 shadow-[0_8px_32px_rgba(0,0,0,0.8),0_0_50px_rgba(153,69,255,0.4),inset_0_1px_0_rgba(255,255,255,0.03)] backdrop-blur-xl">
+        <div className="relative overflow-hidden rounded-lg border border-forge-steel/40 bg-gradient-to-br from-forge-metaldark/90 to-forge-deepblack/80 p-4 shadow-[0_8px_32px_rgba(0,0,0,0.8),0_0_50px_rgba(153,69,255,0.4),inset_0_1px_0_rgba(255,255,255,0.03)] backdrop-blur-xl sm:p-6 md:p-8">
           {/* Metallic top edge */}
           <div className="absolute left-0 top-0 h-[2px] w-full bg-gradient-to-r from-transparent via-forge-steel/40 to-transparent" />
 

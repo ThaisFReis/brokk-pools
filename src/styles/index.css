@@ -1,22 +1,36 @@
-@import url('https://fonts.googleapis.com/css2?family=Cinzel:wght@400..900&family=IBM+Plex+Mono:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;1,100;1,200;1,300;1,400;1,500;1,600;1,700&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Cinzel:wght@400..900&family=IBM+Plex+Mono:ital,wght@0,100..0,700;1,100..1,700&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap');
 
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
 
+/* ... (Animações Globais e Keyframes permanecem os mesmos) ... */
+@keyframes dataStream {
+  0% {
+    transform: translateY(-100%);
+  }
+  100% {
+    transform: translateY(100%);
+  }
+}
+
+/*
+ * =========================================
+ * Estilos de Base (@layer base)
+ * =========================================
+ */
 @layer base {
   html {
     @apply scroll-smooth;
   }
 
   body {
-    @apply bg-forge-deepblack font-body antialiased;
+    @apply font-body antialiased;
     margin: 0;
     padding: 0;
-    color: #E8E6E3;
-    background-image:
-      radial-gradient(circle at 20% 50%, rgba(153, 69, 255, 0.08) 0%, transparent 50%),
-      radial-gradient(circle at 80% 80%, rgba(255, 107, 53, 0.06) 0%, transparent 50%);
+    color: #e8e6e3;
+    /* Background agora vem da configuração do Tailwind */
+    @apply bg-solana-gray bg-main-background;
   }
 
   h1,
@@ -29,53 +43,44 @@
   }
 }
 
+/*
+ * =========================================
+ * Classes Utilitárias (@layer utilities)
+ * =========================================
+ */
 @layer utilities {
+  /* Efeitos de brilho no texto (mantidos aqui pois não há plugin de text-shadow) */
   .glow-text-green {
     text-shadow: 0 0 10px rgba(20, 241, 149, 0.5);
   }
-
   .glow-text-purple {
     text-shadow: 0 0 10px rgba(153, 69, 255, 0.5);
   }
 
-  .glow-border-green {
-    box-shadow: 0 0 20px rgba(20, 241, 149, 0.3);
-  }
+  /*
+   * As classes .glow-border-* e .forge-glow foram movidas para tailwind.config.js.
+   * Use diretamente no HTML: <div class="shadow-glow-border-purple"></div>
+   */
 
-  .glow-border-purple {
-    box-shadow: 0 0 20px rgba(153, 69, 255, 0.3);
-  }
-
+  /* Esta classe agora compõe utilitários do seu tema */
   .metal-texture {
-    background: linear-gradient(135deg, #1a1a1a 0%, #0a0a0a 50%, #2a2a2a 100%);
-    box-shadow:
-      inset 0 1px 0 rgba(255, 255, 255, 0.05),
-      inset 0 -1px 0 rgba(0, 0, 0, 0.5);
-  }
-
-  .forge-glow {
-    box-shadow:
-      0 0 40px rgba(153, 69, 255, 0.4),
-      0 0 80px rgba(153, 69, 255, 0.2),
-      inset 0 0 20px rgba(255, 107, 53, 0.1);
+    @apply bg-metal-gradient shadow-metal-texture;
   }
 
   .hologram-effect {
     background: linear-gradient(
       135deg,
       rgba(153, 69, 255, 0.1) 0%,
-      rgba(20, 241, 149, 0.05) 50%,
-      rgba(153, 69, 255, 0.1) 100%
+      rgba(20, 241, 149, 0.01) 50%,
+      rgba(153, 69, 255, 0.05) 100%
     );
     backdrop-filter: blur(20px);
-    border: 1px solid rgba(153, 69, 255, 0.2);
   }
 
   .data-stream-line {
     position: relative;
     overflow: hidden;
   }
-
   .data-stream-line::before {
     content: '';
     position: absolute;
@@ -83,12 +88,165 @@
     left: 0;
     width: 2px;
     height: 100%;
-    background: linear-gradient(
-      to bottom,
-      transparent,
-      rgba(153, 69, 255, 0.8),
-      transparent
-    );
+    background: linear-gradient(to bottom, transparent, rgba(153, 69, 255, 0.8), transparent);
     animation: dataStream 3s linear infinite;
   }
+}
+
+/*
+ * ===================================================================
+ * Estilos para a Biblioteca Solana Wallet Adapter
+ * Tema: 'Forge'
+ * ===================================================================
+ */
+
+/* --- Botão Principal (Conectar Carteira) --- */
+.wallet-adapter-button-trigger {
+  @apply !flex !h-10 !w-fit !items-center !rounded-full !bg-transparent !px-4 !py-2 !text-xs !font-medium !uppercase !tracking-wider !text-gray-300 !shadow-[inset_0px_2px_3px_2px_rgba(6,6,6,0.4)] !transition-all !duration-300;
+}
+
+/* --- Estados dos Botões (Hover, Focus, Disabled) --- */
+.wallet-adapter-button:not([disabled]):hover {
+  @apply !bg-forge-steel/60 !text-white;
+}
+
+.wallet-adapter-button:not([disabled]):focus-visible {
+  outline-color: theme('colors.solana.purple');
+}
+
+.wallet-adapter-button[disabled] {
+  @apply cursor-not-allowed bg-forge-metalgray/30 text-forge-steel;
+}
+
+/* --- Ícones nos Botões --- */
+.wallet-adapter-button-start-icon,
+.wallet-adapter-button-end-icon {
+  @apply mr-2;
+}
+
+.wallet-adapter-button-start-icon {
+  @apply mr-2;
+}
+
+.wallet-adapter-button-end-icon {
+  @apply mr-2;
+}
+
+/* --- Dropdown (Menu da Carteira Conectada) --- */
+.wallet-adapter-dropdown-list {
+  @apply absolute right-0 top-full z-50 m-0 mt-6 grid w-48 list-none gap-y-1 rounded-2xl border border-[#312E33]/40 bg-white/5 p-2 shadow-md shadow-solana-gray/30 backdrop-blur-xl;
+  opacity: 0;
+  visibility: hidden;
+  transform: translateY(-10px); /* Estado inicial: deslocado para cima */
+  transition:
+    opacity 400ms ease,
+    transform 400ms ease,
+    visibility 200ms;
+}
+
+.wallet-adapter-dropdown-list-active {
+  opacity: 1;
+  visibility: visible;
+  transform: translateY(0); /* Estado final: na posição correta */
+}
+
+.wallet-adapter-dropdown-list-item {
+  @apply flex h-10 cursor-pointer items-center justify-center whitespace-nowrap rounded-xl bg-transparent px-4 text-sm font-medium text-white outline-none;
+}
+
+.wallet-adapter-dropdown-list-item:not([disabled]):hover {
+  @apply !bg-forge-steel/60;
+}
+
+/* --- Modal (Seleção de Carteiras) --- */
+.wallet-adapter-modal-overlay {
+  @apply fixed inset-0 z-[1040] bg-solana-gray/15 backdrop-blur-md;
+}
+
+.wallet-adapter-modal-container {
+  @apply flex min-h-screen items-center justify-center p-12;
+}
+
+.wallet-adapter-modal-wrapper {
+  @apply hologram-effect relative z-[1050] flex max-w-sm flex-1 flex-col items-center overflow-hidden rounded-3xl p-5 shadow-md shadow-solana-gray;
+}
+
+/* Linhas decorativas no topo do modal */
+.wallet-adapter-modal-wrapper::before,
+.wallet-adapter-modal-wrapper::after {
+  content: '';
+  @apply absolute left-0 h-px w-full rounded-full;
+}
+.wallet-adapter-modal-wrapper::before {
+  @apply top-0 bg-gradient-to-r from-transparent via-forge-steel/50 to-transparent;
+}
+.wallet-adapter-modal-wrapper::after {
+  @apply top-[1px] bg-gradient-to-r from-transparent via-solana-purple/40 to-transparent;
+}
+
+.wallet-adapter-modal-title {
+  @apply m-0 px-12 pb-6 pt-12 text-center !font-body text-xl font-medium uppercase tracking-normal text-gray-300;
+}
+
+.wallet-adapter-modal-list {
+  @apply m-0 flex w-full list-none flex-col items-center justify-between gap-4 p-0 px-6 py-4;
+}
+
+.wallet-adapter-modal-list .wallet-adapter-button {
+  @apply mb-2 flex h-12 w-64 flex-row items-center justify-center gap-2 rounded-xl bg-forge-metalgray/20 text-base font-medium text-gray-300 shadow-md shadow-solana-gray/30 transition-all duration-300;
+}
+
+.wallet-adapter-modal-list .wallet-adapter-button:not([disabled]):hover {
+  @apply bg-forge-metalgray/30 !bg-gradient-to-r !text-gray-100 shadow-md;
+  transform: translateY(-2px);
+}
+
+.wallet-adapter-modal-list .wallet-adapter-button-start-icon,
+.wallet-adapter-modal-list .wallet-adapter-button-end-icon {
+  @apply h-7 w-7;
+}
+
+.wallet-adapter-modal-button-close {
+  @apply absolute right-4 top-4 flex h-8 w-8 cursor-pointer items-center justify-center rounded-full border-none bg-forge-metalgray/40 p-0 text-solana-purple transition-all duration-300;
+}
+
+.wallet-adapter-modal-button-close:hover {
+  @apply bg-forge-steel/60 text-gray-300;
+}
+
+.wallet-adapter-modal-button-close svg {
+  fill: currentColor;
+}
+
+/* --- Estilos Gerais e Responsividade --- */
+.wallet-adapter-dropdown {
+  @apply relative inline-block;
+}
+
+.wallet-adapter-modal {
+  @apply fixed inset-0 z-[1040] overflow-y-auto bg-black/40 opacity-0 transition-opacity;
+}
+
+.wallet-adapter-modal.wallet-adapter-modal-fade-in {
+  @apply opacity-100;
+}
+
+.wallet-adapter-modal-list-more {
+  @apply flex flex-col items-center justify-center gap-2 font-body text-xs font-bold uppercase;
+}
+
+/*--- .wallet-adapter-modal-list-more svg invert color ---*/
+.wallet-adapter-modal-list-more svg {
+  fill: currentColor;
+}
+
+@media (max-width: 480px) {
+  .wallet-adapter-modal-container {
+    @apply p-4;
+  }
+}
+
+/* Oculta elementos desnecessários da biblioteca, se houver */
+.css-14cme0a {
+  display: none !important;
 }

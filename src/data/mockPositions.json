@@ -1,0 +1,6288 @@
+{
+  "positions": [
+    {
+      "id": "7xKXtg2CW2PnLzPvqmHZWRuDVBBwGMZvDJTLMBpWJHmj",
+      "protocol": "Orca",
+      "tokenPair": {
+        "tokenA": {
+          "symbol": "SOL",
+          "name": "Solana",
+          "mint": "So11111111111111111111111111111111111111112",
+          "decimals": 9,
+          "logoURI": "https://raw.githubusercontent.com/solana-labs/token-list/main/assets/mainnet/So11111111111111111111111111111111111111112/logo.png"
+        },
+        "tokenB": {
+          "symbol": "USDC",
+          "name": "USD Coin",
+          "mint": "EPjFWdd5AufqSSqeM2qN1xzybapC8G4wEGGkZwyTDt1v",
+          "decimals": 6,
+          "logoURI": "https://raw.githubusercontent.com/solana-labs/token-list/main/assets/mainnet/EPjFWdd5AufqSSqeM2qN1xzybapC8G4wEGGkZwyTDt1v/logo.png"
+        },
+        "currentPrice": 152.34
+      },
+      "priceRange": {
+        "min": 140,
+        "max": 180,
+        "current": 152.34
+      },
+      "status": {
+        "inRange": true,
+        "autoCompound": false
+      },
+      "pooledAssets": {
+        "tokenAAmount": 12.5,
+        "tokenBAmount": 950.25,
+        "totalValueUSD": 2854.5
+      },
+      "initialAssets": {
+        "tokenAAmount": 13,
+        "tokenBAmount": 1000,
+        "timestamp": "2024-09-15T10:30:00Z"
+      },
+      "metrics": {
+        "totalPnL": 124.75,
+        "roi": 4.57,
+        "impermanentLoss": 124.75,
+        "totalAPR": 18.5,
+        "feeAPR": 15.2,
+        "gasCosts": 2.45,
+        "netProfit": 256.8,
+        "ageInDays": 88
+      },
+      "fees": {
+        "totalEarned": 259.25,
+        "uncollected": 45.3,
+        "daily": 2.95,
+        "weekly": 20.65,
+        "monthly": 88.5
+      },
+      "historicalData": {
+        "prices": [
+          {
+            "timestamp": 1757723484509,
+            "price": 154.46
+          },
+          {
+            "timestamp": 1757809884509,
+            "price": 150.7
+          },
+          {
+            "timestamp": 1757896284509,
+            "price": 154.36
+          },
+          {
+            "timestamp": 1757982684509,
+            "price": 151.99
+          },
+          {
+            "timestamp": 1758069084509,
+            "price": 155.2
+          },
+          {
+            "timestamp": 1758155484509,
+            "price": 151.24
+          },
+          {
+            "timestamp": 1758241884509,
+            "price": 147.52
+          },
+          {
+            "timestamp": 1758328284509,
+            "price": 146.29
+          },
+          {
+            "timestamp": 1758414684509,
+            "price": 149.46
+          },
+          {
+            "timestamp": 1758501084509,
+            "price": 147.96
+          },
+          {
+            "timestamp": 1758587484509,
+            "price": 149.8
+          },
+          {
+            "timestamp": 1758673884509,
+            "price": 152.94
+          },
+          {
+            "timestamp": 1758760284509,
+            "price": 153.7
+          },
+          {
+            "timestamp": 1758846684509,
+            "price": 154.98
+          },
+          {
+            "timestamp": 1758933084509,
+            "price": 151.08
+          },
+          {
+            "timestamp": 1759019484509,
+            "price": 152.16
+          },
+          {
+            "timestamp": 1759105884509,
+            "price": 152.82
+          },
+          {
+            "timestamp": 1759192284509,
+            "price": 155.52
+          },
+          {
+            "timestamp": 1759278684509,
+            "price": 157.44
+          },
+          {
+            "timestamp": 1759365084509,
+            "price": 156.62
+          },
+          {
+            "timestamp": 1759451484509,
+            "price": 161.18
+          },
+          {
+            "timestamp": 1759537884509,
+            "price": 156.49
+          },
+          {
+            "timestamp": 1759624284509,
+            "price": 157.47
+          },
+          {
+            "timestamp": 1759710684509,
+            "price": 158.09
+          },
+          {
+            "timestamp": 1759797084509,
+            "price": 155.39
+          },
+          {
+            "timestamp": 1759883484509,
+            "price": 154.2
+          },
+          {
+            "timestamp": 1759969884509,
+            "price": 154.34
+          },
+          {
+            "timestamp": 1760056284509,
+            "price": 154.17
+          },
+          {
+            "timestamp": 1760142684509,
+            "price": 152.05
+          },
+          {
+            "timestamp": 1760229084509,
+            "price": 150.38
+          },
+          {
+            "timestamp": 1760315484509,
+            "price": 148.09
+          }
+        ],
+        "volume": [
+          {
+            "timestamp": 1757723484509,
+            "volume": 31460.06
+          },
+          {
+            "timestamp": 1757809884509,
+            "volume": 24269.8
+          },
+          {
+            "timestamp": 1757896284509,
+            "volume": 16401.2
+          },
+          {
+            "timestamp": 1757982684509,
+            "volume": 17729.47
+          },
+          {
+            "timestamp": 1758069084509,
+            "volume": 22974.06
+          },
+          {
+            "timestamp": 1758155484509,
+            "volume": 27914.73
+          },
+          {
+            "timestamp": 1758241884509,
+            "volume": 15023.05
+          },
+          {
+            "timestamp": 1758328284509,
+            "volume": 33227.95
+          },
+          {
+            "timestamp": 1758414684509,
+            "volume": 39206.47
+          },
+          {
+            "timestamp": 1758501084509,
+            "volume": 34851.33
+          },
+          {
+            "timestamp": 1758587484509,
+            "volume": 24540.41
+          },
+          {
+            "timestamp": 1758673884509,
+            "volume": 23138.78
+          },
+          {
+            "timestamp": 1758760284509,
+            "volume": 25546.52
+          },
+          {
+            "timestamp": 1758846684509,
+            "volume": 25461.99
+          },
+          {
+            "timestamp": 1758933084509,
+            "volume": 16033.64
+          },
+          {
+            "timestamp": 1759019484509,
+            "volume": 38472.95
+          },
+          {
+            "timestamp": 1759105884509,
+            "volume": 35760.3
+          },
+          {
+            "timestamp": 1759192284509,
+            "volume": 19410.24
+          },
+          {
+            "timestamp": 1759278684509,
+            "volume": 28967.28
+          },
+          {
+            "timestamp": 1759365084509,
+            "volume": 34071.76
+          },
+          {
+            "timestamp": 1759451484509,
+            "volume": 30412.41
+          },
+          {
+            "timestamp": 1759537884509,
+            "volume": 38277.39
+          },
+          {
+            "timestamp": 1759624284509,
+            "volume": 28922.7
+          },
+          {
+            "timestamp": 1759710684509,
+            "volume": 27102.65
+          },
+          {
+            "timestamp": 1759797084509,
+            "volume": 34331.72
+          },
+          {
+            "timestamp": 1759883484509,
+            "volume": 31481.35
+          },
+          {
+            "timestamp": 1759969884509,
+            "volume": 21335.38
+          },
+          {
+            "timestamp": 1760056284509,
+            "volume": 36524.88
+          },
+          {
+            "timestamp": 1760142684509,
+            "volume": 14692.67
+          },
+          {
+            "timestamp": 1760229084509,
+            "volume": 36117.8
+          },
+          {
+            "timestamp": 1760315484509,
+            "volume": 31526.6
+          }
+        ],
+        "fees": [
+          {
+            "timestamp": 1757723484510,
+            "fees": 1.51
+          },
+          {
+            "timestamp": 1757809884510,
+            "fees": 4.19
+          },
+          {
+            "timestamp": 1757896284510,
+            "fees": 1.66
+          },
+          {
+            "timestamp": 1757982684510,
+            "fees": 3.47
+          },
+          {
+            "timestamp": 1758069084510,
+            "fees": 0.62
+          },
+          {
+            "timestamp": 1758155484510,
+            "fees": 0.56
+          },
+          {
+            "timestamp": 1758241884510,
+            "fees": 0.63
+          },
+          {
+            "timestamp": 1758328284510,
+            "fees": 2.12
+          },
+          {
+            "timestamp": 1758414684510,
+            "fees": 3.09
+          },
+          {
+            "timestamp": 1758501084510,
+            "fees": 0.58
+          },
+          {
+            "timestamp": 1758587484510,
+            "fees": 3.47
+          },
+          {
+            "timestamp": 1758673884510,
+            "fees": 3.89
+          },
+          {
+            "timestamp": 1758760284510,
+            "fees": 3.48
+          },
+          {
+            "timestamp": 1758846684510,
+            "fees": 2.34
+          },
+          {
+            "timestamp": 1758933084510,
+            "fees": 0.57
+          },
+          {
+            "timestamp": 1759019484510,
+            "fees": 1.91
+          },
+          {
+            "timestamp": 1759105884510,
+            "fees": 4.34
+          },
+          {
+            "timestamp": 1759192284510,
+            "fees": 2.57
+          },
+          {
+            "timestamp": 1759278684510,
+            "fees": 0.66
+          },
+          {
+            "timestamp": 1759365084510,
+            "fees": 3.54
+          },
+          {
+            "timestamp": 1759451484510,
+            "fees": 4.75
+          },
+          {
+            "timestamp": 1759537884510,
+            "fees": 4.99
+          },
+          {
+            "timestamp": 1759624284510,
+            "fees": 3.94
+          },
+          {
+            "timestamp": 1759710684510,
+            "fees": 1.88
+          },
+          {
+            "timestamp": 1759797084510,
+            "fees": 1.51
+          },
+          {
+            "timestamp": 1759883484510,
+            "fees": 1.74
+          },
+          {
+            "timestamp": 1759969884510,
+            "fees": 4.87
+          },
+          {
+            "timestamp": 1760056284510,
+            "fees": 0.86
+          },
+          {
+            "timestamp": 1760142684510,
+            "fees": 2.34
+          },
+          {
+            "timestamp": 1760229084510,
+            "fees": 4.54
+          },
+          {
+            "timestamp": 1760315484510,
+            "fees": 2.68
+          }
+        ],
+        "liquidityDistribution": [
+          {
+            "price": 140,
+            "liquidity": 46702.24
+          },
+          {
+            "price": 142,
+            "liquidity": 58591.65
+          },
+          {
+            "price": 144,
+            "liquidity": 70625.56
+          },
+          {
+            "price": 146,
+            "liquidity": 81793.04
+          },
+          {
+            "price": 148,
+            "liquidity": 91012.07
+          },
+          {
+            "price": 150,
+            "liquidity": 97299.34
+          },
+          {
+            "price": 152,
+            "liquidity": 99942.22
+          },
+          {
+            "price": 154,
+            "liquidity": 98631.65
+          },
+          {
+            "price": 156,
+            "liquidity": 93521.58
+          },
+          {
+            "price": 158,
+            "liquidity": 85199.21
+          },
+          {
+            "price": 160,
+            "liquidity": 74574.02
+          },
+          {
+            "price": 162,
+            "liquidity": 62714.47
+          },
+          {
+            "price": 164,
+            "liquidity": 50672.95
+          },
+          {
+            "price": 166,
+            "liquidity": 39338.05
+          },
+          {
+            "price": 168,
+            "liquidity": 29341.19
+          },
+          {
+            "price": 170,
+            "liquidity": 21026.68
+          },
+          {
+            "price": 172,
+            "liquidity": 14477.45
+          },
+          {
+            "price": 174,
+            "liquidity": 9577.27
+          },
+          {
+            "price": 176,
+            "liquidity": 6087.22
+          },
+          {
+            "price": 178,
+            "liquidity": 3717.28
+          },
+          {
+            "price": 180,
+            "liquidity": 2181.02
+          }
+        ]
+      },
+      "createdAt": "2024-09-15T10:30:00Z",
+      "updatedAt": "2025-10-12T08:15:00Z"
+    },
+    {
+      "id": "9mWRABPZj3K7Q4JxTYvHpFLd2nXwE6vZ8pqCkM5rL3Hn",
+      "protocol": "Orca",
+      "tokenPair": {
+        "tokenA": {
+          "symbol": "ETH",
+          "name": "Ethereum (Portal)",
+          "mint": "7vfCXTUXx5WJV5JADk17DUJ4ksgau7utNKj4b963voxs",
+          "decimals": 8,
+          "logoURI": "https://raw.githubusercontent.com/solana-labs/token-list/main/assets/mainnet/7vfCXTUXx5WJV5JADk17DUJ4ksgau7utNKj4b963voxs/logo.png"
+        },
+        "tokenB": {
+          "symbol": "USDC",
+          "name": "USD Coin",
+          "mint": "EPjFWdd5AufqSSqeM2qN1xzybapC8G4wEGGkZwyTDt1v",
+          "decimals": 6
+        },
+        "currentPrice": 2847.92
+      },
+      "priceRange": {
+        "min": 3200,
+        "max": 4000,
+        "current": 2847.92
+      },
+      "status": {
+        "inRange": false,
+        "autoCompound": false
+      },
+      "pooledAssets": {
+        "tokenAAmount": 0,
+        "tokenBAmount": 8547.83,
+        "totalValueUSD": 8547.83
+      },
+      "initialAssets": {
+        "tokenAAmount": 3,
+        "tokenBAmount": 1000,
+        "timestamp": "2024-03-20T14:22:00Z"
+      },
+      "metrics": {
+        "totalPnL": -1295.93,
+        "roi": -13.16,
+        "impermanentLoss": -1295.93,
+        "totalAPR": 8.3,
+        "feeAPR": 8.3,
+        "gasCosts": 3.12,
+        "netProfit": -1115.45,
+        "ageInDays": 206
+      },
+      "fees": {
+        "totalEarned": 183.6,
+        "uncollected": 12.8,
+        "daily": 0.89,
+        "weekly": 6.23,
+        "monthly": 26.7
+      },
+      "historicalData": {
+        "prices": [
+          {
+            "timestamp": 1757723484510,
+            "price": 2813.41
+          },
+          {
+            "timestamp": 1757809884510,
+            "price": 2848.03
+          },
+          {
+            "timestamp": 1757896284510,
+            "price": 2890.93
+          },
+          {
+            "timestamp": 1757982684510,
+            "price": 2851.01
+          },
+          {
+            "timestamp": 1758069084510,
+            "price": 2829.48
+          },
+          {
+            "timestamp": 1758155484510,
+            "price": 2853.19
+          },
+          {
+            "timestamp": 1758241884510,
+            "price": 2776.66
+          },
+          {
+            "timestamp": 1758328284510,
+            "price": 2717.24
+          },
+          {
+            "timestamp": 1758414684510,
+            "price": 2703.77
+          },
+          {
+            "timestamp": 1758501084510,
+            "price": 2693.27
+          },
+          {
+            "timestamp": 1758587484510,
+            "price": 2761.49
+          },
+          {
+            "timestamp": 1758673884510,
+            "price": 2835.37
+          },
+          {
+            "timestamp": 1758760284510,
+            "price": 2766.2
+          },
+          {
+            "timestamp": 1758846684510,
+            "price": 2756.75
+          },
+          {
+            "timestamp": 1758933084510,
+            "price": 2788.39
+          },
+          {
+            "timestamp": 1759019484510,
+            "price": 2839.4
+          },
+          {
+            "timestamp": 1759105884510,
+            "price": 2824.31
+          },
+          {
+            "timestamp": 1759192284510,
+            "price": 2827.68
+          },
+          {
+            "timestamp": 1759278684510,
+            "price": 2837.37
+          },
+          {
+            "timestamp": 1759365084510,
+            "price": 2790.05
+          },
+          {
+            "timestamp": 1759451484510,
+            "price": 2872.22
+          },
+          {
+            "timestamp": 1759537884510,
+            "price": 2920.34
+          },
+          {
+            "timestamp": 1759624284510,
+            "price": 2992.26
+          },
+          {
+            "timestamp": 1759710684510,
+            "price": 3050.55
+          },
+          {
+            "timestamp": 1759797084510,
+            "price": 3015.98
+          },
+          {
+            "timestamp": 1759883484510,
+            "price": 2963.22
+          },
+          {
+            "timestamp": 1759969884510,
+            "price": 2886.71
+          },
+          {
+            "timestamp": 1760056284510,
+            "price": 2852.75
+          },
+          {
+            "timestamp": 1760142684510,
+            "price": 2930.55
+          },
+          {
+            "timestamp": 1760229084510,
+            "price": 2937.05
+          },
+          {
+            "timestamp": 1760315484510,
+            "price": 2907.72
+          }
+        ],
+        "volume": [
+          {
+            "timestamp": 1757723484510,
+            "volume": 82819.33
+          },
+          {
+            "timestamp": 1757809884510,
+            "volume": 71401.62
+          },
+          {
+            "timestamp": 1757896284510,
+            "volume": 124224.76
+          },
+          {
+            "timestamp": 1757982684510,
+            "volume": 79993.23
+          },
+          {
+            "timestamp": 1758069084510,
+            "volume": 123621.93
+          },
+          {
+            "timestamp": 1758155484510,
+            "volume": 85855.07
+          },
+          {
+            "timestamp": 1758241884510,
+            "volume": 111676.6
+          },
+          {
+            "timestamp": 1758328284510,
+            "volume": 69640.43
+          },
+          {
+            "timestamp": 1758414684510,
+            "volume": 112328.8
+          },
+          {
+            "timestamp": 1758501084510,
+            "volume": 108751.41
+          },
+          {
+            "timestamp": 1758587484510,
+            "volume": 106361.41
+          },
+          {
+            "timestamp": 1758673884510,
+            "volume": 58982.88
+          },
+          {
+            "timestamp": 1758760284510,
+            "volume": 73038.21
+          },
+          {
+            "timestamp": 1758846684510,
+            "volume": 69932.28
+          },
+          {
+            "timestamp": 1758933084510,
+            "volume": 91544.67
+          },
+          {
+            "timestamp": 1759019484510,
+            "volume": 94620.34
+          },
+          {
+            "timestamp": 1759105884510,
+            "volume": 116370.39
+          },
+          {
+            "timestamp": 1759192284510,
+            "volume": 106333.55
+          },
+          {
+            "timestamp": 1759278684510,
+            "volume": 78439.76
+          },
+          {
+            "timestamp": 1759365084510,
+            "volume": 119966.33
+          },
+          {
+            "timestamp": 1759451484510,
+            "volume": 77884
+          },
+          {
+            "timestamp": 1759537884510,
+            "volume": 118699.2
+          },
+          {
+            "timestamp": 1759624284510,
+            "volume": 88159.77
+          },
+          {
+            "timestamp": 1759710684510,
+            "volume": 122456.18
+          },
+          {
+            "timestamp": 1759797084510,
+            "volume": 119283.46
+          },
+          {
+            "timestamp": 1759883484510,
+            "volume": 86268.44
+          },
+          {
+            "timestamp": 1759969884510,
+            "volume": 47589.38
+          },
+          {
+            "timestamp": 1760056284510,
+            "volume": 109142.27
+          },
+          {
+            "timestamp": 1760142684510,
+            "volume": 56679.26
+          },
+          {
+            "timestamp": 1760229084510,
+            "volume": 120897.75
+          },
+          {
+            "timestamp": 1760315484510,
+            "volume": 85711.17
+          }
+        ],
+        "fees": [
+          {
+            "timestamp": 1757723484510,
+            "fees": 4.64
+          },
+          {
+            "timestamp": 1757809884510,
+            "fees": 4.79
+          },
+          {
+            "timestamp": 1757896284510,
+            "fees": 2.33
+          },
+          {
+            "timestamp": 1757982684510,
+            "fees": 3.21
+          },
+          {
+            "timestamp": 1758069084510,
+            "fees": 4.39
+          },
+          {
+            "timestamp": 1758155484510,
+            "fees": 2.18
+          },
+          {
+            "timestamp": 1758241884510,
+            "fees": 2.67
+          },
+          {
+            "timestamp": 1758328284510,
+            "fees": 3.33
+          },
+          {
+            "timestamp": 1758414684510,
+            "fees": 1.21
+          },
+          {
+            "timestamp": 1758501084510,
+            "fees": 1.85
+          },
+          {
+            "timestamp": 1758587484510,
+            "fees": 3.71
+          },
+          {
+            "timestamp": 1758673884510,
+            "fees": 0.74
+          },
+          {
+            "timestamp": 1758760284510,
+            "fees": 2.47
+          },
+          {
+            "timestamp": 1758846684510,
+            "fees": 3.52
+          },
+          {
+            "timestamp": 1758933084510,
+            "fees": 2.61
+          },
+          {
+            "timestamp": 1759019484510,
+            "fees": 3.82
+          },
+          {
+            "timestamp": 1759105884510,
+            "fees": 3.03
+          },
+          {
+            "timestamp": 1759192284510,
+            "fees": 3.83
+          },
+          {
+            "timestamp": 1759278684510,
+            "fees": 2.9
+          },
+          {
+            "timestamp": 1759365084510,
+            "fees": 2.45
+          },
+          {
+            "timestamp": 1759451484510,
+            "fees": 1.66
+          },
+          {
+            "timestamp": 1759537884510,
+            "fees": 4.3
+          },
+          {
+            "timestamp": 1759624284510,
+            "fees": 0.64
+          },
+          {
+            "timestamp": 1759710684510,
+            "fees": 2.29
+          },
+          {
+            "timestamp": 1759797084510,
+            "fees": 1.44
+          },
+          {
+            "timestamp": 1759883484510,
+            "fees": 1.22
+          },
+          {
+            "timestamp": 1759969884510,
+            "fees": 2.23
+          },
+          {
+            "timestamp": 1760056284510,
+            "fees": 2.7
+          },
+          {
+            "timestamp": 1760142684510,
+            "fees": 1.36
+          },
+          {
+            "timestamp": 1760229084510,
+            "fees": 3.34
+          },
+          {
+            "timestamp": 1760315484510,
+            "fees": 3.68
+          }
+        ],
+        "liquidityDistribution": [
+          {
+            "price": 3200,
+            "liquidity": 21235.33
+          },
+          {
+            "price": 3240,
+            "liquidity": 14637.49
+          },
+          {
+            "price": 3280,
+            "liquidity": 9693.99
+          },
+          {
+            "price": 3320,
+            "liquidity": 6168.32
+          },
+          {
+            "price": 3360,
+            "liquidity": 3771.02
+          },
+          {
+            "price": 3400,
+            "liquidity": 2215.03
+          },
+          {
+            "price": 3440,
+            "liquidity": 1250.05
+          },
+          {
+            "price": 3480,
+            "liquidity": 677.81
+          },
+          {
+            "price": 3520,
+            "liquidity": 353.11
+          },
+          {
+            "price": 3560,
+            "liquidity": 176.74
+          },
+          {
+            "price": 3600,
+            "liquidity": 85
+          },
+          {
+            "price": 3640,
+            "liquidity": 39.27
+          },
+          {
+            "price": 3680,
+            "liquidity": 17.43
+          },
+          {
+            "price": 3720,
+            "liquidity": 7.44
+          },
+          {
+            "price": 3760,
+            "liquidity": 3.05
+          },
+          {
+            "price": 3800,
+            "liquidity": 1.2
+          },
+          {
+            "price": 3840,
+            "liquidity": 0.45
+          },
+          {
+            "price": 3880,
+            "liquidity": 0.16
+          },
+          {
+            "price": 3920,
+            "liquidity": 0.06
+          },
+          {
+            "price": 3960,
+            "liquidity": 0.02
+          },
+          {
+            "price": 4000,
+            "liquidity": 0.01
+          }
+        ]
+      },
+      "createdAt": "2024-03-20T14:22:00Z",
+      "updatedAt": "2025-10-12T08:15:00Z"
+    },
+    {
+      "id": "BKipkearKqfNRu6y8yYGFrQTnTvChLR3fLqVz9vXTcHs",
+      "protocol": "Raydium",
+      "tokenPair": {
+        "tokenA": {
+          "symbol": "BONK",
+          "name": "Bonk",
+          "mint": "DezXAZ8z7PnrnRJjz3wXBoRgixCa6xjnB7YaB1pPB263",
+          "decimals": 5
+        },
+        "tokenB": {
+          "symbol": "SOL",
+          "name": "Solana",
+          "mint": "So11111111111111111111111111111111111111112",
+          "decimals": 9
+        },
+        "currentPrice": 0.00002847
+      },
+      "priceRange": {
+        "min": 0.00002,
+        "max": 0.000035,
+        "current": 0.00002847
+      },
+      "status": {
+        "inRange": true,
+        "autoCompound": true
+      },
+      "pooledAssets": {
+        "tokenAAmount": 52847621.35,
+        "tokenBAmount": 9.823,
+        "totalValueUSD": 2997.84
+      },
+      "initialAssets": {
+        "tokenAAmount": 50000000,
+        "tokenBAmount": 10,
+        "timestamp": "2024-08-01T09:15:00Z"
+      },
+      "metrics": {
+        "totalPnL": 318.22,
+        "roi": 11.87,
+        "impermanentLoss": 318.22,
+        "totalAPR": 52.3,
+        "feeAPR": 42.1,
+        "gasCosts": 4.65,
+        "netProfit": 428.57,
+        "ageInDays": 103
+      },
+      "fees": {
+        "totalEarned": 433.22,
+        "uncollected": 89.5,
+        "daily": 4.21,
+        "weekly": 29.47,
+        "monthly": 126.3
+      },
+      "historicalData": {
+        "prices": [
+          {
+            "timestamp": 1757723484510,
+            "price": 0
+          },
+          {
+            "timestamp": 1757809884510,
+            "price": 0
+          },
+          {
+            "timestamp": 1757896284510,
+            "price": 0
+          },
+          {
+            "timestamp": 1757982684510,
+            "price": 0
+          },
+          {
+            "timestamp": 1758069084510,
+            "price": 0
+          },
+          {
+            "timestamp": 1758155484510,
+            "price": 0
+          },
+          {
+            "timestamp": 1758241884510,
+            "price": 0
+          },
+          {
+            "timestamp": 1758328284510,
+            "price": 0
+          },
+          {
+            "timestamp": 1758414684510,
+            "price": 0
+          },
+          {
+            "timestamp": 1758501084510,
+            "price": 0
+          },
+          {
+            "timestamp": 1758587484510,
+            "price": 0
+          },
+          {
+            "timestamp": 1758673884510,
+            "price": 0
+          },
+          {
+            "timestamp": 1758760284510,
+            "price": 0
+          },
+          {
+            "timestamp": 1758846684510,
+            "price": 0
+          },
+          {
+            "timestamp": 1758933084510,
+            "price": 0
+          },
+          {
+            "timestamp": 1759019484510,
+            "price": 0
+          },
+          {
+            "timestamp": 1759105884510,
+            "price": 0
+          },
+          {
+            "timestamp": 1759192284510,
+            "price": 0
+          },
+          {
+            "timestamp": 1759278684510,
+            "price": 0
+          },
+          {
+            "timestamp": 1759365084510,
+            "price": 0
+          },
+          {
+            "timestamp": 1759451484510,
+            "price": 0
+          },
+          {
+            "timestamp": 1759537884510,
+            "price": 0
+          },
+          {
+            "timestamp": 1759624284510,
+            "price": 0
+          },
+          {
+            "timestamp": 1759710684510,
+            "price": 0
+          },
+          {
+            "timestamp": 1759797084510,
+            "price": 0
+          },
+          {
+            "timestamp": 1759883484510,
+            "price": 0
+          },
+          {
+            "timestamp": 1759969884510,
+            "price": 0
+          },
+          {
+            "timestamp": 1760056284510,
+            "price": 0
+          },
+          {
+            "timestamp": 1760142684510,
+            "price": 0
+          },
+          {
+            "timestamp": 1760229084510,
+            "price": 0
+          },
+          {
+            "timestamp": 1760315484510,
+            "price": 0
+          }
+        ],
+        "volume": [
+          {
+            "timestamp": 1757723484510,
+            "volume": 33301.59
+          },
+          {
+            "timestamp": 1757809884510,
+            "volume": 35756.4
+          },
+          {
+            "timestamp": 1757896284510,
+            "volume": 37757.31
+          },
+          {
+            "timestamp": 1757982684510,
+            "volume": 29913.79
+          },
+          {
+            "timestamp": 1758069084510,
+            "volume": 42091.45
+          },
+          {
+            "timestamp": 1758155484510,
+            "volume": 36854.01
+          },
+          {
+            "timestamp": 1758241884510,
+            "volume": 28623.05
+          },
+          {
+            "timestamp": 1758328284510,
+            "volume": 17902.34
+          },
+          {
+            "timestamp": 1758414684510,
+            "volume": 42770.42
+          },
+          {
+            "timestamp": 1758501084510,
+            "volume": 26487.09
+          },
+          {
+            "timestamp": 1758587484510,
+            "volume": 41249.53
+          },
+          {
+            "timestamp": 1758673884510,
+            "volume": 30166.63
+          },
+          {
+            "timestamp": 1758760284510,
+            "volume": 38254.11
+          },
+          {
+            "timestamp": 1758846684510,
+            "volume": 34363.72
+          },
+          {
+            "timestamp": 1758933084510,
+            "volume": 28846.07
+          },
+          {
+            "timestamp": 1759019484510,
+            "volume": 26608.01
+          },
+          {
+            "timestamp": 1759105884510,
+            "volume": 42158.2
+          },
+          {
+            "timestamp": 1759192284510,
+            "volume": 23401.79
+          },
+          {
+            "timestamp": 1759278684510,
+            "volume": 17361.86
+          },
+          {
+            "timestamp": 1759365084510,
+            "volume": 31446.56
+          },
+          {
+            "timestamp": 1759451484510,
+            "volume": 34697.11
+          },
+          {
+            "timestamp": 1759537884510,
+            "volume": 32465.8
+          },
+          {
+            "timestamp": 1759624284510,
+            "volume": 44522.59
+          },
+          {
+            "timestamp": 1759710684510,
+            "volume": 31411.76
+          },
+          {
+            "timestamp": 1759797084510,
+            "volume": 30758.25
+          },
+          {
+            "timestamp": 1759883484510,
+            "volume": 17087.34
+          },
+          {
+            "timestamp": 1759969884510,
+            "volume": 16205.42
+          },
+          {
+            "timestamp": 1760056284510,
+            "volume": 32641.15
+          },
+          {
+            "timestamp": 1760142684510,
+            "volume": 36991.85
+          },
+          {
+            "timestamp": 1760229084510,
+            "volume": 28900.21
+          },
+          {
+            "timestamp": 1760315484510,
+            "volume": 27503.05
+          }
+        ],
+        "fees": [
+          {
+            "timestamp": 1757723484510,
+            "fees": 0.96
+          },
+          {
+            "timestamp": 1757809884510,
+            "fees": 2.14
+          },
+          {
+            "timestamp": 1757896284510,
+            "fees": 4.86
+          },
+          {
+            "timestamp": 1757982684510,
+            "fees": 1.32
+          },
+          {
+            "timestamp": 1758069084510,
+            "fees": 0.52
+          },
+          {
+            "timestamp": 1758155484510,
+            "fees": 1.01
+          },
+          {
+            "timestamp": 1758241884510,
+            "fees": 4.13
+          },
+          {
+            "timestamp": 1758328284510,
+            "fees": 2.75
+          },
+          {
+            "timestamp": 1758414684510,
+            "fees": 1.82
+          },
+          {
+            "timestamp": 1758501084510,
+            "fees": 2.02
+          },
+          {
+            "timestamp": 1758587484510,
+            "fees": 4.63
+          },
+          {
+            "timestamp": 1758673884510,
+            "fees": 2.49
+          },
+          {
+            "timestamp": 1758760284510,
+            "fees": 1.93
+          },
+          {
+            "timestamp": 1758846684510,
+            "fees": 2.57
+          },
+          {
+            "timestamp": 1758933084510,
+            "fees": 4.54
+          },
+          {
+            "timestamp": 1759019484510,
+            "fees": 0.63
+          },
+          {
+            "timestamp": 1759105884510,
+            "fees": 0.92
+          },
+          {
+            "timestamp": 1759192284510,
+            "fees": 2.73
+          },
+          {
+            "timestamp": 1759278684510,
+            "fees": 4.08
+          },
+          {
+            "timestamp": 1759365084510,
+            "fees": 1.57
+          },
+          {
+            "timestamp": 1759451484510,
+            "fees": 4.84
+          },
+          {
+            "timestamp": 1759537884510,
+            "fees": 3.27
+          },
+          {
+            "timestamp": 1759624284510,
+            "fees": 3.93
+          },
+          {
+            "timestamp": 1759710684510,
+            "fees": 4.64
+          },
+          {
+            "timestamp": 1759797084510,
+            "fees": 4.46
+          },
+          {
+            "timestamp": 1759883484510,
+            "fees": 3.04
+          },
+          {
+            "timestamp": 1759969884510,
+            "fees": 2.74
+          },
+          {
+            "timestamp": 1760056284510,
+            "fees": 2.42
+          },
+          {
+            "timestamp": 1760142684510,
+            "fees": 3.35
+          },
+          {
+            "timestamp": 1760229084510,
+            "fees": 4.47
+          },
+          {
+            "timestamp": 1760315484510,
+            "fees": 1.93
+          }
+        ],
+        "liquidityDistribution": [
+          {
+            "price": 0,
+            "liquidity": 7802.02
+          },
+          {
+            "price": 0,
+            "liquidity": 12014.52
+          },
+          {
+            "price": 0,
+            "liquidity": 17776
+          },
+          {
+            "price": 0,
+            "liquidity": 25269.11
+          },
+          {
+            "price": 0,
+            "liquidity": 34512.31
+          },
+          {
+            "price": 0,
+            "liquidity": 45288.33
+          },
+          {
+            "price": 0,
+            "liquidity": 57098.77
+          },
+          {
+            "price": 0,
+            "liquidity": 69166.45
+          },
+          {
+            "price": 0,
+            "liquidity": 80499.37
+          },
+          {
+            "price": 0,
+            "liquidity": 90015.57
+          },
+          {
+            "price": 0,
+            "liquidity": 96709.92
+          },
+          {
+            "price": 0,
+            "liquidity": 99828.06
+          },
+          {
+            "price": 0,
+            "liquidity": 99006.22
+          },
+          {
+            "price": 0,
+            "liquidity": 94341.01
+          },
+          {
+            "price": 0,
+            "liquidity": 86370.77
+          },
+          {
+            "price": 0,
+            "liquidity": 75973.35
+          },
+          {
+            "price": 0,
+            "liquidity": 64207.24
+          },
+          {
+            "price": 0,
+            "liquidity": 52135.67
+          },
+          {
+            "price": 0,
+            "liquidity": 40673.74
+          },
+          {
+            "price": 0,
+            "liquidity": 30487.48
+          },
+          {
+            "price": 0,
+            "liquidity": 21956.19
+          }
+        ]
+      },
+      "createdAt": "2024-08-01T09:15:00Z",
+      "updatedAt": "2025-10-12T08:15:00Z"
+    },
+    {
+      "id": "4vJ9JU1bJJE96FWSJKvHsmmFADCg4gpZQff4P3bkLKi",
+      "protocol": "Orca",
+      "tokenPair": {
+        "tokenA": {
+          "symbol": "USDT",
+          "name": "Tether USD",
+          "mint": "Es9vMFrzaCERmJfrF4H2FYD4KCoNkY11McCe8BenwNYB",
+          "decimals": 6
+        },
+        "tokenB": {
+          "symbol": "USDC",
+          "name": "USD Coin",
+          "mint": "EPjFWdd5AufqSSqeM2qN1xzybapC8G4wEGGkZwyTDt1v",
+          "decimals": 6
+        },
+        "currentPrice": 1.0001
+      },
+      "priceRange": {
+        "min": 0.998,
+        "max": 1.002,
+        "current": 1.0001
+      },
+      "status": {
+        "inRange": true,
+        "autoCompound": false
+      },
+      "pooledAssets": {
+        "tokenAAmount": 5000.12,
+        "tokenBAmount": 5000.08,
+        "totalValueUSD": 10000.2
+      },
+      "initialAssets": {
+        "tokenAAmount": 5000,
+        "tokenBAmount": 5000,
+        "timestamp": "2024-06-10T16:45:00Z"
+      },
+      "metrics": {
+        "totalPnL": 0.03,
+        "roi": 0.0003,
+        "impermanentLoss": 0.03,
+        "totalAPR": 0.12,
+        "feeAPR": 0.12,
+        "gasCosts": 1.85,
+        "netProfit": -1.85,
+        "ageInDays": 154
+      },
+      "fees": {
+        "totalEarned": 0,
+        "uncollected": 0,
+        "daily": 0,
+        "weekly": 0,
+        "monthly": 0
+      },
+      "historicalData": {
+        "prices": [
+          {
+            "timestamp": 1757723484510,
+            "price": 0.97
+          },
+          {
+            "timestamp": 1757809884510,
+            "price": 0.98
+          },
+          {
+            "timestamp": 1757896284510,
+            "price": 0.95
+          },
+          {
+            "timestamp": 1757982684510,
+            "price": 0.94
+          },
+          {
+            "timestamp": 1758069084510,
+            "price": 0.92
+          },
+          {
+            "timestamp": 1758155484510,
+            "price": 0.91
+          },
+          {
+            "timestamp": 1758241884510,
+            "price": 0.89
+          },
+          {
+            "timestamp": 1758328284510,
+            "price": 0.87
+          },
+          {
+            "timestamp": 1758414684510,
+            "price": 0.9
+          },
+          {
+            "timestamp": 1758501084510,
+            "price": 0.87
+          },
+          {
+            "timestamp": 1758587484510,
+            "price": 0.86
+          },
+          {
+            "timestamp": 1758673884510,
+            "price": 0.87
+          },
+          {
+            "timestamp": 1758760284510,
+            "price": 0.9
+          },
+          {
+            "timestamp": 1758846684510,
+            "price": 0.88
+          },
+          {
+            "timestamp": 1758933084510,
+            "price": 0.9
+          },
+          {
+            "timestamp": 1759019484510,
+            "price": 0.9
+          },
+          {
+            "timestamp": 1759105884510,
+            "price": 0.88
+          },
+          {
+            "timestamp": 1759192284510,
+            "price": 0.87
+          },
+          {
+            "timestamp": 1759278684510,
+            "price": 0.86
+          },
+          {
+            "timestamp": 1759365084510,
+            "price": 0.85
+          },
+          {
+            "timestamp": 1759451484510,
+            "price": 0.85
+          },
+          {
+            "timestamp": 1759537884510,
+            "price": 0.88
+          },
+          {
+            "timestamp": 1759624284510,
+            "price": 0.9
+          },
+          {
+            "timestamp": 1759710684510,
+            "price": 0.9
+          },
+          {
+            "timestamp": 1759797084510,
+            "price": 0.91
+          },
+          {
+            "timestamp": 1759883484510,
+            "price": 0.91
+          },
+          {
+            "timestamp": 1759969884510,
+            "price": 0.88
+          },
+          {
+            "timestamp": 1760056284510,
+            "price": 0.88
+          },
+          {
+            "timestamp": 1760142684510,
+            "price": 0.88
+          },
+          {
+            "timestamp": 1760229084510,
+            "price": 0.9
+          },
+          {
+            "timestamp": 1760315484510,
+            "price": 0.89
+          }
+        ],
+        "volume": [
+          {
+            "timestamp": 1757723484510,
+            "volume": 79833.38
+          },
+          {
+            "timestamp": 1757809884510,
+            "volume": 77196.55
+          },
+          {
+            "timestamp": 1757896284510,
+            "volume": 101956.64
+          },
+          {
+            "timestamp": 1757982684510,
+            "volume": 52294.51
+          },
+          {
+            "timestamp": 1758069084510,
+            "volume": 100336.94
+          },
+          {
+            "timestamp": 1758155484510,
+            "volume": 82750.97
+          },
+          {
+            "timestamp": 1758241884510,
+            "volume": 96297.86
+          },
+          {
+            "timestamp": 1758328284510,
+            "volume": 113535.11
+          },
+          {
+            "timestamp": 1758414684510,
+            "volume": 89149.08
+          },
+          {
+            "timestamp": 1758501084510,
+            "volume": 115236.78
+          },
+          {
+            "timestamp": 1758587484510,
+            "volume": 139684.56
+          },
+          {
+            "timestamp": 1758673884510,
+            "volume": 114428.44
+          },
+          {
+            "timestamp": 1758760284510,
+            "volume": 101568.61
+          },
+          {
+            "timestamp": 1758846684510,
+            "volume": 76103.31
+          },
+          {
+            "timestamp": 1758933084510,
+            "volume": 149115.88
+          },
+          {
+            "timestamp": 1759019484510,
+            "volume": 76571.23
+          },
+          {
+            "timestamp": 1759105884510,
+            "volume": 138740.92
+          },
+          {
+            "timestamp": 1759192284510,
+            "volume": 74849.49
+          },
+          {
+            "timestamp": 1759278684510,
+            "volume": 71750.69
+          },
+          {
+            "timestamp": 1759365084510,
+            "volume": 116281.74
+          },
+          {
+            "timestamp": 1759451484510,
+            "volume": 94291.95
+          },
+          {
+            "timestamp": 1759537884510,
+            "volume": 86271.31
+          },
+          {
+            "timestamp": 1759624284510,
+            "volume": 91669.38
+          },
+          {
+            "timestamp": 1759710684510,
+            "volume": 105785.47
+          },
+          {
+            "timestamp": 1759797084510,
+            "volume": 117345.2
+          },
+          {
+            "timestamp": 1759883484510,
+            "volume": 126517.23
+          },
+          {
+            "timestamp": 1759969884510,
+            "volume": 104427.18
+          },
+          {
+            "timestamp": 1760056284510,
+            "volume": 88840.5
+          },
+          {
+            "timestamp": 1760142684510,
+            "volume": 80138.84
+          },
+          {
+            "timestamp": 1760229084510,
+            "volume": 144845.29
+          },
+          {
+            "timestamp": 1760315484510,
+            "volume": 72207.49
+          }
+        ],
+        "fees": [
+          {
+            "timestamp": 1757723484510,
+            "fees": 2.96
+          },
+          {
+            "timestamp": 1757809884510,
+            "fees": 2.37
+          },
+          {
+            "timestamp": 1757896284510,
+            "fees": 2.59
+          },
+          {
+            "timestamp": 1757982684510,
+            "fees": 4.94
+          },
+          {
+            "timestamp": 1758069084510,
+            "fees": 3.92
+          },
+          {
+            "timestamp": 1758155484510,
+            "fees": 2.37
+          },
+          {
+            "timestamp": 1758241884510,
+            "fees": 2.66
+          },
+          {
+            "timestamp": 1758328284510,
+            "fees": 4.69
+          },
+          {
+            "timestamp": 1758414684510,
+            "fees": 0.69
+          },
+          {
+            "timestamp": 1758501084510,
+            "fees": 3.94
+          },
+          {
+            "timestamp": 1758587484510,
+            "fees": 4.93
+          },
+          {
+            "timestamp": 1758673884510,
+            "fees": 4.29
+          },
+          {
+            "timestamp": 1758760284510,
+            "fees": 1.34
+          },
+          {
+            "timestamp": 1758846684510,
+            "fees": 3.74
+          },
+          {
+            "timestamp": 1758933084510,
+            "fees": 3.4
+          },
+          {
+            "timestamp": 1759019484510,
+            "fees": 4.68
+          },
+          {
+            "timestamp": 1759105884510,
+            "fees": 3.74
+          },
+          {
+            "timestamp": 1759192284510,
+            "fees": 1.22
+          },
+          {
+            "timestamp": 1759278684510,
+            "fees": 1.99
+          },
+          {
+            "timestamp": 1759365084510,
+            "fees": 4.7
+          },
+          {
+            "timestamp": 1759451484510,
+            "fees": 4.59
+          },
+          {
+            "timestamp": 1759537884510,
+            "fees": 4.73
+          },
+          {
+            "timestamp": 1759624284510,
+            "fees": 2.31
+          },
+          {
+            "timestamp": 1759710684510,
+            "fees": 1.29
+          },
+          {
+            "timestamp": 1759797084510,
+            "fees": 3.66
+          },
+          {
+            "timestamp": 1759883484510,
+            "fees": 2.53
+          },
+          {
+            "timestamp": 1759969884510,
+            "fees": 2.33
+          },
+          {
+            "timestamp": 1760056284510,
+            "fees": 4.89
+          },
+          {
+            "timestamp": 1760142684510,
+            "fees": 2.74
+          },
+          {
+            "timestamp": 1760229084510,
+            "fees": 3.36
+          },
+          {
+            "timestamp": 1760315484510,
+            "fees": 2.34
+          }
+        ],
+        "liquidityDistribution": [
+          {
+            "price": 1,
+            "liquidity": 11025.05
+          },
+          {
+            "price": 1,
+            "liquidity": 16447.45
+          },
+          {
+            "price": 1,
+            "liquidity": 23574.61
+          },
+          {
+            "price": 1,
+            "liquidity": 32465.25
+          },
+          {
+            "price": 1,
+            "liquidity": 42955.74
+          },
+          {
+            "price": 1,
+            "liquidity": 54607.44
+          },
+          {
+            "price": 1,
+            "liquidity": 66697.68
+          },
+          {
+            "price": 1,
+            "liquidity": 78270.45
+          },
+          {
+            "price": 1,
+            "liquidity": 88249.69
+          },
+          {
+            "price": 1,
+            "liquidity": 95599.75
+          },
+          {
+            "price": 1,
+            "liquidity": 99501.25
+          },
+          {
+            "price": 1,
+            "liquidity": 99501.25
+          },
+          {
+            "price": 1,
+            "liquidity": 95599.75
+          },
+          {
+            "price": 1,
+            "liquidity": 88249.69
+          },
+          {
+            "price": 1,
+            "liquidity": 78270.45
+          },
+          {
+            "price": 1,
+            "liquidity": 66697.68
+          },
+          {
+            "price": 1,
+            "liquidity": 54607.44
+          },
+          {
+            "price": 1,
+            "liquidity": 42955.74
+          },
+          {
+            "price": 1,
+            "liquidity": 32465.25
+          },
+          {
+            "price": 1,
+            "liquidity": 23574.61
+          },
+          {
+            "price": 1,
+            "liquidity": 16447.45
+          }
+        ]
+      },
+      "createdAt": "2024-06-10T16:45:00Z",
+      "updatedAt": "2025-10-12T08:15:00Z"
+    },
+    {
+      "id": "HmZ7vYwvRW9pKjQ5nXyL3GfJ8tC2sV6uDpBkE4rNwFxA",
+      "protocol": "Raydium",
+      "tokenPair": {
+        "tokenA": {
+          "symbol": "SOL",
+          "name": "Solana",
+          "mint": "So11111111111111111111111111111111111111112",
+          "decimals": 9
+        },
+        "tokenB": {
+          "symbol": "USDC",
+          "name": "USD Coin",
+          "mint": "EPjFWdd5AufqSSqeM2qN1xzybapC8G4wEGGkZwyTDt1v",
+          "decimals": 6
+        },
+        "currentPrice": 152.34
+      },
+      "priceRange": {
+        "min": 145,
+        "max": 160,
+        "current": 152.34
+      },
+      "status": {
+        "inRange": true,
+        "autoCompound": true
+      },
+      "pooledAssets": {
+        "tokenAAmount": 3284.56,
+        "tokenBAmount": 250123.45,
+        "totalValueUSD": 750456.78
+      },
+      "initialAssets": {
+        "tokenAAmount": 3200,
+        "tokenBAmount": 240000,
+        "timestamp": "2023-12-05T11:20:00Z"
+      },
+      "metrics": {
+        "totalPnL": 28952.34,
+        "roi": 4.01,
+        "impermanentLoss": 28952.34,
+        "totalAPR": 15.8,
+        "feeAPR": 12.5,
+        "gasCosts": 8.92,
+        "netProfit": 42847.42,
+        "ageInDays": 312
+      },
+      "fees": {
+        "totalEarned": 42856.34,
+        "uncollected": 1234.56,
+        "daily": 137.35,
+        "weekly": 961.45,
+        "monthly": 4120.2
+      },
+      "historicalData": {
+        "prices": [
+          {
+            "timestamp": 1757723484510,
+            "price": 150.38
+          },
+          {
+            "timestamp": 1757809884510,
+            "price": 152.99
+          },
+          {
+            "timestamp": 1757896284510,
+            "price": 154.63
+          },
+          {
+            "timestamp": 1757982684510,
+            "price": 158.26
+          },
+          {
+            "timestamp": 1758069084510,
+            "price": 154.38
+          },
+          {
+            "timestamp": 1758155484510,
+            "price": 154.33
+          },
+          {
+            "timestamp": 1758241884510,
+            "price": 152.35
+          },
+          {
+            "timestamp": 1758328284510,
+            "price": 147.99
+          },
+          {
+            "timestamp": 1758414684510,
+            "price": 144.21
+          },
+          {
+            "timestamp": 1758501084510,
+            "price": 144.99
+          },
+          {
+            "timestamp": 1758587484510,
+            "price": 144.48
+          },
+          {
+            "timestamp": 1758673884510,
+            "price": 143.07
+          },
+          {
+            "timestamp": 1758760284510,
+            "price": 141.24
+          },
+          {
+            "timestamp": 1758846684510,
+            "price": 140.89
+          },
+          {
+            "timestamp": 1758933084510,
+            "price": 143.45
+          },
+          {
+            "timestamp": 1759019484510,
+            "price": 139.38
+          },
+          {
+            "timestamp": 1759105884510,
+            "price": 141.26
+          },
+          {
+            "timestamp": 1759192284510,
+            "price": 142.24
+          },
+          {
+            "timestamp": 1759278684510,
+            "price": 143.48
+          },
+          {
+            "timestamp": 1759365084510,
+            "price": 143.04
+          },
+          {
+            "timestamp": 1759451484510,
+            "price": 141.78
+          },
+          {
+            "timestamp": 1759537884510,
+            "price": 144.86
+          },
+          {
+            "timestamp": 1759624284510,
+            "price": 146.5
+          },
+          {
+            "timestamp": 1759710684510,
+            "price": 149.85
+          },
+          {
+            "timestamp": 1759797084510,
+            "price": 146.94
+          },
+          {
+            "timestamp": 1759883484510,
+            "price": 151.34
+          },
+          {
+            "timestamp": 1759969884510,
+            "price": 153.51
+          },
+          {
+            "timestamp": 1760056284510,
+            "price": 153.22
+          },
+          {
+            "timestamp": 1760142684510,
+            "price": 151.83
+          },
+          {
+            "timestamp": 1760229084510,
+            "price": 149.14
+          },
+          {
+            "timestamp": 1760315484510,
+            "price": 145.82
+          }
+        ],
+        "volume": [
+          {
+            "timestamp": 1757723484510,
+            "volume": 9408261.93
+          },
+          {
+            "timestamp": 1757809884510,
+            "volume": 4262120.9
+          },
+          {
+            "timestamp": 1757896284510,
+            "volume": 5571084.6
+          },
+          {
+            "timestamp": 1757982684510,
+            "volume": 7209663.02
+          },
+          {
+            "timestamp": 1758069084510,
+            "volume": 3920761.5
+          },
+          {
+            "timestamp": 1758155484510,
+            "volume": 7826146.69
+          },
+          {
+            "timestamp": 1758241884510,
+            "volume": 7889451.41
+          },
+          {
+            "timestamp": 1758328284510,
+            "volume": 9255549.41
+          },
+          {
+            "timestamp": 1758414684510,
+            "volume": 11045415.72
+          },
+          {
+            "timestamp": 1758501084510,
+            "volume": 10995497.95
+          },
+          {
+            "timestamp": 1758587484510,
+            "volume": 11035910.59
+          },
+          {
+            "timestamp": 1758673884510,
+            "volume": 4397597.84
+          },
+          {
+            "timestamp": 1758760284510,
+            "volume": 9337423.23
+          },
+          {
+            "timestamp": 1758846684510,
+            "volume": 6499326.47
+          },
+          {
+            "timestamp": 1758933084510,
+            "volume": 4912218.09
+          },
+          {
+            "timestamp": 1759019484510,
+            "volume": 4936427.74
+          },
+          {
+            "timestamp": 1759105884510,
+            "volume": 3801652.34
+          },
+          {
+            "timestamp": 1759192284510,
+            "volume": 5569952.16
+          },
+          {
+            "timestamp": 1759278684510,
+            "volume": 4790065.1
+          },
+          {
+            "timestamp": 1759365084510,
+            "volume": 5480307.4
+          },
+          {
+            "timestamp": 1759451484510,
+            "volume": 9160191.5
+          },
+          {
+            "timestamp": 1759537884510,
+            "volume": 11057494.52
+          },
+          {
+            "timestamp": 1759624284510,
+            "volume": 6659625.39
+          },
+          {
+            "timestamp": 1759710684510,
+            "volume": 6543095.3
+          },
+          {
+            "timestamp": 1759797084510,
+            "volume": 7788921.56
+          },
+          {
+            "timestamp": 1759883484510,
+            "volume": 6868526.39
+          },
+          {
+            "timestamp": 1759969884510,
+            "volume": 9706002.35
+          },
+          {
+            "timestamp": 1760056284510,
+            "volume": 6331894.95
+          },
+          {
+            "timestamp": 1760142684510,
+            "volume": 10468129.83
+          },
+          {
+            "timestamp": 1760229084510,
+            "volume": 6630912.46
+          },
+          {
+            "timestamp": 1760315484510,
+            "volume": 3993467.91
+          }
+        ],
+        "fees": [
+          {
+            "timestamp": 1757723484510,
+            "fees": 4.54
+          },
+          {
+            "timestamp": 1757809884510,
+            "fees": 3.67
+          },
+          {
+            "timestamp": 1757896284510,
+            "fees": 3.3
+          },
+          {
+            "timestamp": 1757982684510,
+            "fees": 3.31
+          },
+          {
+            "timestamp": 1758069084510,
+            "fees": 1.66
+          },
+          {
+            "timestamp": 1758155484510,
+            "fees": 2.32
+          },
+          {
+            "timestamp": 1758241884510,
+            "fees": 0.93
+          },
+          {
+            "timestamp": 1758328284510,
+            "fees": 2.5
+          },
+          {
+            "timestamp": 1758414684510,
+            "fees": 1.42
+          },
+          {
+            "timestamp": 1758501084510,
+            "fees": 3.83
+          },
+          {
+            "timestamp": 1758587484510,
+            "fees": 4.17
+          },
+          {
+            "timestamp": 1758673884510,
+            "fees": 4.27
+          },
+          {
+            "timestamp": 1758760284510,
+            "fees": 3.8
+          },
+          {
+            "timestamp": 1758846684510,
+            "fees": 3.79
+          },
+          {
+            "timestamp": 1758933084510,
+            "fees": 2.59
+          },
+          {
+            "timestamp": 1759019484510,
+            "fees": 0.9
+          },
+          {
+            "timestamp": 1759105884510,
+            "fees": 3.43
+          },
+          {
+            "timestamp": 1759192284510,
+            "fees": 1.41
+          },
+          {
+            "timestamp": 1759278684510,
+            "fees": 0.9
+          },
+          {
+            "timestamp": 1759365084510,
+            "fees": 2.55
+          },
+          {
+            "timestamp": 1759451484510,
+            "fees": 3.45
+          },
+          {
+            "timestamp": 1759537884510,
+            "fees": 3.77
+          },
+          {
+            "timestamp": 1759624284510,
+            "fees": 1.31
+          },
+          {
+            "timestamp": 1759710684510,
+            "fees": 1.23
+          },
+          {
+            "timestamp": 1759797084510,
+            "fees": 2.57
+          },
+          {
+            "timestamp": 1759883484510,
+            "fees": 1.88
+          },
+          {
+            "timestamp": 1759969884510,
+            "fees": 1.79
+          },
+          {
+            "timestamp": 1760056284510,
+            "fees": 1.28
+          },
+          {
+            "timestamp": 1760142684510,
+            "fees": 1.63
+          },
+          {
+            "timestamp": 1760229084510,
+            "fees": 2.29
+          },
+          {
+            "timestamp": 1760315484510,
+            "fees": 3.96
+          }
+        ],
+        "liquidityDistribution": [
+          {
+            "price": 145,
+            "liquidity": 14725.69
+          },
+          {
+            "price": 145.75,
+            "liquidity": 21350.18
+          },
+          {
+            "price": 146.5,
+            "liquidity": 29741
+          },
+          {
+            "price": 147.25,
+            "liquidity": 39805.03
+          },
+          {
+            "price": 148,
+            "liquidity": 51185.69
+          },
+          {
+            "price": 148.75,
+            "liquidity": 63239.34
+          },
+          {
+            "price": 149.5,
+            "liquidity": 75067.92
+          },
+          {
+            "price": 150.25,
+            "liquidity": 85614.95
+          },
+          {
+            "price": 151,
+            "liquidity": 93815.18
+          },
+          {
+            "price": 151.75,
+            "liquidity": 98769.94
+          },
+          {
+            "price": 152.5,
+            "liquidity": 99909.02
+          },
+          {
+            "price": 153.25,
+            "liquidity": 97098.57
+          },
+          {
+            "price": 154,
+            "liquidity": 90666.99
+          },
+          {
+            "price": 154.75,
+            "liquidity": 81341.79
+          },
+          {
+            "price": 155.5,
+            "liquidity": 70114.29
+          },
+          {
+            "price": 156.25,
+            "liquidity": 58066.76
+          },
+          {
+            "price": 157,
+            "liquidity": 46203.7
+          },
+          {
+            "price": 157.75,
+            "liquidity": 35322.73
+          },
+          {
+            "price": 158.5,
+            "liquidity": 25945.37
+          },
+          {
+            "price": 159.25,
+            "liquidity": 18310.23
+          },
+          {
+            "price": 160,
+            "liquidity": 12415.26
+          }
+        ]
+      },
+      "createdAt": "2023-12-05T11:20:00Z",
+      "updatedAt": "2025-10-12T08:15:00Z"
+    },
+    {
+      "id": "2kYpJ9rXvL8nQcHfZbD3wMsPtG5uA7eV6iKdNx4Rm1Bq",
+      "protocol": "Orca",
+      "tokenPair": {
+        "tokenA": {
+          "symbol": "RAY",
+          "name": "Raydium",
+          "mint": "4k3Dyjzvzp8eMZWUXbBCjEvwSkkk59S5iCNLY3QrkX6R",
+          "decimals": 6
+        },
+        "tokenB": {
+          "symbol": "USDC",
+          "name": "USD Coin",
+          "mint": "EPjFWdd5AufqSSqeM2qN1xzybapC8G4wEGGkZwyTDt1v",
+          "decimals": 6
+        },
+        "currentPrice": 3.47
+      },
+      "priceRange": {
+        "min": 2.8,
+        "max": 4.2,
+        "current": 3.47
+      },
+      "status": {
+        "inRange": true,
+        "autoCompound": false
+      },
+      "pooledAssets": {
+        "tokenAAmount": 2.885,
+        "tokenBAmount": 5,
+        "totalValueUSD": 15.01
+      },
+      "initialAssets": {
+        "tokenAAmount": 2.5,
+        "tokenBAmount": 5,
+        "timestamp": "2025-10-08T18:30:00Z"
+      },
+      "metrics": {
+        "totalPnL": 0.96,
+        "roi": 6.86,
+        "impermanentLoss": 0.96,
+        "totalAPR": 627.4,
+        "feeAPR": 547.2,
+        "gasCosts": 0.45,
+        "netProfit": 0.58,
+        "ageInDays": 4
+      },
+      "fees": {
+        "totalEarned": 1.03,
+        "uncollected": 0.92,
+        "daily": 0.26,
+        "weekly": 1.03,
+        "monthly": 1.03
+      },
+      "historicalData": {
+        "prices": [
+          {
+            "timestamp": 1757723484510,
+            "price": 3.49
+          },
+          {
+            "timestamp": 1757809884510,
+            "price": 3.59
+          },
+          {
+            "timestamp": 1757896284510,
+            "price": 3.64
+          },
+          {
+            "timestamp": 1757982684510,
+            "price": 3.69
+          },
+          {
+            "timestamp": 1758069084510,
+            "price": 3.68
+          },
+          {
+            "timestamp": 1758155484510,
+            "price": 3.78
+          },
+          {
+            "timestamp": 1758241884510,
+            "price": 3.83
+          },
+          {
+            "timestamp": 1758328284510,
+            "price": 3.78
+          },
+          {
+            "timestamp": 1758414684510,
+            "price": 3.86
+          },
+          {
+            "timestamp": 1758501084510,
+            "price": 3.93
+          },
+          {
+            "timestamp": 1758587484510,
+            "price": 3.82
+          },
+          {
+            "timestamp": 1758673884510,
+            "price": 3.84
+          },
+          {
+            "timestamp": 1758760284510,
+            "price": 3.75
+          },
+          {
+            "timestamp": 1758846684510,
+            "price": 3.77
+          },
+          {
+            "timestamp": 1758933084510,
+            "price": 3.76
+          },
+          {
+            "timestamp": 1759019484510,
+            "price": 3.78
+          },
+          {
+            "timestamp": 1759105884510,
+            "price": 3.83
+          },
+          {
+            "timestamp": 1759192284510,
+            "price": 3.91
+          },
+          {
+            "timestamp": 1759278684510,
+            "price": 3.97
+          },
+          {
+            "timestamp": 1759365084510,
+            "price": 4.02
+          },
+          {
+            "timestamp": 1759451484510,
+            "price": 4.03
+          },
+          {
+            "timestamp": 1759537884510,
+            "price": 3.96
+          },
+          {
+            "timestamp": 1759624284510,
+            "price": 4.02
+          },
+          {
+            "timestamp": 1759710684510,
+            "price": 4
+          },
+          {
+            "timestamp": 1759797084510,
+            "price": 4.07
+          },
+          {
+            "timestamp": 1759883484510,
+            "price": 4
+          },
+          {
+            "timestamp": 1759969884510,
+            "price": 3.91
+          },
+          {
+            "timestamp": 1760056284510,
+            "price": 3.83
+          },
+          {
+            "timestamp": 1760142684510,
+            "price": 3.93
+          },
+          {
+            "timestamp": 1760229084510,
+            "price": 3.91
+          },
+          {
+            "timestamp": 1760315484510,
+            "price": 3.9
+          }
+        ],
+        "volume": [
+          {
+            "timestamp": 1757723484510,
+            "volume": 123.13
+          },
+          {
+            "timestamp": 1757809884510,
+            "volume": 106.84
+          },
+          {
+            "timestamp": 1757896284510,
+            "volume": 161.36
+          },
+          {
+            "timestamp": 1757982684510,
+            "volume": 136.28
+          },
+          {
+            "timestamp": 1758069084510,
+            "volume": 185.49
+          },
+          {
+            "timestamp": 1758155484510,
+            "volume": 195.19
+          },
+          {
+            "timestamp": 1758241884510,
+            "volume": 169.62
+          },
+          {
+            "timestamp": 1758328284510,
+            "volume": 213.52
+          },
+          {
+            "timestamp": 1758414684510,
+            "volume": 201.32
+          },
+          {
+            "timestamp": 1758501084510,
+            "volume": 85.75
+          },
+          {
+            "timestamp": 1758587484510,
+            "volume": 127.45
+          },
+          {
+            "timestamp": 1758673884510,
+            "volume": 186.32
+          },
+          {
+            "timestamp": 1758760284510,
+            "volume": 149.39
+          },
+          {
+            "timestamp": 1758846684510,
+            "volume": 171.79
+          },
+          {
+            "timestamp": 1758933084510,
+            "volume": 184.65
+          },
+          {
+            "timestamp": 1759019484510,
+            "volume": 171.27
+          },
+          {
+            "timestamp": 1759105884510,
+            "volume": 115.54
+          },
+          {
+            "timestamp": 1759192284510,
+            "volume": 213.96
+          },
+          {
+            "timestamp": 1759278684510,
+            "volume": 176.3
+          },
+          {
+            "timestamp": 1759365084510,
+            "volume": 203.46
+          },
+          {
+            "timestamp": 1759451484510,
+            "volume": 132.12
+          },
+          {
+            "timestamp": 1759537884510,
+            "volume": 163.31
+          },
+          {
+            "timestamp": 1759624284510,
+            "volume": 173.31
+          },
+          {
+            "timestamp": 1759710684510,
+            "volume": 207.95
+          },
+          {
+            "timestamp": 1759797084510,
+            "volume": 100.05
+          },
+          {
+            "timestamp": 1759883484510,
+            "volume": 191.21
+          },
+          {
+            "timestamp": 1759969884510,
+            "volume": 150.28
+          },
+          {
+            "timestamp": 1760056284510,
+            "volume": 153.08
+          },
+          {
+            "timestamp": 1760142684510,
+            "volume": 106.81
+          },
+          {
+            "timestamp": 1760229084510,
+            "volume": 103.08
+          },
+          {
+            "timestamp": 1760315484510,
+            "volume": 159.53
+          }
+        ],
+        "fees": [
+          {
+            "timestamp": 1757723484510,
+            "fees": 3.64
+          },
+          {
+            "timestamp": 1757809884510,
+            "fees": 4.83
+          },
+          {
+            "timestamp": 1757896284510,
+            "fees": 2.19
+          },
+          {
+            "timestamp": 1757982684510,
+            "fees": 3.03
+          },
+          {
+            "timestamp": 1758069084510,
+            "fees": 3.74
+          },
+          {
+            "timestamp": 1758155484510,
+            "fees": 1.82
+          },
+          {
+            "timestamp": 1758241884510,
+            "fees": 3.66
+          },
+          {
+            "timestamp": 1758328284510,
+            "fees": 2.62
+          },
+          {
+            "timestamp": 1758414684510,
+            "fees": 4.91
+          },
+          {
+            "timestamp": 1758501084510,
+            "fees": 3.67
+          },
+          {
+            "timestamp": 1758587484510,
+            "fees": 2.48
+          },
+          {
+            "timestamp": 1758673884510,
+            "fees": 3.87
+          },
+          {
+            "timestamp": 1758760284510,
+            "fees": 4.22
+          },
+          {
+            "timestamp": 1758846684510,
+            "fees": 3.27
+          },
+          {
+            "timestamp": 1758933084510,
+            "fees": 2.53
+          },
+          {
+            "timestamp": 1759019484510,
+            "fees": 4.58
+          },
+          {
+            "timestamp": 1759105884510,
+            "fees": 3.16
+          },
+          {
+            "timestamp": 1759192284510,
+            "fees": 0.89
+          },
+          {
+            "timestamp": 1759278684510,
+            "fees": 2.68
+          },
+          {
+            "timestamp": 1759365084510,
+            "fees": 2.42
+          },
+          {
+            "timestamp": 1759451484510,
+            "fees": 4.92
+          },
+          {
+            "timestamp": 1759537884510,
+            "fees": 3.59
+          },
+          {
+            "timestamp": 1759624284510,
+            "fees": 2.39
+          },
+          {
+            "timestamp": 1759710684510,
+            "fees": 1.82
+          },
+          {
+            "timestamp": 1759797084510,
+            "fees": 4.64
+          },
+          {
+            "timestamp": 1759883484510,
+            "fees": 3.65
+          },
+          {
+            "timestamp": 1759969884510,
+            "fees": 2.94
+          },
+          {
+            "timestamp": 1760056284510,
+            "fees": 3.21
+          },
+          {
+            "timestamp": 1760142684510,
+            "fees": 1.58
+          },
+          {
+            "timestamp": 1760229084510,
+            "fees": 1.67
+          },
+          {
+            "timestamp": 1760315484510,
+            "fees": 3.49
+          }
+        ],
+        "liquidityDistribution": [
+          {
+            "price": 2.8,
+            "liquidity": 16005.39
+          },
+          {
+            "price": 2.87,
+            "liquidity": 23006.63
+          },
+          {
+            "price": 2.94,
+            "liquidity": 31773.72
+          },
+          {
+            "price": 3.01,
+            "liquidity": 42161.05
+          },
+          {
+            "price": 3.08,
+            "liquidity": 53750.55
+          },
+          {
+            "price": 3.15,
+            "liquidity": 65838.91
+          },
+          {
+            "price": 3.22,
+            "liquidity": 77483.74
+          },
+          {
+            "price": 3.29,
+            "liquidity": 87612.64
+          },
+          {
+            "price": 3.36,
+            "liquidity": 95181.2
+          },
+          {
+            "price": 3.43,
+            "liquidity": 99349.07
+          },
+          {
+            "price": 3.5,
+            "liquidity": 99633.33
+          },
+          {
+            "price": 3.57,
+            "liquidity": 96000.54
+          },
+          {
+            "price": 3.64,
+            "liquidity": 88873.23
+          },
+          {
+            "price": 3.71,
+            "liquidity": 79049.02
+          },
+          {
+            "price": 3.78,
+            "liquidity": 67553.87
+          },
+          {
+            "price": 3.85,
+            "liquidity": 55466.68
+          },
+          {
+            "price": 3.92,
+            "liquidity": 43756.47
+          },
+          {
+            "price": 3.99,
+            "liquidity": 33165.05
+          },
+          {
+            "price": 4.06,
+            "liquidity": 24151.68
+          },
+          {
+            "price": 4.13,
+            "liquidity": 16898.27
+          },
+          {
+            "price": 4.2,
+            "liquidity": 11359.66
+          }
+        ]
+      },
+      "createdAt": "2025-10-08T18:30:00Z",
+      "updatedAt": "2025-10-12T08:15:00Z"
+    },
+    {
+      "id": "8fBnX3TcRmLq9vKpY2sJ7DwHgN5eU4iCaV6tPxQ1oEzM",
+      "protocol": "Raydium",
+      "tokenPair": {
+        "tokenA": {
+          "symbol": "JUP",
+          "name": "Jupiter",
+          "mint": "JUPyiwrYJFskUPiHa7hkeR8VUtAeFoSYbKedZNsDvCN",
+          "decimals": 6
+        },
+        "tokenB": {
+          "symbol": "SOL",
+          "name": "Solana",
+          "mint": "So11111111111111111111111111111111111111112",
+          "decimals": 9
+        },
+        "currentPrice": 0.0068
+      },
+      "priceRange": {
+        "min": 0.005,
+        "max": 0.009,
+        "current": 0.0068
+      },
+      "status": {
+        "inRange": true,
+        "autoCompound": true
+      },
+      "pooledAssets": {
+        "tokenAAmount": 2458.32,
+        "tokenBAmount": 109.6,
+        "totalValueUSD": 33398
+      },
+      "initialAssets": {
+        "tokenAAmount": 15000,
+        "tokenBAmount": 50,
+        "timestamp": "2024-05-15T13:10:00Z"
+      },
+      "metrics": {
+        "totalPnL": 9847.12,
+        "roi": 41.84,
+        "impermanentLoss": 9847.12,
+        "totalAPR": 32.7,
+        "feeAPR": 28.4,
+        "gasCosts": 6.23,
+        "netProfit": 11245.89,
+        "ageInDays": 180
+      },
+      "fees": {
+        "totalEarned": 11252.12,
+        "uncollected": 456.78,
+        "daily": 62.51,
+        "weekly": 437.57,
+        "monthly": 1875.35
+      },
+      "historicalData": {
+        "prices": [
+          {
+            "timestamp": 1757723484510,
+            "price": 0.01
+          },
+          {
+            "timestamp": 1757809884510,
+            "price": 0.01
+          },
+          {
+            "timestamp": 1757896284510,
+            "price": 0.01
+          },
+          {
+            "timestamp": 1757982684510,
+            "price": 0.01
+          },
+          {
+            "timestamp": 1758069084510,
+            "price": 0.01
+          },
+          {
+            "timestamp": 1758155484510,
+            "price": 0.01
+          },
+          {
+            "timestamp": 1758241884510,
+            "price": 0.01
+          },
+          {
+            "timestamp": 1758328284510,
+            "price": 0.01
+          },
+          {
+            "timestamp": 1758414684510,
+            "price": 0.01
+          },
+          {
+            "timestamp": 1758501084510,
+            "price": 0.01
+          },
+          {
+            "timestamp": 1758587484510,
+            "price": 0.01
+          },
+          {
+            "timestamp": 1758673884510,
+            "price": 0.01
+          },
+          {
+            "timestamp": 1758760284510,
+            "price": 0.01
+          },
+          {
+            "timestamp": 1758846684510,
+            "price": 0.01
+          },
+          {
+            "timestamp": 1758933084510,
+            "price": 0.01
+          },
+          {
+            "timestamp": 1759019484510,
+            "price": 0.01
+          },
+          {
+            "timestamp": 1759105884510,
+            "price": 0.01
+          },
+          {
+            "timestamp": 1759192284510,
+            "price": 0.01
+          },
+          {
+            "timestamp": 1759278684510,
+            "price": 0.01
+          },
+          {
+            "timestamp": 1759365084510,
+            "price": 0.01
+          },
+          {
+            "timestamp": 1759451484510,
+            "price": 0.01
+          },
+          {
+            "timestamp": 1759537884510,
+            "price": 0.01
+          },
+          {
+            "timestamp": 1759624284510,
+            "price": 0.01
+          },
+          {
+            "timestamp": 1759710684510,
+            "price": 0.01
+          },
+          {
+            "timestamp": 1759797084510,
+            "price": 0.01
+          },
+          {
+            "timestamp": 1759883484510,
+            "price": 0.01
+          },
+          {
+            "timestamp": 1759969884510,
+            "price": 0.01
+          },
+          {
+            "timestamp": 1760056284510,
+            "price": 0.01
+          },
+          {
+            "timestamp": 1760142684510,
+            "price": 0.01
+          },
+          {
+            "timestamp": 1760229084510,
+            "price": 0.01
+          },
+          {
+            "timestamp": 1760315484510,
+            "price": 0.01
+          }
+        ],
+        "volume": [
+          {
+            "timestamp": 1757723484510,
+            "volume": 219220.12
+          },
+          {
+            "timestamp": 1757809884510,
+            "volume": 353035.64
+          },
+          {
+            "timestamp": 1757896284510,
+            "volume": 226732.04
+          },
+          {
+            "timestamp": 1757982684510,
+            "volume": 365646.77
+          },
+          {
+            "timestamp": 1758069084510,
+            "volume": 445699.77
+          },
+          {
+            "timestamp": 1758155484510,
+            "volume": 208299.88
+          },
+          {
+            "timestamp": 1758241884510,
+            "volume": 292082.03
+          },
+          {
+            "timestamp": 1758328284510,
+            "volume": 440388.5
+          },
+          {
+            "timestamp": 1758414684510,
+            "volume": 439445.91
+          },
+          {
+            "timestamp": 1758501084510,
+            "volume": 361175.12
+          },
+          {
+            "timestamp": 1758587484510,
+            "volume": 200670.14
+          },
+          {
+            "timestamp": 1758673884510,
+            "volume": 388817.28
+          },
+          {
+            "timestamp": 1758760284510,
+            "volume": 254577.83
+          },
+          {
+            "timestamp": 1758846684510,
+            "volume": 205005.82
+          },
+          {
+            "timestamp": 1758933084510,
+            "volume": 442112.86
+          },
+          {
+            "timestamp": 1759019484510,
+            "volume": 333440
+          },
+          {
+            "timestamp": 1759105884510,
+            "volume": 461535.68
+          },
+          {
+            "timestamp": 1759192284510,
+            "volume": 311631.2
+          },
+          {
+            "timestamp": 1759278684510,
+            "volume": 265504.64
+          },
+          {
+            "timestamp": 1759365084510,
+            "volume": 423122.86
+          },
+          {
+            "timestamp": 1759451484510,
+            "volume": 314680.12
+          },
+          {
+            "timestamp": 1759537884510,
+            "volume": 294339.74
+          },
+          {
+            "timestamp": 1759624284510,
+            "volume": 287147.41
+          },
+          {
+            "timestamp": 1759710684510,
+            "volume": 245408.22
+          },
+          {
+            "timestamp": 1759797084510,
+            "volume": 479988.06
+          },
+          {
+            "timestamp": 1759883484510,
+            "volume": 229376.11
+          },
+          {
+            "timestamp": 1759969884510,
+            "volume": 305411.44
+          },
+          {
+            "timestamp": 1760056284510,
+            "volume": 279405.1
+          },
+          {
+            "timestamp": 1760142684510,
+            "volume": 176109.73
+          },
+          {
+            "timestamp": 1760229084510,
+            "volume": 287600.64
+          },
+          {
+            "timestamp": 1760315484510,
+            "volume": 295019.69
+          }
+        ],
+        "fees": [
+          {
+            "timestamp": 1757723484510,
+            "fees": 4.69
+          },
+          {
+            "timestamp": 1757809884510,
+            "fees": 4.07
+          },
+          {
+            "timestamp": 1757896284510,
+            "fees": 1.84
+          },
+          {
+            "timestamp": 1757982684510,
+            "fees": 3.98
+          },
+          {
+            "timestamp": 1758069084510,
+            "fees": 2.34
+          },
+          {
+            "timestamp": 1758155484510,
+            "fees": 2.57
+          },
+          {
+            "timestamp": 1758241884510,
+            "fees": 2.52
+          },
+          {
+            "timestamp": 1758328284510,
+            "fees": 2.43
+          },
+          {
+            "timestamp": 1758414684510,
+            "fees": 1.88
+          },
+          {
+            "timestamp": 1758501084510,
+            "fees": 1.19
+          },
+          {
+            "timestamp": 1758587484510,
+            "fees": 1.59
+          },
+          {
+            "timestamp": 1758673884510,
+            "fees": 4.62
+          },
+          {
+            "timestamp": 1758760284510,
+            "fees": 2.81
+          },
+          {
+            "timestamp": 1758846684510,
+            "fees": 2.92
+          },
+          {
+            "timestamp": 1758933084510,
+            "fees": 3.54
+          },
+          {
+            "timestamp": 1759019484510,
+            "fees": 3.02
+          },
+          {
+            "timestamp": 1759105884510,
+            "fees": 2.64
+          },
+          {
+            "timestamp": 1759192284510,
+            "fees": 3.9
+          },
+          {
+            "timestamp": 1759278684510,
+            "fees": 3.81
+          },
+          {
+            "timestamp": 1759365084510,
+            "fees": 1.93
+          },
+          {
+            "timestamp": 1759451484510,
+            "fees": 1.56
+          },
+          {
+            "timestamp": 1759537884510,
+            "fees": 1.08
+          },
+          {
+            "timestamp": 1759624284510,
+            "fees": 2.32
+          },
+          {
+            "timestamp": 1759710684510,
+            "fees": 2.04
+          },
+          {
+            "timestamp": 1759797084510,
+            "fees": 3.17
+          },
+          {
+            "timestamp": 1759883484510,
+            "fees": 2.09
+          },
+          {
+            "timestamp": 1759969884510,
+            "fees": 3.45
+          },
+          {
+            "timestamp": 1760056284510,
+            "fees": 4.06
+          },
+          {
+            "timestamp": 1760142684510,
+            "fees": 0.55
+          },
+          {
+            "timestamp": 1760229084510,
+            "fees": 2.1
+          },
+          {
+            "timestamp": 1760315484510,
+            "fees": 2.42
+          }
+        ],
+        "liquidityDistribution": [
+          {
+            "price": 0.01,
+            "liquidity": 19789.87
+          },
+          {
+            "price": 0.01,
+            "liquidity": 27803.73
+          },
+          {
+            "price": 0.01,
+            "liquidity": 37531.11
+          },
+          {
+            "price": 0.01,
+            "liquidity": 48675.23
+          },
+          {
+            "price": 0.01,
+            "liquidity": 60653.07
+          },
+          {
+            "price": 0.01,
+            "liquidity": 72614.9
+          },
+          {
+            "price": 0.01,
+            "liquidity": 83527.02
+          },
+          {
+            "price": 0.01,
+            "liquidity": 92311.63
+          },
+          {
+            "price": 0.01,
+            "liquidity": 98019.87
+          },
+          {
+            "price": 0.01,
+            "liquidity": 100000
+          },
+          {
+            "price": 0.01,
+            "liquidity": 98019.87
+          },
+          {
+            "price": 0.01,
+            "liquidity": 92311.63
+          },
+          {
+            "price": 0.01,
+            "liquidity": 83527.02
+          },
+          {
+            "price": 0.01,
+            "liquidity": 72614.9
+          },
+          {
+            "price": 0.01,
+            "liquidity": 60653.07
+          },
+          {
+            "price": 0.01,
+            "liquidity": 48675.23
+          },
+          {
+            "price": 0.01,
+            "liquidity": 37531.11
+          },
+          {
+            "price": 0.01,
+            "liquidity": 27803.73
+          },
+          {
+            "price": 0.01,
+            "liquidity": 19789.87
+          },
+          {
+            "price": 0.01,
+            "liquidity": 13533.53
+          },
+          {
+            "price": 0.01,
+            "liquidity": 8892.16
+          }
+        ]
+      },
+      "createdAt": "2024-05-15T13:10:00Z",
+      "updatedAt": "2025-10-12T08:15:00Z"
+    },
+    {
+      "id": "FnQ7vCpLxW2kM9jY8bR5sD3tHgN6eUoA4iVcP1zKmEx",
+      "protocol": "Orca",
+      "tokenPair": {
+        "tokenA": {
+          "symbol": "ORCA",
+          "name": "Orca",
+          "mint": "orcaEKTdK7LKz57vaAYr9QeNsVEPfiu6QeMU1kektZE",
+          "decimals": 6
+        },
+        "tokenB": {
+          "symbol": "USDC",
+          "name": "USD Coin",
+          "mint": "EPjFWdd5AufqSSqeM2qN1xzybapC8G4wEGGkZwyTDt1v",
+          "decimals": 6
+        },
+        "currentPrice": 4.23
+      },
+      "priceRange": {
+        "min": 3.5,
+        "max": 5.5,
+        "current": 4.23
+      },
+      "status": {
+        "inRange": true,
+        "autoCompound": false
+      },
+      "pooledAssets": {
+        "tokenAAmount": 847.52,
+        "tokenBAmount": 1789.34,
+        "totalValueUSD": 5373.17
+      },
+      "initialAssets": {
+        "tokenAAmount": 850,
+        "tokenBAmount": 1700,
+        "timestamp": "2024-07-22T10:05:00Z"
+      },
+      "metrics": {
+        "totalPnL": 78.92,
+        "roi": 1.49,
+        "impermanentLoss": 78.92,
+        "totalAPR": 6.5,
+        "feeAPR": 5.8,
+        "gasCosts": 2.1,
+        "netProfit": 156.82,
+        "ageInDays": 112
+      },
+      "fees": {
+        "totalEarned": 158.92,
+        "uncollected": 23.45,
+        "daily": 1.42,
+        "weekly": 9.94,
+        "monthly": 42.6
+      },
+      "historicalData": {
+        "prices": [
+          {
+            "timestamp": 1757723484510,
+            "price": 4.32
+          },
+          {
+            "timestamp": 1757809884510,
+            "price": 4.38
+          },
+          {
+            "timestamp": 1757896284510,
+            "price": 4.41
+          },
+          {
+            "timestamp": 1757982684510,
+            "price": 4.5
+          },
+          {
+            "timestamp": 1758069084510,
+            "price": 4.61
+          },
+          {
+            "timestamp": 1758155484510,
+            "price": 4.6
+          },
+          {
+            "timestamp": 1758241884510,
+            "price": 4.5
+          },
+          {
+            "timestamp": 1758328284510,
+            "price": 4.59
+          },
+          {
+            "timestamp": 1758414684510,
+            "price": 4.53
+          },
+          {
+            "timestamp": 1758501084510,
+            "price": 4.6
+          },
+          {
+            "timestamp": 1758587484510,
+            "price": 4.73
+          },
+          {
+            "timestamp": 1758673884510,
+            "price": 4.83
+          },
+          {
+            "timestamp": 1758760284510,
+            "price": 4.7
+          },
+          {
+            "timestamp": 1758846684510,
+            "price": 4.65
+          },
+          {
+            "timestamp": 1758933084510,
+            "price": 4.64
+          },
+          {
+            "timestamp": 1759019484510,
+            "price": 4.76
+          },
+          {
+            "timestamp": 1759105884510,
+            "price": 4.76
+          },
+          {
+            "timestamp": 1759192284510,
+            "price": 4.63
+          },
+          {
+            "timestamp": 1759278684510,
+            "price": 4.57
+          },
+          {
+            "timestamp": 1759365084510,
+            "price": 4.67
+          },
+          {
+            "timestamp": 1759451484510,
+            "price": 4.56
+          },
+          {
+            "timestamp": 1759537884510,
+            "price": 4.53
+          },
+          {
+            "timestamp": 1759624284510,
+            "price": 4.46
+          },
+          {
+            "timestamp": 1759710684510,
+            "price": 4.59
+          },
+          {
+            "timestamp": 1759797084510,
+            "price": 4.66
+          },
+          {
+            "timestamp": 1759883484510,
+            "price": 4.54
+          },
+          {
+            "timestamp": 1759969884510,
+            "price": 4.63
+          },
+          {
+            "timestamp": 1760056284510,
+            "price": 4.65
+          },
+          {
+            "timestamp": 1760142684510,
+            "price": 4.68
+          },
+          {
+            "timestamp": 1760229084510,
+            "price": 4.58
+          },
+          {
+            "timestamp": 1760315484510,
+            "price": 4.49
+          }
+        ],
+        "volume": [
+          {
+            "timestamp": 1757723484510,
+            "volume": 67033.41
+          },
+          {
+            "timestamp": 1757809884510,
+            "volume": 50670.62
+          },
+          {
+            "timestamp": 1757896284510,
+            "volume": 50270.82
+          },
+          {
+            "timestamp": 1757982684510,
+            "volume": 44854.48
+          },
+          {
+            "timestamp": 1758069084510,
+            "volume": 35047.57
+          },
+          {
+            "timestamp": 1758155484510,
+            "volume": 65131.06
+          },
+          {
+            "timestamp": 1758241884510,
+            "volume": 30930.46
+          },
+          {
+            "timestamp": 1758328284510,
+            "volume": 51782.6
+          },
+          {
+            "timestamp": 1758414684510,
+            "volume": 73791.34
+          },
+          {
+            "timestamp": 1758501084510,
+            "volume": 54970.25
+          },
+          {
+            "timestamp": 1758587484510,
+            "volume": 49738.74
+          },
+          {
+            "timestamp": 1758673884510,
+            "volume": 67532.37
+          },
+          {
+            "timestamp": 1758760284510,
+            "volume": 33442.65
+          },
+          {
+            "timestamp": 1758846684510,
+            "volume": 31084.38
+          },
+          {
+            "timestamp": 1758933084510,
+            "volume": 40708.47
+          },
+          {
+            "timestamp": 1759019484510,
+            "volume": 38003.16
+          },
+          {
+            "timestamp": 1759105884510,
+            "volume": 79938.4
+          },
+          {
+            "timestamp": 1759192284510,
+            "volume": 74579.17
+          },
+          {
+            "timestamp": 1759278684510,
+            "volume": 30431.02
+          },
+          {
+            "timestamp": 1759365084510,
+            "volume": 41989.39
+          },
+          {
+            "timestamp": 1759451484510,
+            "volume": 79723.54
+          },
+          {
+            "timestamp": 1759537884510,
+            "volume": 68426
+          },
+          {
+            "timestamp": 1759624284510,
+            "volume": 40488.33
+          },
+          {
+            "timestamp": 1759710684510,
+            "volume": 39942.25
+          },
+          {
+            "timestamp": 1759797084510,
+            "volume": 42435.32
+          },
+          {
+            "timestamp": 1759883484510,
+            "volume": 66200.46
+          },
+          {
+            "timestamp": 1759969884510,
+            "volume": 61751.56
+          },
+          {
+            "timestamp": 1760056284510,
+            "volume": 59648.54
+          },
+          {
+            "timestamp": 1760142684510,
+            "volume": 62357.3
+          },
+          {
+            "timestamp": 1760229084510,
+            "volume": 50719.91
+          },
+          {
+            "timestamp": 1760315484510,
+            "volume": 58561.16
+          }
+        ],
+        "fees": [
+          {
+            "timestamp": 1757723484510,
+            "fees": 4.78
+          },
+          {
+            "timestamp": 1757809884510,
+            "fees": 2.32
+          },
+          {
+            "timestamp": 1757896284510,
+            "fees": 1.88
+          },
+          {
+            "timestamp": 1757982684510,
+            "fees": 3.71
+          },
+          {
+            "timestamp": 1758069084510,
+            "fees": 4.35
+          },
+          {
+            "timestamp": 1758155484510,
+            "fees": 4.63
+          },
+          {
+            "timestamp": 1758241884510,
+            "fees": 1.11
+          },
+          {
+            "timestamp": 1758328284510,
+            "fees": 0.98
+          },
+          {
+            "timestamp": 1758414684510,
+            "fees": 1.96
+          },
+          {
+            "timestamp": 1758501084510,
+            "fees": 3.92
+          },
+          {
+            "timestamp": 1758587484510,
+            "fees": 3.73
+          },
+          {
+            "timestamp": 1758673884510,
+            "fees": 2.2
+          },
+          {
+            "timestamp": 1758760284510,
+            "fees": 1
+          },
+          {
+            "timestamp": 1758846684510,
+            "fees": 1.83
+          },
+          {
+            "timestamp": 1758933084510,
+            "fees": 0.8
+          },
+          {
+            "timestamp": 1759019484510,
+            "fees": 1.54
+          },
+          {
+            "timestamp": 1759105884510,
+            "fees": 2.05
+          },
+          {
+            "timestamp": 1759192284510,
+            "fees": 1.3
+          },
+          {
+            "timestamp": 1759278684510,
+            "fees": 3.11
+          },
+          {
+            "timestamp": 1759365084510,
+            "fees": 4.13
+          },
+          {
+            "timestamp": 1759451484510,
+            "fees": 0.81
+          },
+          {
+            "timestamp": 1759537884510,
+            "fees": 3.68
+          },
+          {
+            "timestamp": 1759624284510,
+            "fees": 1.24
+          },
+          {
+            "timestamp": 1759710684510,
+            "fees": 4.08
+          },
+          {
+            "timestamp": 1759797084510,
+            "fees": 1.57
+          },
+          {
+            "timestamp": 1759883484510,
+            "fees": 0.7
+          },
+          {
+            "timestamp": 1759969884510,
+            "fees": 1.65
+          },
+          {
+            "timestamp": 1760056284510,
+            "fees": 3.24
+          },
+          {
+            "timestamp": 1760142684510,
+            "fees": 3.01
+          },
+          {
+            "timestamp": 1760229084510,
+            "fees": 0.72
+          },
+          {
+            "timestamp": 1760315484510,
+            "fees": 3.97
+          }
+        ],
+        "liquidityDistribution": [
+          {
+            "price": 3.5,
+            "liquidity": 34445.22
+          },
+          {
+            "price": 3.6,
+            "liquidity": 45212.35
+          },
+          {
+            "price": 3.7,
+            "liquidity": 57018.18
+          },
+          {
+            "price": 3.8,
+            "liquidity": 69087.25
+          },
+          {
+            "price": 3.9,
+            "liquidity": 80428.63
+          },
+          {
+            "price": 4,
+            "liquidity": 89960.46
+          },
+          {
+            "price": 4.1,
+            "liquidity": 96676.48
+          },
+          {
+            "price": 4.2,
+            "liquidity": 99820.16
+          },
+          {
+            "price": 4.3,
+            "liquidity": 99024.79
+          },
+          {
+            "price": 4.4,
+            "liquidity": 94383.87
+          },
+          {
+            "price": 4.5,
+            "liquidity": 86433.06
+          },
+          {
+            "price": 4.6,
+            "liquidity": 76048.42
+          },
+          {
+            "price": 4.7,
+            "liquidity": 64287.82
+          },
+          {
+            "price": 4.8,
+            "liquidity": 52215.02
+          },
+          {
+            "price": 4.9,
+            "liquidity": 40746.51
+          },
+          {
+            "price": 5,
+            "liquidity": 30550.17
+          },
+          {
+            "price": 5.1,
+            "liquidity": 22007.21
+          },
+          {
+            "price": 5.2,
+            "liquidity": 15231.57
+          },
+          {
+            "price": 5.3,
+            "liquidity": 10128.67
+          },
+          {
+            "price": 5.4,
+            "liquidity": 6471.26
+          },
+          {
+            "price": 5.5,
+            "liquidity": 3972.4
+          }
+        ]
+      },
+      "createdAt": "2024-07-22T10:05:00Z",
+      "updatedAt": "2025-10-12T08:15:00Z"
+    },
+    {
+      "id": "DpW8kZ5vQnR3xYcHfJ2mL7tS9gB6eUoA1iNdP4rKmXz",
+      "protocol": "Raydium",
+      "tokenPair": {
+        "tokenA": {
+          "symbol": "WIF",
+          "name": "dogwifhat",
+          "mint": "EKpQGSJtjMFqKZ9KQanSqYXRcF8fBopzLHYxdM65zcjm",
+          "decimals": 6
+        },
+        "tokenB": {
+          "symbol": "SOL",
+          "name": "Solana",
+          "mint": "So11111111111111111111111111111111111111112",
+          "decimals": 9
+        },
+        "currentPrice": 0.0134
+      },
+      "priceRange": {
+        "min": 0.008,
+        "max": 0.025,
+        "current": 0.0134
+      },
+      "status": {
+        "inRange": true,
+        "autoCompound": true
+      },
+      "pooledAssets": {
+        "tokenAAmount": 8452.76,
+        "tokenBAmount": 743.28,
+        "totalValueUSD": 226542.8
+      },
+      "initialAssets": {
+        "tokenAAmount": 50000,
+        "tokenBAmount": 335,
+        "timestamp": "2024-02-10T08:50:00Z"
+      },
+      "metrics": {
+        "totalPnL": 140238.94,
+        "roi": 162.27,
+        "impermanentLoss": 140238.94,
+        "totalAPR": 78.4,
+        "feeAPR": 65.3,
+        "gasCosts": 12.56,
+        "netProfit": 154872.3,
+        "ageInDays": 245
+      },
+      "fees": {
+        "totalEarned": 154884.86,
+        "uncollected": 8945.67,
+        "daily": 632.18,
+        "weekly": 4425.26,
+        "monthly": 18965.4
+      },
+      "historicalData": {
+        "prices": [
+          {
+            "timestamp": 1757723484510,
+            "price": 0.01
+          },
+          {
+            "timestamp": 1757809884510,
+            "price": 0.01
+          },
+          {
+            "timestamp": 1757896284510,
+            "price": 0.01
+          },
+          {
+            "timestamp": 1757982684510,
+            "price": 0.01
+          },
+          {
+            "timestamp": 1758069084510,
+            "price": 0.01
+          },
+          {
+            "timestamp": 1758155484510,
+            "price": 0.01
+          },
+          {
+            "timestamp": 1758241884510,
+            "price": 0.01
+          },
+          {
+            "timestamp": 1758328284510,
+            "price": 0.01
+          },
+          {
+            "timestamp": 1758414684510,
+            "price": 0.01
+          },
+          {
+            "timestamp": 1758501084510,
+            "price": 0.01
+          },
+          {
+            "timestamp": 1758587484510,
+            "price": 0.01
+          },
+          {
+            "timestamp": 1758673884510,
+            "price": 0.01
+          },
+          {
+            "timestamp": 1758760284510,
+            "price": 0.01
+          },
+          {
+            "timestamp": 1758846684510,
+            "price": 0.02
+          },
+          {
+            "timestamp": 1758933084510,
+            "price": 0.02
+          },
+          {
+            "timestamp": 1759019484510,
+            "price": 0.02
+          },
+          {
+            "timestamp": 1759105884510,
+            "price": 0.02
+          },
+          {
+            "timestamp": 1759192284510,
+            "price": 0.02
+          },
+          {
+            "timestamp": 1759278684510,
+            "price": 0.02
+          },
+          {
+            "timestamp": 1759365084510,
+            "price": 0.02
+          },
+          {
+            "timestamp": 1759451484510,
+            "price": 0.02
+          },
+          {
+            "timestamp": 1759537884510,
+            "price": 0.02
+          },
+          {
+            "timestamp": 1759624284510,
+            "price": 0.02
+          },
+          {
+            "timestamp": 1759710684510,
+            "price": 0.02
+          },
+          {
+            "timestamp": 1759797084510,
+            "price": 0.02
+          },
+          {
+            "timestamp": 1759883484510,
+            "price": 0.02
+          },
+          {
+            "timestamp": 1759969884510,
+            "price": 0.02
+          },
+          {
+            "timestamp": 1760056284510,
+            "price": 0.02
+          },
+          {
+            "timestamp": 1760142684510,
+            "price": 0.02
+          },
+          {
+            "timestamp": 1760229084510,
+            "price": 0.02
+          },
+          {
+            "timestamp": 1760315484510,
+            "price": 0.02
+          }
+        ],
+        "volume": [
+          {
+            "timestamp": 1757723484510,
+            "volume": 1479678.15
+          },
+          {
+            "timestamp": 1757809884510,
+            "volume": 2295431.26
+          },
+          {
+            "timestamp": 1757896284510,
+            "volume": 2874533.99
+          },
+          {
+            "timestamp": 1757982684510,
+            "volume": 1860835.65
+          },
+          {
+            "timestamp": 1758069084510,
+            "volume": 2649326.28
+          },
+          {
+            "timestamp": 1758155484510,
+            "volume": 2342524.06
+          },
+          {
+            "timestamp": 1758241884510,
+            "volume": 3163778.15
+          },
+          {
+            "timestamp": 1758328284510,
+            "volume": 1706909.27
+          },
+          {
+            "timestamp": 1758414684510,
+            "volume": 1581347.39
+          },
+          {
+            "timestamp": 1758501084510,
+            "volume": 2994678.65
+          },
+          {
+            "timestamp": 1758587484510,
+            "volume": 2048632.03
+          },
+          {
+            "timestamp": 1758673884510,
+            "volume": 1704549.97
+          },
+          {
+            "timestamp": 1758760284510,
+            "volume": 1561364.43
+          },
+          {
+            "timestamp": 1758846684510,
+            "volume": 2048330.52
+          },
+          {
+            "timestamp": 1758933084510,
+            "volume": 2843878.99
+          },
+          {
+            "timestamp": 1759019484510,
+            "volume": 1527543.04
+          },
+          {
+            "timestamp": 1759105884510,
+            "volume": 2373133.46
+          },
+          {
+            "timestamp": 1759192284510,
+            "volume": 2794474.88
+          },
+          {
+            "timestamp": 1759278684510,
+            "volume": 2349633.74
+          },
+          {
+            "timestamp": 1759365084510,
+            "volume": 1662549.71
+          },
+          {
+            "timestamp": 1759451484510,
+            "volume": 2815143.91
+          },
+          {
+            "timestamp": 1759537884510,
+            "volume": 3377244.61
+          },
+          {
+            "timestamp": 1759624284510,
+            "volume": 2552909.34
+          },
+          {
+            "timestamp": 1759710684510,
+            "volume": 1963399.85
+          },
+          {
+            "timestamp": 1759797084510,
+            "volume": 2477648.6
+          },
+          {
+            "timestamp": 1759883484510,
+            "volume": 1601578.24
+          },
+          {
+            "timestamp": 1759969884510,
+            "volume": 3171236.53
+          },
+          {
+            "timestamp": 1760056284510,
+            "volume": 2520795.26
+          },
+          {
+            "timestamp": 1760142684510,
+            "volume": 3338472.91
+          },
+          {
+            "timestamp": 1760229084510,
+            "volume": 1617597.75
+          },
+          {
+            "timestamp": 1760315484510,
+            "volume": 1893458.24
+          }
+        ],
+        "fees": [
+          {
+            "timestamp": 1757723484510,
+            "fees": 0.88
+          },
+          {
+            "timestamp": 1757809884510,
+            "fees": 2.26
+          },
+          {
+            "timestamp": 1757896284510,
+            "fees": 4.03
+          },
+          {
+            "timestamp": 1757982684510,
+            "fees": 0.88
+          },
+          {
+            "timestamp": 1758069084510,
+            "fees": 3.77
+          },
+          {
+            "timestamp": 1758155484510,
+            "fees": 4.9
+          },
+          {
+            "timestamp": 1758241884510,
+            "fees": 4.01
+          },
+          {
+            "timestamp": 1758328284510,
+            "fees": 3.42
+          },
+          {
+            "timestamp": 1758414684510,
+            "fees": 2.53
+          },
+          {
+            "timestamp": 1758501084510,
+            "fees": 4.4
+          },
+          {
+            "timestamp": 1758587484510,
+            "fees": 2.91
+          },
+          {
+            "timestamp": 1758673884510,
+            "fees": 0.77
+          },
+          {
+            "timestamp": 1758760284510,
+            "fees": 2.09
+          },
+          {
+            "timestamp": 1758846684510,
+            "fees": 0.68
+          },
+          {
+            "timestamp": 1758933084510,
+            "fees": 1.96
+          },
+          {
+            "timestamp": 1759019484510,
+            "fees": 1.49
+          },
+          {
+            "timestamp": 1759105884510,
+            "fees": 1.55
+          },
+          {
+            "timestamp": 1759192284510,
+            "fees": 0.77
+          },
+          {
+            "timestamp": 1759278684510,
+            "fees": 2.11
+          },
+          {
+            "timestamp": 1759365084510,
+            "fees": 4.95
+          },
+          {
+            "timestamp": 1759451484510,
+            "fees": 2.16
+          },
+          {
+            "timestamp": 1759537884510,
+            "fees": 4.81
+          },
+          {
+            "timestamp": 1759624284510,
+            "fees": 2.93
+          },
+          {
+            "timestamp": 1759710684510,
+            "fees": 4.8
+          },
+          {
+            "timestamp": 1759797084510,
+            "fees": 4.36
+          },
+          {
+            "timestamp": 1759883484510,
+            "fees": 1.52
+          },
+          {
+            "timestamp": 1759969884510,
+            "fees": 4.5
+          },
+          {
+            "timestamp": 1760056284510,
+            "fees": 4.29
+          },
+          {
+            "timestamp": 1760142684510,
+            "fees": 0.67
+          },
+          {
+            "timestamp": 1760229084510,
+            "fees": 3.98
+          },
+          {
+            "timestamp": 1760315484510,
+            "fees": 4.93
+          }
+        ],
+        "liquidityDistribution": [
+          {
+            "price": 0.01,
+            "liquidity": 44610.66
+          },
+          {
+            "price": 0.01,
+            "liquidity": 56378.65
+          },
+          {
+            "price": 0.01,
+            "liquidity": 68457.17
+          },
+          {
+            "price": 0.01,
+            "liquidity": 79864.06
+          },
+          {
+            "price": 0.01,
+            "liquidity": 89518.34
+          },
+          {
+            "price": 0.01,
+            "liquidity": 96405.3
+          },
+          {
+            "price": 0.01,
+            "liquidity": 99751.18
+          },
+          {
+            "price": 0.01,
+            "liquidity": 99166.13
+          },
+          {
+            "price": 0.01,
+            "liquidity": 94718.95
+          },
+          {
+            "price": 0.02,
+            "liquidity": 86923.79
+          },
+          {
+            "price": 0.02,
+            "liquidity": 76642.32
+          },
+          {
+            "price": 0.02,
+            "liquidity": 64927.23
+          },
+          {
+            "price": 0.02,
+            "liquidity": 52846.14
+          },
+          {
+            "price": 0.02,
+            "liquidity": 41326.43
+          },
+          {
+            "price": 0.02,
+            "liquidity": 31050.66
+          },
+          {
+            "price": 0.02,
+            "liquidity": 22415.16
+          },
+          {
+            "price": 0.02,
+            "liquidity": 15546.81
+          },
+          {
+            "price": 0.02,
+            "liquidity": 10360.21
+          },
+          {
+            "price": 0.02,
+            "liquidity": 6633.22
+          },
+          {
+            "price": 0.02,
+            "liquidity": 4080.45
+          },
+          {
+            "price": 0.03,
+            "liquidity": 2411.69
+          }
+        ]
+      },
+      "createdAt": "2024-02-10T08:50:00Z",
+      "updatedAt": "2025-10-12T08:15:00Z"
+    },
+    {
+      "id": "GkL3pW9vRnQ7xYcHfJ2mZ5tS8dB4eUoA6iKcP1zNmXy",
+      "protocol": "Orca",
+      "tokenPair": {
+        "tokenA": {
+          "symbol": "MSOL",
+          "name": "Marinade staked SOL",
+          "mint": "mSoLzYCxHdYgdzU16g5QSh3i5K3z3KZK7ytfqcJm7So",
+          "decimals": 9
+        },
+        "tokenB": {
+          "symbol": "SOL",
+          "name": "Solana",
+          "mint": "So11111111111111111111111111111111111111112",
+          "decimals": 9
+        },
+        "currentPrice": 1.047
+      },
+      "priceRange": {
+        "min": 1.03,
+        "max": 1.08,
+        "current": 1.047
+      },
+      "status": {
+        "inRange": true,
+        "autoCompound": false
+      },
+      "pooledAssets": {
+        "tokenAAmount": 52.34,
+        "tokenBAmount": 54.76,
+        "totalValueUSD": 16676.82
+      },
+      "initialAssets": {
+        "tokenAAmount": 52,
+        "tokenBAmount": 54.5,
+        "timestamp": "2024-04-18T15:40:00Z"
+      },
+      "metrics": {
+        "totalPnL": 0,
+        "roi": 0,
+        "impermanentLoss": 0,
+        "totalAPR": 2.1,
+        "feeAPR": 2.1,
+        "gasCosts": 1.95,
+        "netProfit": 54.38,
+        "ageInDays": 177
+      },
+      "fees": {
+        "totalEarned": 56.33,
+        "uncollected": 8.9,
+        "daily": 0.32,
+        "weekly": 2.24,
+        "monthly": 9.6
+      },
+      "historicalData": {
+        "prices": [
+          {
+            "timestamp": 1757723484511,
+            "price": 1.06
+          },
+          {
+            "timestamp": 1757809884511,
+            "price": 1.05
+          },
+          {
+            "timestamp": 1757896284511,
+            "price": 1.05
+          },
+          {
+            "timestamp": 1757982684511,
+            "price": 1.02
+          },
+          {
+            "timestamp": 1758069084511,
+            "price": 0.99
+          },
+          {
+            "timestamp": 1758155484511,
+            "price": 1.02
+          },
+          {
+            "timestamp": 1758241884511,
+            "price": 1.03
+          },
+          {
+            "timestamp": 1758328284511,
+            "price": 1.02
+          },
+          {
+            "timestamp": 1758414684511,
+            "price": 1
+          },
+          {
+            "timestamp": 1758501084511,
+            "price": 1.01
+          },
+          {
+            "timestamp": 1758587484511,
+            "price": 1.01
+          },
+          {
+            "timestamp": 1758673884511,
+            "price": 0.98
+          },
+          {
+            "timestamp": 1758760284511,
+            "price": 0.96
+          },
+          {
+            "timestamp": 1758846684511,
+            "price": 0.96
+          },
+          {
+            "timestamp": 1758933084511,
+            "price": 0.94
+          },
+          {
+            "timestamp": 1759019484511,
+            "price": 0.94
+          },
+          {
+            "timestamp": 1759105884511,
+            "price": 0.93
+          },
+          {
+            "timestamp": 1759192284511,
+            "price": 0.94
+          },
+          {
+            "timestamp": 1759278684511,
+            "price": 0.96
+          },
+          {
+            "timestamp": 1759365084511,
+            "price": 0.93
+          },
+          {
+            "timestamp": 1759451484511,
+            "price": 0.91
+          },
+          {
+            "timestamp": 1759537884511,
+            "price": 0.93
+          },
+          {
+            "timestamp": 1759624284511,
+            "price": 0.9
+          },
+          {
+            "timestamp": 1759710684511,
+            "price": 0.88
+          },
+          {
+            "timestamp": 1759797084511,
+            "price": 0.86
+          },
+          {
+            "timestamp": 1759883484511,
+            "price": 0.85
+          },
+          {
+            "timestamp": 1759969884511,
+            "price": 0.85
+          },
+          {
+            "timestamp": 1760056284511,
+            "price": 0.83
+          },
+          {
+            "timestamp": 1760142684511,
+            "price": 0.81
+          },
+          {
+            "timestamp": 1760229084511,
+            "price": 0.81
+          },
+          {
+            "timestamp": 1760315484511,
+            "price": 0.8
+          }
+        ],
+        "volume": [
+          {
+            "timestamp": 1757723484511,
+            "volume": 226582.5
+          },
+          {
+            "timestamp": 1757809884511,
+            "volume": 96134.98
+          },
+          {
+            "timestamp": 1757896284511,
+            "volume": 98367.85
+          },
+          {
+            "timestamp": 1757982684511,
+            "volume": 232721.33
+          },
+          {
+            "timestamp": 1758069084511,
+            "volume": 90441.35
+          },
+          {
+            "timestamp": 1758155484511,
+            "volume": 134026.64
+          },
+          {
+            "timestamp": 1758241884511,
+            "volume": 218281.02
+          },
+          {
+            "timestamp": 1758328284511,
+            "volume": 102798.58
+          },
+          {
+            "timestamp": 1758414684511,
+            "volume": 130967.63
+          },
+          {
+            "timestamp": 1758501084511,
+            "volume": 108483.57
+          },
+          {
+            "timestamp": 1758587484511,
+            "volume": 166815.61
+          },
+          {
+            "timestamp": 1758673884511,
+            "volume": 101673.69
+          },
+          {
+            "timestamp": 1758760284511,
+            "volume": 93910.76
+          },
+          {
+            "timestamp": 1758846684511,
+            "volume": 141034.33
+          },
+          {
+            "timestamp": 1758933084511,
+            "volume": 179086.88
+          },
+          {
+            "timestamp": 1759019484511,
+            "volume": 235445.52
+          },
+          {
+            "timestamp": 1759105884511,
+            "volume": 148429.68
+          },
+          {
+            "timestamp": 1759192284511,
+            "volume": 245275.03
+          },
+          {
+            "timestamp": 1759278684511,
+            "volume": 204973.64
+          },
+          {
+            "timestamp": 1759365084511,
+            "volume": 112588.06
+          },
+          {
+            "timestamp": 1759451484511,
+            "volume": 140610.79
+          },
+          {
+            "timestamp": 1759537884511,
+            "volume": 244082.15
+          },
+          {
+            "timestamp": 1759624284511,
+            "volume": 200321.92
+          },
+          {
+            "timestamp": 1759710684511,
+            "volume": 174671.34
+          },
+          {
+            "timestamp": 1759797084511,
+            "volume": 152886.65
+          },
+          {
+            "timestamp": 1759883484511,
+            "volume": 232810.02
+          },
+          {
+            "timestamp": 1759969884511,
+            "volume": 192231.19
+          },
+          {
+            "timestamp": 1760056284511,
+            "volume": 100095.86
+          },
+          {
+            "timestamp": 1760142684511,
+            "volume": 233982.31
+          },
+          {
+            "timestamp": 1760229084511,
+            "volume": 149835.41
+          },
+          {
+            "timestamp": 1760315484511,
+            "volume": 235621.41
+          }
+        ],
+        "fees": [
+          {
+            "timestamp": 1757723484511,
+            "fees": 4.6
+          },
+          {
+            "timestamp": 1757809884511,
+            "fees": 2.79
+          },
+          {
+            "timestamp": 1757896284511,
+            "fees": 3.15
+          },
+          {
+            "timestamp": 1757982684511,
+            "fees": 4.91
+          },
+          {
+            "timestamp": 1758069084511,
+            "fees": 3.9
+          },
+          {
+            "timestamp": 1758155484511,
+            "fees": 4.39
+          },
+          {
+            "timestamp": 1758241884511,
+            "fees": 2.01
+          },
+          {
+            "timestamp": 1758328284511,
+            "fees": 0.84
+          },
+          {
+            "timestamp": 1758414684511,
+            "fees": 2.65
+          },
+          {
+            "timestamp": 1758501084511,
+            "fees": 1.17
+          },
+          {
+            "timestamp": 1758587484511,
+            "fees": 0.77
+          },
+          {
+            "timestamp": 1758673884511,
+            "fees": 2.22
+          },
+          {
+            "timestamp": 1758760284511,
+            "fees": 2.07
+          },
+          {
+            "timestamp": 1758846684511,
+            "fees": 2.57
+          },
+          {
+            "timestamp": 1758933084511,
+            "fees": 4.44
+          },
+          {
+            "timestamp": 1759019484511,
+            "fees": 2.16
+          },
+          {
+            "timestamp": 1759105884511,
+            "fees": 4.37
+          },
+          {
+            "timestamp": 1759192284511,
+            "fees": 3.79
+          },
+          {
+            "timestamp": 1759278684511,
+            "fees": 3.94
+          },
+          {
+            "timestamp": 1759365084511,
+            "fees": 4.58
+          },
+          {
+            "timestamp": 1759451484511,
+            "fees": 4.71
+          },
+          {
+            "timestamp": 1759537884511,
+            "fees": 2.76
+          },
+          {
+            "timestamp": 1759624284511,
+            "fees": 4.04
+          },
+          {
+            "timestamp": 1759710684511,
+            "fees": 4.17
+          },
+          {
+            "timestamp": 1759797084511,
+            "fees": 1.16
+          },
+          {
+            "timestamp": 1759883484511,
+            "fees": 2.02
+          },
+          {
+            "timestamp": 1759969884511,
+            "fees": 4.17
+          },
+          {
+            "timestamp": 1760056284511,
+            "fees": 3.42
+          },
+          {
+            "timestamp": 1760142684511,
+            "fees": 4.19
+          },
+          {
+            "timestamp": 1760229084511,
+            "fees": 4.44
+          },
+          {
+            "timestamp": 1760315484511,
+            "fees": 4.87
+          }
+        ],
+        "liquidityDistribution": [
+          {
+            "price": 1.03,
+            "liquidity": 39661.07
+          },
+          {
+            "price": 1.03,
+            "liquidity": 51027.78
+          },
+          {
+            "price": 1.04,
+            "liquidity": 63077.88
+          },
+          {
+            "price": 1.04,
+            "liquidity": 74916.2
+          },
+          {
+            "price": 1.04,
+            "liquidity": 85487.5
+          },
+          {
+            "price": 1.04,
+            "liquidity": 93725.49
+          },
+          {
+            "price": 1.04,
+            "liquidity": 98728.16
+          },
+          {
+            "price": 1.05,
+            "liquidity": 99920.03
+          },
+          {
+            "price": 1.05,
+            "liquidity": 97161.08
+          },
+          {
+            "price": 1.05,
+            "liquidity": 90773.75
+          },
+          {
+            "price": 1.06,
+            "liquidity": 81481.03
+          },
+          {
+            "price": 1.06,
+            "liquidity": 70271.77
+          },
+          {
+            "price": 1.06,
+            "liquidity": 58228.22
+          },
+          {
+            "price": 1.06,
+            "liquidity": 46356.9
+          },
+          {
+            "price": 1.06,
+            "liquidity": 35458.75
+          },
+          {
+            "price": 1.07,
+            "liquidity": 26059.18
+          },
+          {
+            "price": 1.07,
+            "liquidity": 18400.36
+          },
+          {
+            "price": 1.07,
+            "liquidity": 12483.03
+          },
+          {
+            "price": 1.08,
+            "liquidity": 8136.58
+          },
+          {
+            "price": 1.08,
+            "liquidity": 5095.56
+          },
+          {
+            "price": 1.08,
+            "liquidity": 3065.99
+          }
+        ]
+      },
+      "createdAt": "2024-04-18T15:40:00Z",
+      "updatedAt": "2025-10-12T08:15:00Z"
+    },
+    {
+      "id": "CmN8wZ3vPnR5xKcQfY2tL9jS6dB7eUoA4iVdG1zHmWx",
+      "protocol": "Raydium",
+      "tokenPair": {
+        "tokenA": {
+          "symbol": "PYTH",
+          "name": "Pyth Network",
+          "mint": "HZ1JovNiVvGrGNiiYvEozEVgZ58xaU3RKwX8eACQBCt3",
+          "decimals": 6
+        },
+        "tokenB": {
+          "symbol": "USDC",
+          "name": "USD Coin",
+          "mint": "EPjFWdd5AufqSSqeM2qN1xzybapC8G4wEGGkZwyTDt1v",
+          "decimals": 6
+        },
+        "currentPrice": 0.42
+      },
+      "priceRange": {
+        "min": 0.35,
+        "max": 0.55,
+        "current": 0.42
+      },
+      "status": {
+        "inRange": true,
+        "autoCompound": false
+      },
+      "pooledAssets": {
+        "tokenAAmount": 8547.32,
+        "tokenBAmount": 1789.45,
+        "totalValueUSD": 5379.32
+      },
+      "initialAssets": {
+        "tokenAAmount": 10000,
+        "tokenBAmount": 2000,
+        "timestamp": "2024-09-01T12:20:00Z"
+      },
+      "metrics": {
+        "totalPnL": -820.68,
+        "roi": -13.24,
+        "impermanentLoss": -820.68,
+        "totalAPR": 11.2,
+        "feeAPR": 11.2,
+        "gasCosts": 2.35,
+        "netProfit": -705.03,
+        "ageInDays": 71
+      },
+      "fees": {
+        "totalEarned": 118,
+        "uncollected": 15.6,
+        "daily": 1.66,
+        "weekly": 11.62,
+        "monthly": 49.8
+      },
+      "historicalData": {
+        "prices": [
+          {
+            "timestamp": 1757723484511,
+            "price": 0.41
+          },
+          {
+            "timestamp": 1757809884511,
+            "price": 0.4
+          },
+          {
+            "timestamp": 1757896284511,
+            "price": 0.41
+          },
+          {
+            "timestamp": 1757982684511,
+            "price": 0.41
+          },
+          {
+            "timestamp": 1758069084511,
+            "price": 0.4
+          },
+          {
+            "timestamp": 1758155484511,
+            "price": 0.39
+          },
+          {
+            "timestamp": 1758241884511,
+            "price": 0.4
+          },
+          {
+            "timestamp": 1758328284511,
+            "price": 0.4
+          },
+          {
+            "timestamp": 1758414684511,
+            "price": 0.4
+          },
+          {
+            "timestamp": 1758501084511,
+            "price": 0.39
+          },
+          {
+            "timestamp": 1758587484511,
+            "price": 0.39
+          },
+          {
+            "timestamp": 1758673884511,
+            "price": 0.4
+          },
+          {
+            "timestamp": 1758760284511,
+            "price": 0.41
+          },
+          {
+            "timestamp": 1758846684511,
+            "price": 0.42
+          },
+          {
+            "timestamp": 1758933084511,
+            "price": 0.42
+          },
+          {
+            "timestamp": 1759019484511,
+            "price": 0.43
+          },
+          {
+            "timestamp": 1759105884511,
+            "price": 0.42
+          },
+          {
+            "timestamp": 1759192284511,
+            "price": 0.42
+          },
+          {
+            "timestamp": 1759278684511,
+            "price": 0.4
+          },
+          {
+            "timestamp": 1759365084511,
+            "price": 0.42
+          },
+          {
+            "timestamp": 1759451484511,
+            "price": 0.41
+          },
+          {
+            "timestamp": 1759537884511,
+            "price": 0.41
+          },
+          {
+            "timestamp": 1759624284511,
+            "price": 0.4
+          },
+          {
+            "timestamp": 1759710684511,
+            "price": 0.4
+          },
+          {
+            "timestamp": 1759797084511,
+            "price": 0.39
+          },
+          {
+            "timestamp": 1759883484511,
+            "price": 0.38
+          },
+          {
+            "timestamp": 1759969884511,
+            "price": 0.37
+          },
+          {
+            "timestamp": 1760056284511,
+            "price": 0.36
+          },
+          {
+            "timestamp": 1760142684511,
+            "price": 0.36
+          },
+          {
+            "timestamp": 1760229084511,
+            "price": 0.36
+          },
+          {
+            "timestamp": 1760315484511,
+            "price": 0.36
+          }
+        ],
+        "volume": [
+          {
+            "timestamp": 1757723484511,
+            "volume": 29173.65
+          },
+          {
+            "timestamp": 1757809884511,
+            "volume": 48158.92
+          },
+          {
+            "timestamp": 1757896284511,
+            "volume": 46862.38
+          },
+          {
+            "timestamp": 1757982684511,
+            "volume": 63556.74
+          },
+          {
+            "timestamp": 1758069084511,
+            "volume": 56988.91
+          },
+          {
+            "timestamp": 1758155484511,
+            "volume": 54759.62
+          },
+          {
+            "timestamp": 1758241884511,
+            "volume": 54364.87
+          },
+          {
+            "timestamp": 1758328284511,
+            "volume": 44352.96
+          },
+          {
+            "timestamp": 1758414684511,
+            "volume": 30164.46
+          },
+          {
+            "timestamp": 1758501084511,
+            "volume": 44023.27
+          },
+          {
+            "timestamp": 1758587484511,
+            "volume": 34005.04
+          },
+          {
+            "timestamp": 1758673884511,
+            "volume": 57755.38
+          },
+          {
+            "timestamp": 1758760284511,
+            "volume": 71225.82
+          },
+          {
+            "timestamp": 1758846684511,
+            "volume": 69466.56
+          },
+          {
+            "timestamp": 1758933084511,
+            "volume": 40221.48
+          },
+          {
+            "timestamp": 1759019484511,
+            "volume": 72077.42
+          },
+          {
+            "timestamp": 1759105884511,
+            "volume": 77927.96
+          },
+          {
+            "timestamp": 1759192284511,
+            "volume": 72162.36
+          },
+          {
+            "timestamp": 1759278684511,
+            "volume": 41769.21
+          },
+          {
+            "timestamp": 1759365084511,
+            "volume": 30277.19
+          },
+          {
+            "timestamp": 1759451484511,
+            "volume": 51773.95
+          },
+          {
+            "timestamp": 1759537884511,
+            "volume": 64465.05
+          },
+          {
+            "timestamp": 1759624284511,
+            "volume": 80484.59
+          },
+          {
+            "timestamp": 1759710684511,
+            "volume": 69392.41
+          },
+          {
+            "timestamp": 1759797084511,
+            "volume": 75355.04
+          },
+          {
+            "timestamp": 1759883484511,
+            "volume": 62093.97
+          },
+          {
+            "timestamp": 1759969884511,
+            "volume": 77611.22
+          },
+          {
+            "timestamp": 1760056284511,
+            "volume": 42205.5
+          },
+          {
+            "timestamp": 1760142684511,
+            "volume": 54497.57
+          },
+          {
+            "timestamp": 1760229084511,
+            "volume": 49631
+          },
+          {
+            "timestamp": 1760315484511,
+            "volume": 77835.45
+          }
+        ],
+        "fees": [
+          {
+            "timestamp": 1757723484511,
+            "fees": 4.65
+          },
+          {
+            "timestamp": 1757809884511,
+            "fees": 2.31
+          },
+          {
+            "timestamp": 1757896284511,
+            "fees": 3.89
+          },
+          {
+            "timestamp": 1757982684511,
+            "fees": 0.74
+          },
+          {
+            "timestamp": 1758069084511,
+            "fees": 1.86
+          },
+          {
+            "timestamp": 1758155484511,
+            "fees": 2.47
+          },
+          {
+            "timestamp": 1758241884511,
+            "fees": 0.58
+          },
+          {
+            "timestamp": 1758328284511,
+            "fees": 4.74
+          },
+          {
+            "timestamp": 1758414684511,
+            "fees": 3.12
+          },
+          {
+            "timestamp": 1758501084511,
+            "fees": 4.81
+          },
+          {
+            "timestamp": 1758587484511,
+            "fees": 2.77
+          },
+          {
+            "timestamp": 1758673884511,
+            "fees": 3.14
+          },
+          {
+            "timestamp": 1758760284511,
+            "fees": 4.93
+          },
+          {
+            "timestamp": 1758846684511,
+            "fees": 3.27
+          },
+          {
+            "timestamp": 1758933084511,
+            "fees": 4.48
+          },
+          {
+            "timestamp": 1759019484511,
+            "fees": 2.19
+          },
+          {
+            "timestamp": 1759105884511,
+            "fees": 4.34
+          },
+          {
+            "timestamp": 1759192284511,
+            "fees": 0.82
+          },
+          {
+            "timestamp": 1759278684511,
+            "fees": 4.67
+          },
+          {
+            "timestamp": 1759365084511,
+            "fees": 1.55
+          },
+          {
+            "timestamp": 1759451484511,
+            "fees": 2.58
+          },
+          {
+            "timestamp": 1759537884511,
+            "fees": 2.2
+          },
+          {
+            "timestamp": 1759624284511,
+            "fees": 1.61
+          },
+          {
+            "timestamp": 1759710684511,
+            "fees": 3.59
+          },
+          {
+            "timestamp": 1759797084511,
+            "fees": 2.88
+          },
+          {
+            "timestamp": 1759883484511,
+            "fees": 4.27
+          },
+          {
+            "timestamp": 1759969884511,
+            "fees": 2.78
+          },
+          {
+            "timestamp": 1760056284511,
+            "fees": 3.9
+          },
+          {
+            "timestamp": 1760142684511,
+            "fees": 2.97
+          },
+          {
+            "timestamp": 1760229084511,
+            "fees": 1.97
+          },
+          {
+            "timestamp": 1760315484511,
+            "fees": 4.34
+          }
+        ],
+        "liquidityDistribution": [
+          {
+            "price": 0.35,
+            "liquidity": 37531.11
+          },
+          {
+            "price": 0.36,
+            "liquidity": 48675.23
+          },
+          {
+            "price": 0.37,
+            "liquidity": 60653.07
+          },
+          {
+            "price": 0.38,
+            "liquidity": 72614.9
+          },
+          {
+            "price": 0.39,
+            "liquidity": 83527.02
+          },
+          {
+            "price": 0.4,
+            "liquidity": 92311.63
+          },
+          {
+            "price": 0.41,
+            "liquidity": 98019.87
+          },
+          {
+            "price": 0.42,
+            "liquidity": 100000
+          },
+          {
+            "price": 0.43,
+            "liquidity": 98019.87
+          },
+          {
+            "price": 0.44,
+            "liquidity": 92311.63
+          },
+          {
+            "price": 0.45,
+            "liquidity": 83527.02
+          },
+          {
+            "price": 0.46,
+            "liquidity": 72614.9
+          },
+          {
+            "price": 0.47,
+            "liquidity": 60653.07
+          },
+          {
+            "price": 0.48,
+            "liquidity": 48675.23
+          },
+          {
+            "price": 0.49,
+            "liquidity": 37531.11
+          },
+          {
+            "price": 0.5,
+            "liquidity": 27803.73
+          },
+          {
+            "price": 0.51,
+            "liquidity": 19789.87
+          },
+          {
+            "price": 0.52,
+            "liquidity": 13533.53
+          },
+          {
+            "price": 0.53,
+            "liquidity": 8892.16
+          },
+          {
+            "price": 0.54,
+            "liquidity": 5613.48
+          },
+          {
+            "price": 0.55,
+            "liquidity": 3404.75
+          }
+        ]
+      },
+      "createdAt": "2024-09-01T12:20:00Z",
+      "updatedAt": "2025-10-12T08:15:00Z"
+    },
+    {
+      "id": "BpT6kX9wQnM2vLcYfZ3rJ8sD5dH4eUoA7iNcG1zPmWy",
+      "protocol": "Orca",
+      "tokenPair": {
+        "tokenA": {
+          "symbol": "JTO",
+          "name": "Jito",
+          "mint": "jtojtomepa8beP8AuQc6eXt5FriJwfFMwQx2v2f9mCL",
+          "decimals": 9
+        },
+        "tokenB": {
+          "symbol": "SOL",
+          "name": "Solana",
+          "mint": "So11111111111111111111111111111111111111112",
+          "decimals": 9
+        },
+        "currentPrice": 0.0189
+      },
+      "priceRange": {
+        "min": 0.015,
+        "max": 0.025,
+        "current": 0.0189
+      },
+      "status": {
+        "inRange": true,
+        "autoCompound": true
+      },
+      "pooledAssets": {
+        "tokenAAmount": 1847.52,
+        "tokenBAmount": 22.89,
+        "totalValueUSD": 6977.58
+      },
+      "initialAssets": {
+        "tokenAAmount": 1800,
+        "tokenBAmount": 23,
+        "timestamp": "2024-08-20T09:30:00Z"
+      },
+      "metrics": {
+        "totalPnL": 145.28,
+        "roi": 2.13,
+        "impermanentLoss": 145.28,
+        "totalAPR": 14.9,
+        "feeAPR": 12.6,
+        "gasCosts": 3.45,
+        "netProfit": 221.83,
+        "ageInDays": 83
+      },
+      "fees": {
+        "totalEarned": 225.28,
+        "uncollected": 34.56,
+        "daily": 2.71,
+        "weekly": 18.97,
+        "monthly": 81.3
+      },
+      "historicalData": {
+        "prices": [
+          {
+            "timestamp": 1757723484511,
+            "price": 0.02
+          },
+          {
+            "timestamp": 1757809884511,
+            "price": 0.02
+          },
+          {
+            "timestamp": 1757896284511,
+            "price": 0.02
+          },
+          {
+            "timestamp": 1757982684511,
+            "price": 0.02
+          },
+          {
+            "timestamp": 1758069084511,
+            "price": 0.02
+          },
+          {
+            "timestamp": 1758155484511,
+            "price": 0.02
+          },
+          {
+            "timestamp": 1758241884511,
+            "price": 0.02
+          },
+          {
+            "timestamp": 1758328284511,
+            "price": 0.02
+          },
+          {
+            "timestamp": 1758414684511,
+            "price": 0.02
+          },
+          {
+            "timestamp": 1758501084511,
+            "price": 0.02
+          },
+          {
+            "timestamp": 1758587484511,
+            "price": 0.02
+          },
+          {
+            "timestamp": 1758673884511,
+            "price": 0.02
+          },
+          {
+            "timestamp": 1758760284511,
+            "price": 0.02
+          },
+          {
+            "timestamp": 1758846684511,
+            "price": 0.02
+          },
+          {
+            "timestamp": 1758933084511,
+            "price": 0.02
+          },
+          {
+            "timestamp": 1759019484511,
+            "price": 0.02
+          },
+          {
+            "timestamp": 1759105884511,
+            "price": 0.02
+          },
+          {
+            "timestamp": 1759192284511,
+            "price": 0.02
+          },
+          {
+            "timestamp": 1759278684511,
+            "price": 0.02
+          },
+          {
+            "timestamp": 1759365084511,
+            "price": 0.02
+          },
+          {
+            "timestamp": 1759451484511,
+            "price": 0.02
+          },
+          {
+            "timestamp": 1759537884511,
+            "price": 0.02
+          },
+          {
+            "timestamp": 1759624284511,
+            "price": 0.02
+          },
+          {
+            "timestamp": 1759710684511,
+            "price": 0.02
+          },
+          {
+            "timestamp": 1759797084511,
+            "price": 0.02
+          },
+          {
+            "timestamp": 1759883484511,
+            "price": 0.02
+          },
+          {
+            "timestamp": 1759969884511,
+            "price": 0.02
+          },
+          {
+            "timestamp": 1760056284511,
+            "price": 0.02
+          },
+          {
+            "timestamp": 1760142684511,
+            "price": 0.02
+          },
+          {
+            "timestamp": 1760229084511,
+            "price": 0.02
+          },
+          {
+            "timestamp": 1760315484511,
+            "price": 0.02
+          }
+        ],
+        "volume": [
+          {
+            "timestamp": 1757723484511,
+            "volume": 91138.72
+          },
+          {
+            "timestamp": 1757809884511,
+            "volume": 47271.58
+          },
+          {
+            "timestamp": 1757896284511,
+            "volume": 76748.93
+          },
+          {
+            "timestamp": 1757982684511,
+            "volume": 53608.97
+          },
+          {
+            "timestamp": 1758069084511,
+            "volume": 44820.63
+          },
+          {
+            "timestamp": 1758155484511,
+            "volume": 98493.84
+          },
+          {
+            "timestamp": 1758241884511,
+            "volume": 61096.48
+          },
+          {
+            "timestamp": 1758328284511,
+            "volume": 53963.63
+          },
+          {
+            "timestamp": 1758414684511,
+            "volume": 40808.97
+          },
+          {
+            "timestamp": 1758501084511,
+            "volume": 53611.65
+          },
+          {
+            "timestamp": 1758587484511,
+            "volume": 104516.11
+          },
+          {
+            "timestamp": 1758673884511,
+            "volume": 99059.09
+          },
+          {
+            "timestamp": 1758760284511,
+            "volume": 67809.15
+          },
+          {
+            "timestamp": 1758846684511,
+            "volume": 98045.11
+          },
+          {
+            "timestamp": 1758933084511,
+            "volume": 82900.73
+          },
+          {
+            "timestamp": 1759019484511,
+            "volume": 60828.6
+          },
+          {
+            "timestamp": 1759105884511,
+            "volume": 70664.66
+          },
+          {
+            "timestamp": 1759192284511,
+            "volume": 93422.9
+          },
+          {
+            "timestamp": 1759278684511,
+            "volume": 38169.06
+          },
+          {
+            "timestamp": 1759365084511,
+            "volume": 70170.72
+          },
+          {
+            "timestamp": 1759451484511,
+            "volume": 88604.56
+          },
+          {
+            "timestamp": 1759537884511,
+            "volume": 103467.26
+          },
+          {
+            "timestamp": 1759624284511,
+            "volume": 60204.95
+          },
+          {
+            "timestamp": 1759710684511,
+            "volume": 38837.46
+          },
+          {
+            "timestamp": 1759797084511,
+            "volume": 94734.36
+          },
+          {
+            "timestamp": 1759883484511,
+            "volume": 52306.7
+          },
+          {
+            "timestamp": 1759969884511,
+            "volume": 73434.41
+          },
+          {
+            "timestamp": 1760056284511,
+            "volume": 43151.38
+          },
+          {
+            "timestamp": 1760142684511,
+            "volume": 75294.9
+          },
+          {
+            "timestamp": 1760229084511,
+            "volume": 63020.52
+          },
+          {
+            "timestamp": 1760315484511,
+            "volume": 46843.3
+          }
+        ],
+        "fees": [
+          {
+            "timestamp": 1757723484511,
+            "fees": 4.12
+          },
+          {
+            "timestamp": 1757809884511,
+            "fees": 4.39
+          },
+          {
+            "timestamp": 1757896284511,
+            "fees": 0.52
+          },
+          {
+            "timestamp": 1757982684511,
+            "fees": 0.53
+          },
+          {
+            "timestamp": 1758069084511,
+            "fees": 2.22
+          },
+          {
+            "timestamp": 1758155484511,
+            "fees": 2.45
+          },
+          {
+            "timestamp": 1758241884511,
+            "fees": 1.03
+          },
+          {
+            "timestamp": 1758328284511,
+            "fees": 3.97
+          },
+          {
+            "timestamp": 1758414684511,
+            "fees": 1.53
+          },
+          {
+            "timestamp": 1758501084511,
+            "fees": 1.53
+          },
+          {
+            "timestamp": 1758587484511,
+            "fees": 4.74
+          },
+          {
+            "timestamp": 1758673884511,
+            "fees": 1.67
+          },
+          {
+            "timestamp": 1758760284511,
+            "fees": 2.78
+          },
+          {
+            "timestamp": 1758846684511,
+            "fees": 2.06
+          },
+          {
+            "timestamp": 1758933084511,
+            "fees": 4.71
+          },
+          {
+            "timestamp": 1759019484511,
+            "fees": 1.01
+          },
+          {
+            "timestamp": 1759105884511,
+            "fees": 3.3
+          },
+          {
+            "timestamp": 1759192284511,
+            "fees": 2.78
+          },
+          {
+            "timestamp": 1759278684511,
+            "fees": 1.62
+          },
+          {
+            "timestamp": 1759365084511,
+            "fees": 3.8
+          },
+          {
+            "timestamp": 1759451484511,
+            "fees": 2.66
+          },
+          {
+            "timestamp": 1759537884511,
+            "fees": 0.91
+          },
+          {
+            "timestamp": 1759624284511,
+            "fees": 2.56
+          },
+          {
+            "timestamp": 1759710684511,
+            "fees": 1.96
+          },
+          {
+            "timestamp": 1759797084511,
+            "fees": 4.6
+          },
+          {
+            "timestamp": 1759883484511,
+            "fees": 3.9
+          },
+          {
+            "timestamp": 1759969884511,
+            "fees": 2.68
+          },
+          {
+            "timestamp": 1760056284511,
+            "fees": 3.25
+          },
+          {
+            "timestamp": 1760142684511,
+            "fees": 3.72
+          },
+          {
+            "timestamp": 1760229084511,
+            "fees": 1.51
+          },
+          {
+            "timestamp": 1760315484511,
+            "fees": 3.98
+          }
+        ],
+        "liquidityDistribution": [
+          {
+            "price": 0.01,
+            "liquidity": 29617.64
+          },
+          {
+            "price": 0.02,
+            "liquidity": 39661.07
+          },
+          {
+            "price": 0.02,
+            "liquidity": 51027.78
+          },
+          {
+            "price": 0.02,
+            "liquidity": 63077.88
+          },
+          {
+            "price": 0.02,
+            "liquidity": 74916.2
+          },
+          {
+            "price": 0.02,
+            "liquidity": 85487.5
+          },
+          {
+            "price": 0.02,
+            "liquidity": 93725.49
+          },
+          {
+            "price": 0.02,
+            "liquidity": 98728.16
+          },
+          {
+            "price": 0.02,
+            "liquidity": 99920.03
+          },
+          {
+            "price": 0.02,
+            "liquidity": 97161.08
+          },
+          {
+            "price": 0.02,
+            "liquidity": 90773.75
+          },
+          {
+            "price": 0.02,
+            "liquidity": 81481.03
+          },
+          {
+            "price": 0.02,
+            "liquidity": 70271.77
+          },
+          {
+            "price": 0.02,
+            "liquidity": 58228.22
+          },
+          {
+            "price": 0.02,
+            "liquidity": 46356.9
+          },
+          {
+            "price": 0.02,
+            "liquidity": 35458.75
+          },
+          {
+            "price": 0.02,
+            "liquidity": 26059.18
+          },
+          {
+            "price": 0.02,
+            "liquidity": 18400.36
+          },
+          {
+            "price": 0.02,
+            "liquidity": 12483.03
+          },
+          {
+            "price": 0.02,
+            "liquidity": 8136.58
+          },
+          {
+            "price": 0.03,
+            "liquidity": 5095.56
+          }
+        ]
+      },
+      "createdAt": "2024-08-20T09:30:00Z",
+      "updatedAt": "2025-10-12T08:15:00Z"
+    }
+  ],
+  "metadata": {
+    "version": "1.0.0",
+    "generatedAt": "2025-10-12T08:15:00Z",
+    "walletAddress": "GkH3fT9vCW2PnLzPvqmHZWRuDVBBwGMZvDJTLMBpW"
+  }
+}

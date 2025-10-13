@@ -6,7 +6,9 @@ export default {
       colors: {
         solana: {
           purple: '#9945FF',
-          green: '#14F195',
+          cyan: '#14F195',
+          blue: '#4E44CE',
+          green: '#19FB9B',
           teal: '#00D4AA',
           dark: '#1A1A2E',
           gray: '#060606',
@@ -58,13 +60,40 @@ export default {
           '100%': { transform: 'translateY(-100%) translateX(20px)' },
         },
         forgePulse: {
-          '0%, 100%': { boxShadow: '0 0 30px rgba(153, 69, 255, 0.3), inset 0 0 20px rgba(255, 107, 53, 0.1)' },
-          '50%': { boxShadow: '0 0 50px rgba(153, 69, 255, 0.5), inset 0 0 30px rgba(255, 107, 53, 0.2)' },
+          '0%, 100%': {
+            boxShadow: '0 0 30px rgba(153, 69, 255, 0.3), inset 0 0 20px rgba(255, 107, 53, 0.1)',
+          },
+          '50%': {
+            boxShadow: '0 0 50px rgba(153, 69, 255, 0.5), inset 0 0 30px rgba(255, 107, 53, 0.2)',
+          },
         },
       },
+      // ATUALIZADO AQUI
       backgroundImage: {
         'metal-gradient': 'linear-gradient(135deg, #1a1a1a 0%, #0a0a0a 50%, #2a2a2a 100%)',
         'forge-radial': 'radial-gradient(circle, rgba(153,69,255,0.15) 0%, rgba(10,10,10,0) 70%)',
+        'cyberpunk-radial': 'radial-gradient(circle at top, #1c1c1c, #000000)',
+        // Gradientes do body adicionados aqui
+        'main-background': [
+          'radial-gradient(ellipse 120% 80% at 70% 20%, #535259, transparent 50%)',
+          'radial-gradient(ellipse 100% 60% at 30% 10%, #4B3852, transparent 60%)',
+          'radial-gradient(ellipse 90% 70% at 50% 0%, #4B3256, transparent 65%)',
+          'radial-gradient(ellipse 110% 50% at 80% 30%, #34323C, transparent 40%)',
+        ],
+        'deep-gradient': 'radial-gradient(circle at top, #1c1c1c, #060606)',
+        'deep-gradient-transparent':
+          'radial-gradient(circle at top, rgba(28, 28, 28, 0.6), rgba(6, 6, 6, 0.6))',
+        'violet-abyss': 'radial-gradient(125% 125% at 50% 90%, #060606 40%, #413F47 100%)',
+      },
+      // Sombras personalizadas adicionadas aqui
+      boxShadow: {
+        'glow-border-green': '0 0 20px rgba(20, 241, 149, 0.3)',
+        'glow-border-purple': '0 0 20px rgba(153, 69, 255, 0.3)',
+        'metal-texture':
+          'inset 0 1px 0 rgba(255, 255, 255, 0.05), inset 0 -1px 0 rgba(0, 0, 0, 0.5)',
+        'forge-glow':
+          '0 0 40px rgba(153, 69, 255, 0.4), 0 0 80px rgba(153, 69, 255, 0.2), inset 0 0 20px rgba(255, 107, 53, 0.1)',
+        'inner-glow': 'inset 0px 1px 16px -3px rgba(6,6,6,0.7)',
       },
     },
   },
