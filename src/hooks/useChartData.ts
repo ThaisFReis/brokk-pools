@@ -16,7 +16,9 @@ export interface ChartData {
     data: number[];
     type: string;
     name?: string;
+    // eslint-disable-next-line @typescript-eslint/no-explicit-any
     itemStyle?: any;
+    // eslint-disable-next-line @typescript-eslint/no-explicit-any
     areaStyle?: any;
   }>;
 }

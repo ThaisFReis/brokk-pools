@@ -6,7 +6,7 @@ export const Features = () => {
     <section
       id="features"
       aria-labelledby="features-title"
-      className="bg-violet-abyss relative w-full px-6 py-20 md:px-12 lg:py-32"
+      className="relative w-full bg-violet-abyss px-6 py-20 md:px-12 lg:py-32"
     >
       {/* Gradient transition to next section */}
       <div className="absolute inset-x-0 top-0 h-60 bg-gradient-to-b from-solana-gray via-solana-gray/80 to-transparent" />

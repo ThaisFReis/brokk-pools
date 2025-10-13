@@ -64,7 +64,7 @@ export function PositionDetail({ position, onCollapse }: PositionDetailProps) {
       {/* Charts Grid */}
       <div className="grid grid-cols-1 gap-6 lg:grid-cols-2">
         {/* Liquidity Distribution Chart */}
-        <div className="rounded-lg shadow-inner-glow bg-forge-metaldark p-4">
+        <div className="rounded-lg bg-forge-metaldark p-4 shadow-inner-glow">
           <h3 className="mb-4 text-sm font-semibold text-white">Liquidity Distribution</h3>
           <Suspense fallback={<ChartSkeleton />}>
             <LiquidityChart
@@ -75,7 +75,7 @@ export function PositionDetail({ position, onCollapse }: PositionDetailProps) {
         </div>
 
         {/* Price History Chart */}
-        <div className="rounded-lg shadow-inner-glow bg-forge-metaldark p-4">
+        <div className="rounded-lg bg-forge-metaldark p-4 shadow-inner-glow">
           <h3 className="mb-4 text-sm font-semibold text-white">Price History (30 Days)</h3>
           <Suspense fallback={<ChartSkeleton />}>
             <PriceHistoryChart priceData={position.historicalData.prices} />
@@ -83,7 +83,7 @@ export function PositionDetail({ position, onCollapse }: PositionDetailProps) {
         </div>
 
         {/* Volume Chart */}
-        <div className="rounded-lg shadow-inner-glow bg-forge-metaldark p-4">
+        <div className="rounded-lg bg-forge-metaldark p-4 shadow-inner-glow">
           <h3 className="mb-4 text-sm font-semibold text-white">Trading Volume</h3>
           <Suspense fallback={<ChartSkeleton />}>
             <VolumeChart volumeData={position.historicalData.volume} />

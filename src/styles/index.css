@@ -33,7 +33,12 @@
     @apply bg-solana-gray bg-main-background;
   }
 
-  h1, h2, h3, h4, h5, h6 {
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
     @apply font-display;
   }
 }
@@ -63,7 +68,12 @@
   }
 
   .hologram-effect {
-    background: linear-gradient(135deg, rgba(153, 69, 255, 0.1) 0%, rgba(20, 241, 149, 0.01) 50%, rgba(153, 69, 255, 0.05) 100%);
+    background: linear-gradient(
+      135deg,
+      rgba(153, 69, 255, 0.1) 0%,
+      rgba(20, 241, 149, 0.01) 50%,
+      rgba(153, 69, 255, 0.05) 100%
+    );
     backdrop-filter: blur(20px);
   }
 
@@ -92,7 +102,7 @@
 
 /* --- Botão Principal (Conectar Carteira) --- */
 .wallet-adapter-button-trigger {
-  @apply !flex !items-center !w-fit !h-10 !rounded-full !bg-transparent !px-4 !py-2 !text-xs !font-medium !uppercase !tracking-wider !text-gray-300 !transition-all !duration-300 !shadow-[inset_0px_2px_3px_2px_rgba(6,6,6,0.4)];
+  @apply !flex !h-10 !w-fit !items-center !rounded-full !bg-transparent !px-4 !py-2 !text-xs !font-medium !uppercase !tracking-wider !text-gray-300 !shadow-[inset_0px_2px_3px_2px_rgba(6,6,6,0.4)] !transition-all !duration-300;
 }
 
 /* --- Estados dos Botões (Hover, Focus, Disabled) --- */
@@ -128,7 +138,10 @@
   opacity: 0;
   visibility: hidden;
   transform: translateY(-10px); /* Estado inicial: deslocado para cima */
-  transition: opacity 400ms ease, transform 400ms ease, visibility 200ms;
+  transition:
+    opacity 400ms ease,
+    transform 400ms ease,
+    visibility 200ms;
 }
 
 .wallet-adapter-dropdown-list-active {
@@ -155,7 +168,7 @@
 }
 
 .wallet-adapter-modal-wrapper {
-  @apply hologram-effect relative z-[1050] flex max-w-sm flex-1 flex-col items-center overflow-hidden rounded-3xl shadow-md shadow-solana-gray p-5;
+  @apply hologram-effect relative z-[1050] flex max-w-sm flex-1 flex-col items-center overflow-hidden rounded-3xl p-5 shadow-md shadow-solana-gray;
 }
 
 /* Linhas decorativas no topo do modal */
@@ -176,15 +189,15 @@
 }
 
 .wallet-adapter-modal-list {
-  @apply flex flex-col items-center justify-between m-0 w-full list-none p-0 px-6 py-4 gap-4;
+  @apply m-0 flex w-full list-none flex-col items-center justify-between gap-4 p-0 px-6 py-4;
 }
 
 .wallet-adapter-modal-list .wallet-adapter-button {
-  @apply flex flex-row items-center justify-center gap-2 mb-2 w-64 h-12 rounded-xl bg-forge-metalgray/20 text-base font-medium text-gray-300 transition-all duration-300 shadow-md shadow-solana-gray/30;
+  @apply mb-2 flex h-12 w-64 flex-row items-center justify-center gap-2 rounded-xl bg-forge-metalgray/20 text-base font-medium text-gray-300 shadow-md shadow-solana-gray/30 transition-all duration-300;
 }
 
 .wallet-adapter-modal-list .wallet-adapter-button:not([disabled]):hover {
-  @apply !bg-gradient-to-r bg-forge-metalgray/30 !text-gray-100 shadow-md;
+  @apply bg-forge-metalgray/30 !bg-gradient-to-r !text-gray-100 shadow-md;
   transform: translateY(-2px);
 }
 
@@ -218,8 +231,8 @@
   @apply opacity-100;
 }
 
-.wallet-adapter-modal-list-more{
-  @apply font-body text-xs font-bold uppercase flex flex-col items-center justify-center gap-2;
+.wallet-adapter-modal-list-more {
+  @apply flex flex-col items-center justify-center gap-2 font-body text-xs font-bold uppercase;
 }
 
 /*--- .wallet-adapter-modal-list-more svg invert color ---*/

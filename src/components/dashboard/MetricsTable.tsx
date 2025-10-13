@@ -78,7 +78,7 @@ export function MetricsTable({ position }: MetricsTableProps) {
   ];
 
   return (
-    <div className="overflow-hidden rounded-lg shadow-inner-glow bg-forge-metaldark">
+    <div className="overflow-hidden rounded-lg bg-forge-metaldark shadow-inner-glow">
       <div className="border-b border-solana-gray/40 px-6 py-4">
         <h3 className="text-lg font-semibold text-white">Detailed Metrics</h3>
       </div>

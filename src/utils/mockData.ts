@@ -53,6 +53,7 @@ export function loadMockPositions(): Position[] {
 
     if (!isValidPosition(position)) {
       errors.push(
+        // eslint-disable-next-line @typescript-eslint/no-explicit-any
         `Position at index ${i} (id: ${(position as any)?.id || 'unknown'}) failed validation`
       );
       continue;

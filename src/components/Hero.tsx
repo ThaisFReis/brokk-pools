@@ -18,17 +18,17 @@ export const Hero = () => {
       <div className="relative z-10 flex max-w-5xl flex-col items-center gap-8">
         {/* Badge */}
         <div
-          className="animate-slide-in-bottom inline-flex  items-center gap-2 rounded-full border border-[rgba(245,242,237,0.2)] px-4 py-2 backdrop-blur-sm"
+          className="animate-slide-in-bottom inline-flex  items-center gap-2 rounded-full border border-gray-300/10 px-4 py-2 backdrop-blur-sm bg-solana-gray/5"
           style={{ animationDelay: '0.1s' }}
         >
-          <div className="h-2 w-2 animate-pulse rounded-full bg-solana-green" />
-          <span className="text-sm">{heroContent.badge}</span>
+          <div className="h-1 w-1 animate-pulse rounded-full bg-solana-green" />
+          <span className="text-xs">{heroContent.badge}</span>
         </div>
         <div className="flex flex-col items-center">
           {/* Title */}
           <h1
             id="hero-title"
-            className="animate-fade-in-delayed font-title text-4xl font-bold leading-tight sm:text-6xl md:text-7xl lg:text-8xl xl:text-9xl"
+            className="animate-fade-in-delayed font-title text-4xl font-bold leading-tight sm:text-6xl md:text-7xl lg:text-8xl"
           >
             {heroContent.title}
           </h1>
@@ -39,7 +39,7 @@ export const Hero = () => {
           </p>
 
           {/* Description */}
-          <p className="max-w-xl animate-fade-in-delayed font-body text-base leading-relaxed text-gray-300 sm:text-lg">
+          <p className="max-w-xl animate-fade-in-delayed font-body text-base leading-relaxed text-pretty text-gray-300 sm:text-lg">
             {heroContent.description}
           </p>
         </div>

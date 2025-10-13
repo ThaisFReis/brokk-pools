@@ -1,12 +1,24 @@
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
+import { useNavigate, useLocation } from 'react-router-dom';
+import { useWallet } from '@solana/wallet-adapter-react';
 import { WalletMultiButton } from '@solana/wallet-adapter-react-ui';
 import Logo from './Logo';
 import icon from '../../public/logo.svg';
 
 export const Header = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
+  const { connected } = useWallet();
+  const navigate = useNavigate();
+  const location = useLocation();
 
   const toggleMenu = () => setIsMenuOpen(!isMenuOpen);
+
+  // Redirect to dashboard when wallet connects (only from landing page)
+  useEffect(() => {
+    if (connected && location.pathname === '/') {
+      navigate('/dashboard');
+    }
+  }, [connected, navigate, location.pathname]);
 
   const menuItems = [
     { href: '/dashboard', label: 'dashboard' },

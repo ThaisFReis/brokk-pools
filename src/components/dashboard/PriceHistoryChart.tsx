@@ -45,6 +45,7 @@ export function PriceHistoryChart({ priceData }: PriceHistoryChartProps) {
       textStyle: {
         color: '#ffffff',
       },
+      // eslint-disable-next-line @typescript-eslint/no-explicit-any
       formatter: (params: any) => {
         const param = params[0];
         return `

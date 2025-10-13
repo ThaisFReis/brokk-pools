@@ -28,7 +28,7 @@ export function PositionCard({ position, onClick, isExpanded = false }: Position
       data-testid="position-card"
       data-position-id={position.id}
       onClick={onClick}
-      className={`rounded-xl  bg-deep-gradient-transparent shadow-md shadow-solana-gray p-4 transition-all duration-200 hover:border-solana-purple hover:shadow-lg hover:shadow-solana-gray ${
+      className={`rounded-xl  bg-deep-gradient-transparent p-4 shadow-md shadow-solana-gray transition-all duration-200 hover:border-solana-purple hover:shadow-lg hover:shadow-solana-gray ${
         onClick ? 'cursor-pointer' : ''
       } md:p-6`}
     >

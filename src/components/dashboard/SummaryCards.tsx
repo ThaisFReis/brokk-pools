@@ -38,7 +38,7 @@ function SummaryCard({ label, value, subtext, valueColor, loading }: SummaryCard
 
   return (
     <article
-      className="space-y-2 rounded-lg bg-deep-gradient-transparent shadow-md shadow-solana-gray p-6 transition-colors hover:border-solana-purple/30 backdrop-blur-xl"
+      className="space-y-2 rounded-lg bg-deep-gradient-transparent p-6 shadow-md shadow-solana-gray backdrop-blur-xl transition-colors hover:border-solana-purple/30"
       aria-labelledby={`${label.replace(/\s+/g, '-')}-label`}
     >
       <div

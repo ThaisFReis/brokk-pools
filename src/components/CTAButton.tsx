@@ -48,7 +48,7 @@ function CTAButton({ text, href, ariaLabel, className = '' }: CTAButtonProps) {
       {/* Bottom forge glow */}
       <div className="absolute bottom-0 left-0 h-[1px] w-0 bg-gradient-to-r from-solana-purple/20 to-solana-purple/40 transition-all duration-700 group-hover:w-full" />
 
-      <span className="relative font-display text-lg font-medium tracking-wide text-gray-300/70 group-hover:text-gray-100">
+      <span className="relative font-display text-base font-medium tracking-wide text-gray-300/70 group-hover:text-gray-100">
         {text}
       </span>
     </a>
