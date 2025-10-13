@@ -6,9 +6,6 @@ import { WalletModalProvider } from '@solana/wallet-adapter-react-ui';
 import { PhantomWalletAdapter, SolflareWalletAdapter } from '@solana/wallet-adapter-wallets';
 import { clusterApiUrl } from '@solana/web3.js';
 
-// Import wallet adapter CSS
-import '@solana/wallet-adapter-react-ui/styles.css';
-
 // Landing page components
 import { Header } from './components/Header';
 import { Hero } from './components/Hero';

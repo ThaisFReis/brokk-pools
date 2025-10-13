@@ -1,4 +1,5 @@
 import { useState } from 'react';
+import { WalletMultiButton } from '@solana/wallet-adapter-react-ui';
 import Logo from './Logo';
 import icon from '../../public/logo.svg';
 
@@ -7,17 +8,16 @@ export const Header = () => {
 
   const toggleMenu = () => setIsMenuOpen(!isMenuOpen);
 
-  // Temporariamente desativado
-  // const menuItems = [
-  //   { href: '#dashboard', label: 'dashboard' },
-  //   { href: '#swap', label: 'swap' },
-  //   { href: '#simule', label: 'simule' },
-  //   { href: '#top-position', label: 'top position' },
-  //   { href: '#rebalance', label: 'rebalance' },
-  // ];
+  const menuItems = [
+    { href: '/dashboard', label: 'dashboard' },
+    //   { href: '#swap', label: 'swap' },
+    //   { href: '#simule', label: 'simule' },
+    //   { href: '#top-position', label: 'top position' },
+    //   { href: '#rebalance', label: 'rebalance' },
+  ];
 
   return (
-    <header className="fixed left-1/2 top-4 z-50 w-[95%] max-w-[800px] -translate-x-1/2">
+    <header className="fixed left-1/2 top-4 z-50 w-[95%] max-w-[1200px] -translate-x-1/2">
       <div className="relative w-full overflow-visible rounded-full bg-white/5 px-3 py-3 shadow-md backdrop-blur-lg sm:px-6 sm:py-4">
         {/* Metallic top edge */}
         <div className="absolute left-0 top-0 h-[2px] w-full rounded-full bg-gradient-to-r from-transparent via-forge-steel/50 to-transparent" />
@@ -27,7 +27,10 @@ export const Header = () => {
 
         <div className="relative flex items-center justify-between">
           {/* Logo - Left side */}
-          <div className="group flex items-center gap-1 transition-transform duration-500 hover:scale-110">
+          <a
+            href="/"
+            className="group flex items-center gap-1 transition-transform duration-500 hover:scale-110"
+          >
             <Logo
               src={icon}
               alt="Brokk Logo"
@@ -35,16 +38,14 @@ export const Header = () => {
               height={20}
               className="brightness-0 invert transition-transform duration-300 group-hover:rotate-12"
             />
-            <a href="#home" className="relative whitespace-nowrap font-title">
-              <div className="relative z-10 flex flex-col text-[8px] font-bold uppercase leading-none tracking-wider text-gray-300 transition-colors duration-300 group-hover:text-gray-100">
-                <span className="relative z-10">BROKK</span>
-                <span className="relative z-10">POOLS</span>
-              </div>
-            </a>
-          </div>
+            <div className="relative z-10 flex flex-col whitespace-nowrap font-title text-[8px] font-bold uppercase leading-none tracking-wider text-gray-300 transition-colors duration-300 group-hover:text-gray-100">
+              <span className="relative z-10">BROKK</span>
+              <span className="relative z-10">POOLS</span>
+            </div>
+          </a>
 
           {/* Desktop Navigation - Center */}
-          {/* Temporariamente desativado
+
           <nav className="absolute left-1/2 hidden -translate-x-1/2 items-center justify-center gap-4 lg:flex xl:gap-6">
             {menuItems.map((item) => (
               <a
@@ -57,28 +58,15 @@ export const Header = () => {
               </a>
             ))}
           </nav>
-          */}
 
-          {/* Dashboard Button & Social Media & Mobile Menu - Right side */}
+          {/* Wallet Button, Dashboard Button & Social Media & Mobile Menu - Right side */}
           <div className="ml-auto flex items-center gap-3">
-            {/* Dashboard Button - Desktop */}
-            <a
-              href="/dashboard"
-              className="hidden items-center gap-2 rounded-full bg-solana-purple px-4 py-2 text-xs font-medium uppercase tracking-wider text-white transition-all duration-300 hover:bg-solana-purple/80 lg:flex"
-            >
-              <span>Dashboard</span>
-              <svg className="h-4 w-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                <path
-                  strokeLinecap="round"
-                  strokeLinejoin="round"
-                  strokeWidth={2}
-                  d="M9 19v-6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2a2 2 0 002-2zm0 0V9a2 2 0 012-2h2a2 2 0 012 2v10m-6 0a2 2 0 002 2h2a2 2 0 002-2m0 0V5a2 2 0 012-2h2a2 2 0 012 2v14a2 2 0 01-2 2h-2a2 2 0 01-2-2z"
-                />
-              </svg>
-            </a>
-
+             {/* Wallet Connect Button - Desktop */}
+             <div className="hidden lg:block">
+              <WalletMultiButton />
+            </div>
             {/* Social Media Icons - Desktop */}
-            <div className="hidden items-center gap-2 lg:flex">
+            {/*<div className="hidden items-center gap-2 lg:flex">
               <a
                 href="https://twitter.com/brokkpools"
                 target="_blank"
@@ -124,7 +112,7 @@ export const Header = () => {
                   <path d="M11.944 0A12 12 0 0 0 0 12a12 12 0 0 0 12 12a12 12 0 0 0 12-12A12 12 0 0 0 12 0a12 12 0 0 0-.056 0zm4.962 7.224c.1-.002.321.023.465.14a.506.506 0 0 1 .171.325c.016.093.036.306.02.472c-.18 1.898-.962 6.502-1.36 8.627c-.168.9-.499 1.201-.82 1.23c-.696.065-1.225-.46-1.9-.902c-1.056-.693-1.653-1.124-2.678-1.8c-1.185-.78-.417-1.21.258-1.91c.177-.184 3.247-2.977 3.307-3.23c.007-.032.014-.15-.056-.212s-.174-.041-.249-.024c-.106.024-1.793 1.14-5.061 3.345c-.48.33-.913.49-1.302.48c-.428-.008-1.252-.241-1.865-.44c-.752-.245-1.349-.374-1.297-.789c.027-.216.325-.437.893-.663c3.498-1.524 5.83-2.529 6.998-3.014c3.332-1.386 4.025-1.627 4.476-1.635z" />
                 </svg>
               </a>
-            </div>
+            </div>*/}
 
             {/* Mobile Menu Button */}
             <button
@@ -180,6 +168,11 @@ export const Header = () => {
               >
                 <span className="relative z-10">Dashboard</span>
               </a>
+
+                            {/* Wallet Connect Button - Mobile */}
+                            <div className="flex justify-center">
+                <WalletMultiButton className="!w-full !rounded-xl !bg-gradient-to-r !from-solana-purple !to-solana-pink !px-4 !py-3 !text-sm !font-medium !uppercase !tracking-wider !transition-all !duration-300 hover:!opacity-90" />
+              </div>
 
               {/* Social Media Icons - Mobile */}
               <div className="mt-2 flex items-center justify-center gap-3">

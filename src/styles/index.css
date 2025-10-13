@@ -87,3 +87,188 @@
     animation: dataStream 3s linear infinite;
   }
 }
+
+
+/* Wallet - Estilo Combinando com o Header e o Tema 'Forge' */
+
+/* --- BOTÃO PRINCIPAL (TRIGGER) --- */
+.wallet-adapter-button-trigger {
+  /* Alinhado com o estilo do header, usando cores do tema */
+  @apply !rounded-full !h-auto !px-4 !py-2 !text-xs !font-medium !uppercase !tracking-wider !transition-all !duration-300 !bg-forge-metalgray/50 !text-gray-300;
+}
+
+/* --- ESTADO HOVER GERAL PARA BOTÕES --- */
+.wallet-adapter-button:not([disabled]):hover {
+  /* Um hover sutil que se encaixa no tema 'forge' */
+ @apply !bg-forge-steel/60 !text-white;
+}
+
+.wallet-adapter-button:not([disabled]):focus-visible {
+  /* Usando a cor 'solana-purple' do seu tema */
+  outline-color: theme('colors.solana.purple');
+}
+
+.wallet-adapter-button[disabled] {
+  @apply bg-forge-metalgray/30 text-forge-steel cursor-not-allowed;
+}
+
+/* --- ÍCONES DENTRO DOS BOTÕES --- */
+.wallet-adapter-button-end-icon,
+.wallet-adapter-button-start-icon,
+.wallet-adapter-button-end-icon img,
+.wallet-adapter-button-start-icon img {
+  @apply flex items-center justify-center w-6 h-6;
+}
+
+.wallet-adapter-button-end-icon {
+  margin-left: 8px;
+}
+
+.wallet-adapter-button-start-icon {
+  margin-right: 8px;
+}
+
+/* --- DROPDOWN (Quando a carteira está conectada) --- */
+.wallet-adapter-dropdown-list {
+  position: absolute;
+  z-index: 99;
+  @apply grid gap-y-2 p-2 top-full right-0 m-0 list-none;
+  
+  /* Efeito 'Hologram' do seu tema */
+  @apply mt-2 w-48 rounded-2xl border border-solana-purple/20 bg-forge-metaldark/50 shadow-lg backdrop-blur-xl;
+  
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity 200ms ease, transform 200ms ease, visibility 200ms;
+}
+
+.wallet-adapter-dropdown-list-active {
+  opacity: 1;
+  visibility: visible;
+  transform: translateY(10px);
+}
+
+.wallet-adapter-dropdown-list-item {
+  @apply flex flex-row justify-center items-center border-none outline-none cursor-pointer whitespace-nowrap box-border;
+  @apply p-0 px-4 w-full rounded-xl text-sm font-medium h-10 text-white bg-transparent;
+}
+
+/* O hover geral já cobre este caso, mas podemos garantir com a cor do tema */
+.wallet-adapter-dropdown-list-item:not([disabled]):hover {
+  @apply !bg-forge-steel/60;
+}
+
+
+/* --- MODAL (Janela de seleção de carteira) --- */
+.wallet-adapter-modal-overlay {
+  @apply backdrop-blur-sm fixed top-0 left-0 bottom-0 right-0;
+}
+
+.wallet-adapter-modal-wrapper {
+  position: relative;
+  z-index: 1050;
+  overflow: hidden; /* Importante para os cantos arredondados com pseudo-elementos */
+  @apply box-border flex flex-col items-center max-w-sm flex-1;
+
+  /* Aplicando o utilitário .hologram-effect que você já criou */
+  @apply hologram-effect rounded-3xl shadow-2xl;
+}
+
+/* Linha decorativa metálica (como no header) usando cores do tema */
+.wallet-adapter-modal-wrapper::before {
+  content: '';
+  @apply absolute left-0 top-0 h-px w-full rounded-full bg-gradient-to-r from-transparent via-forge-steel/50 to-transparent;
+}
+
+/* Linha decorativa holográfica roxa (como no header) usando cores do tema */
+.wallet-adapter-modal-wrapper::after {
+  content: '';
+  @apply absolute left-0 top-[1px] h-px w-full rounded-full bg-gradient-to-r from-transparent via-solana-purple/40 to-transparent;
+}
+
+.wallet-adapter-modal-title {
+  @apply font-title font-bold text-xl leading-normal m-0 text-center uppercase tracking-wider text-gray-100;
+  padding: 48px 48px 24px 48px;
+}
+
+.wallet-adapter-modal-list {
+  @apply m-0 p-0 px-6 pb-6 w-full list-none box-border;
+}
+
+/* Botões da lista de carteiras dentro do modal */
+.wallet-adapter-modal-list .wallet-adapter-button {
+  @apply rounded-xl bg-forge-metalgray/50 font-medium text-base text-gray-200 h-12 mb-2 transition-all duration-300;
+}
+
+/* Destaque no hover para os botões da lista */
+.wallet-adapter-modal-list .wallet-adapter-button:not([disabled]):hover {
+  /* FIX: Substituímos 'solana-pink' (que não existe) por 'cyberpunk-pink' (que existe no seu tema) */
+  @apply !bg-gradient-to-r !from-solana-purple/50 !to-cyberpunk-pink/50 !text-white shadow-md;
+  transform: translateY(-2px);
+}
+
+.wallet-adapter-modal-list .wallet-adapter-button-end-icon,
+.wallet-adapter-modal-list .wallet-adapter-button-start-icon,
+.wallet-adapter-modal-list .wallet-adapter-button-end-icon img,
+.wallet-adapter-modal-list .wallet-adapter-button-start-icon img {
+  @apply w-7 h-7;
+}
+
+.wallet-adapter-modal-button-close {
+  position: absolute;
+  top: 16px;
+  right: 16px;
+  @apply flex items-center justify-center p-0 cursor-pointer border-none w-8 h-8;
+  /* Estilo 'glassmorphism' para o botão de fechar */
+  @apply rounded-full bg-forge-metalgray/50 text-gray-300 transition-all duration-300;
+}
+
+.wallet-adapter-modal-button-close:hover {
+  @apply bg-forge-steel/60 text-white;
+}
+
+.wallet-adapter-modal-button-close svg {
+  fill: currentColor;
+  transition: fill 200ms ease 0s;
+}
+
+/* --- CÓDIGO RESTANTE (Refatorado com @apply) --- */
+.wallet-adapter-button {
+  @apply w-full flex gap-1 p-2 text-xs items-center justify-center;
+}
+
+.wallet-adapter-collapse {
+  @apply w-full;
+}
+
+.wallet-adapter-dropdown {
+  @apply relative inline-block;
+}
+
+.wallet-adapter-modal {
+  @apply fixed inset-0 z-[1040] overflow-y-auto bg-black/50 opacity-0 transition-opacity duration-150 ease-linear;
+}
+
+.wallet-adapter-modal.wallet-adapter-modal-fade-in {
+  @apply opacity-100;
+}
+
+.wallet-adapter-modal-container {
+  @apply flex items-center justify-center min-h-screen p-12;
+}
+
+@media (max-width: 480px) {
+  .wallet-adapter-modal-container {
+    @apply p-4;
+  }
+}
+
+/* Ocultar elementos desnecessários, se houver */
+.css-14cme0a {
+  display: none !important;
+}
+
+/* Adaptações menores */
+.wallet-adapter-modal-list .wallet-adapter-button span {
+  @apply ml-auto text-sm opacity-60;
+}
