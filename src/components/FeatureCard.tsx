@@ -17,7 +17,7 @@ function FeatureCard({ feature }: FeatureCardProps) {
 
   return (
     <div
-      className="group relative flex flex-col items-center gap-4 overflow-hidden rounded-lg bg-gradient-to-br from-forge-metaldark/90 to-forge-deepblack/80 p-6 text-center shadow-md backdrop-blur-xl transition-all duration-500 hover:border-solana-purple/60 hover:shadow-lg sm:p-8"
+      className="group relative flex flex-col items-center gap-4 overflow-hidden rounded-lg deep-gradient p-6 text-center shadow-md backdrop-blur-xl transition-all duration-500 hover:border-solana-purple/60 hover:shadow-lg sm:p-8"
       style={{ animationDelay }}
     >
       {/* Metallic top edge highlight */}

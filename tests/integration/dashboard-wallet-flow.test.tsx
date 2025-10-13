@@ -196,7 +196,6 @@ describe('Dashboard Wallet Connection Flow', () => {
     });
 
     it('should provide retry option after error', async () => {
-      const user = userEvent.setup();
       render(<Dashboard />);
 
       // Simulate error state

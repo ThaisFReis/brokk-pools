@@ -19,7 +19,7 @@ export const about: About[] = [
     id: 'new-masterwork',
     title: 'The Masterwork',
     description:
-      "His new mission: forge tools that empower mortals to navigate the decentralized cosmos. Brokk Pools is his masterwork—where data is hammered into wisdom, and liquidity becomes lightning.",
+      'His new mission: forge tools that empower mortals to navigate the decentralized cosmos. Brokk Pools is his masterwork—where data is hammered into wisdom, and liquidity becomes lightning.',
     order: 3,
   },
 ];

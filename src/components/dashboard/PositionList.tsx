@@ -3,15 +3,31 @@
  * Renders a list of PositionCards with sorting and virtualization
  */
 
-import { useMemo, useRef } from 'react';
+import { useMemo, useRef, useState } from 'react';
 import { useVirtualizer } from '@tanstack/react-virtual';
 import type { Position } from '../../types/dashboard';
 import { PositionCard } from './PositionCard';
+import { PositionDetail } from './PositionDetail';
 
 export interface PositionListProps {
   positions: Position[];
   loading?: boolean;
-  onPositionClick?: (position: Position) => void;
+}
+
+// Individual position item with expand/collapse
+function PositionItem({ position }: { position: Position }) {
+  const [isExpanded, setIsExpanded] = useState(false);
+
+  return (
+    <div>
+      <PositionCard
+        position={position}
+        onClick={() => setIsExpanded(!isExpanded)}
+        isExpanded={isExpanded}
+      />
+      {isExpanded && <PositionDetail position={position} onCollapse={() => setIsExpanded(false)} />}
+    </div>
+  );
 }
 
 // Skeleton loader for position cards
@@ -19,7 +35,7 @@ function PositionCardSkeleton() {
   return (
     <div
       data-testid="position-skeleton"
-      className="animate-pulse rounded-xl border border-forge-steel bg-forge-metaldark p-4 md:p-6"
+      className="animate-pulse rounded-xl border border-forge-steel bg-deep-gradient-transparent p-4 md:p-6"
     >
       <div className="mb-4 flex items-center justify-between">
         <div className="h-6 w-32 rounded bg-forge-steel" />
@@ -39,7 +55,7 @@ function PositionCardSkeleton() {
   );
 }
 
-export function PositionList({ positions, loading = false, onPositionClick }: PositionListProps) {
+export function PositionList({ positions, loading = false }: PositionListProps) {
   const parentRef = useRef<HTMLDivElement>(null);
 
   // Sort positions by total value (descending)
@@ -111,10 +127,7 @@ export function PositionList({ positions, loading = false, onPositionClick }: Po
                 }}
               >
                 <div className="pb-4">
-                  <PositionCard
-                    position={position}
-                    onClick={onPositionClick ? () => onPositionClick(position) : undefined}
-                  />
+                  <PositionItem position={position} />
                 </div>
               </div>
             );
@@ -128,11 +141,7 @@ export function PositionList({ positions, loading = false, onPositionClick }: Po
   return (
     <div data-testid="position-list" data-virtualized="false" className="space-y-4">
       {sortedPositions.map((position) => (
-        <PositionCard
-          key={position.id}
-          position={position}
-          onClick={onPositionClick ? () => onPositionClick(position) : undefined}
-        />
+        <PositionItem key={position.id} position={position} />
       ))}
     </div>
   );

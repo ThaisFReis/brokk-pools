@@ -18,7 +18,7 @@ export const Header = () => {
 
   return (
     <header className="fixed left-1/2 top-4 z-50 w-[95%] max-w-[1200px] -translate-x-1/2">
-      <div className="relative w-full overflow-visible rounded-full bg-white/5 px-3 py-3 shadow-md backdrop-blur-lg sm:px-6 sm:py-4">
+      <div className="relative w-full overflow-visible rounded-full bg-white/5 px-3 py-3 shadow-md shadow-solana-gray/30 backdrop-blur-lg sm:px-6 sm:py-4">
         {/* Metallic top edge */}
         <div className="absolute left-0 top-0 h-[2px] w-full rounded-full bg-gradient-to-r from-transparent via-forge-steel/50 to-transparent" />
 
@@ -61,8 +61,8 @@ export const Header = () => {
 
           {/* Wallet Button, Dashboard Button & Social Media & Mobile Menu - Right side */}
           <div className="ml-auto flex items-center gap-3">
-             {/* Wallet Connect Button - Desktop */}
-             <div className="hidden lg:block">
+            {/* Wallet Connect Button - Desktop */}
+            <div className="hidden lg:block">
               <WalletMultiButton />
             </div>
             {/* Social Media Icons - Desktop */}
@@ -169,9 +169,9 @@ export const Header = () => {
                 <span className="relative z-10">Dashboard</span>
               </a>
 
-                            {/* Wallet Connect Button - Mobile */}
-                            <div className="flex justify-center">
-                <WalletMultiButton className="!w-full !rounded-xl !bg-gradient-to-r !from-solana-purple !to-solana-pink !px-4 !py-3 !text-sm !font-medium !uppercase !tracking-wider !transition-all !duration-300 hover:!opacity-90" />
+              {/* Wallet Connect Button - Mobile */}
+              <div className="flex justify-center">
+                <WalletMultiButton className="!to-solana-pink !w-full !rounded-xl !bg-gradient-to-r !from-solana-purple !px-4 !py-3 !text-sm !font-medium !uppercase !tracking-wider !transition-all !duration-300 hover:!opacity-90" />
               </div>
 
               {/* Social Media Icons - Mobile */}

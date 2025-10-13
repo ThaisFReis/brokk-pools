@@ -5,7 +5,6 @@
 
 import { describe, it, expect, beforeEach } from 'vitest';
 import { render, screen, within } from '@testing-library/react';
-import userEvent from '@testing-library/user-event';
 import { DashboardLayout } from '../../src/components/dashboard/DashboardLayout';
 
 // Mock @solana/wallet-adapter-react

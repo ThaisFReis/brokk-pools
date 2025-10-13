@@ -14,9 +14,9 @@ export function DashboardLayout() {
   const { positions, summary, loading, error } = usePositions(connected);
 
   return (
-    <div className="min-h-screen bg-cyberpunk-radial-gradient bg-no-repeat bg-cover">
+    <div className="min-h-screen bg-cover bg-no-repeat">
       {/* Main Content */}
-      <main className="mx-auto max-w-7xl px-4 py-8 sm:px-6 lg:px-8 mt-32">
+      <main className="mx-auto mt-32 max-w-7xl px-4 py-8 sm:px-6 lg:px-8">
         {!connected ? (
           // Not connected state
           <div className="flex flex-col items-center justify-center py-16">

@@ -12,7 +12,7 @@ export const About = () => {
           The Legend of Brokk
         </h2>
 
-        <div className="grid gap-6 sm:gap-8 grid-cols-1 sm:grid-cols-2 lg:grid-cols-3">
+        <div className="grid grid-cols-1 gap-6 sm:grid-cols-2 sm:gap-8 lg:grid-cols-3">
           {about.map((story) => (
             <FeatureCard key={story.id} feature={story} />
           ))}
