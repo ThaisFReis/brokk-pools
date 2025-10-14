@@ -480,3 +480,86 @@ export function isPriceInRange(position: Position): boolean {
 export function hasValidAmounts(pooled: PooledAssets): boolean {
   return pooled.tokenAAmount >= 0 && pooled.tokenBAmount >= 0 && pooled.totalValueUSD >= 0;
 }
+
+// ============================================================================
+// MINING RANKING TYPES
+// ============================================================================
+
+/**
+ * Hashrate units for display
+ */
+export enum HashrateUnit {
+  H = 'H/s',
+  KH = 'KH/s',
+  MH = 'MH/s',
+  GH = 'GH/s',
+  TH = 'TH/s',
+}
+
+/**
+ * Individual miner data for ranking
+ */
+export interface MinerData {
+  /** Unique miner identifier (wallet address) */
+  minerId: string;
+
+  /** Total hashrate in H/s */
+  hashrate: number;
+
+  /** Miner display name (optional, falls back to shortened address) */
+  displayName?: string;
+
+  /** Whether this is the current user */
+  isCurrentUser: boolean;
+}
+
+/**
+ * User's ranking information
+ */
+export interface UserRanking {
+  /** Current position in the global ranking (1-indexed) */
+  position: number;
+
+  /** Total number of active miners */
+  totalMiners: number;
+
+  /** User's total hashrate in H/s */
+  hashrate: number;
+
+  /** Formatted hashrate string with unit (e.g., "2.5 TH/s") */
+  hashrateFormatted: string;
+
+  /** Whether user is in top 10 */
+  isTopTen: boolean;
+
+  /** Percentage of total network hashrate */
+  networkPercentage: number;
+}
+
+/**
+ * Loading state for ranking data
+ */
+export interface RankingLoadingState {
+  /** Whether ranking data is being loaded */
+  isLoading: boolean;
+
+  /** Error message if loading failed */
+  error?: string;
+}
+
+/**
+ * Complete ranking data for the mining network
+ */
+export interface MiningRankingData {
+  /** All miners in the network sorted by hashrate */
+  miners: MinerData[];
+
+  /** Current user's ranking information */
+  userRanking: UserRanking | null;
+
+  /** Last updated timestamp (ISO 8601) */
+  lastUpdated: string;
+
+  /** Total network hashrate in H/s */
+  totalNetworkHashrate: number;
+}

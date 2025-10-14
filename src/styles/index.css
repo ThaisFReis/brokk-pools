@@ -203,7 +203,7 @@
 
 .wallet-adapter-modal-list .wallet-adapter-button-start-icon,
 .wallet-adapter-modal-list .wallet-adapter-button-end-icon {
-  @apply h-7 w-7;
+  @apply !max-h-4 !max-w-4;
 }
 
 .wallet-adapter-modal-button-close {

@@ -11,41 +11,13 @@ import { PositionList } from './PositionList';
 
 export function DashboardLayout() {
   const { connected } = useWallet();
-  const { positions, summary, loading, error } = usePositions(connected);
+  const { positions, summary, loading, error } = usePositions();
 
   return (
     <div className="min-h-screen bg-cover bg-no-repeat">
       {/* Main Content */}
       <main className="mx-auto mt-32 max-w-7xl px-4 py-8 sm:px-6 lg:px-8">
-        {!connected ? (
-          // Not connected state
-          <div className="flex flex-col items-center justify-center py-16">
-            <div
-              className="mb-6 flex h-24 w-24 items-center justify-center rounded-full bg-forge-metalgray"
-              role="img"
-              aria-hidden="true"
-            >
-              <svg
-                className="h-12 w-12 text-gray-600"
-                fill="none"
-                stroke="currentColor"
-                viewBox="0 0 24 24"
-              >
-                <path
-                  strokeLinecap="round"
-                  strokeLinejoin="round"
-                  strokeWidth={1.5}
-                  d="M17 9V7a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2m2 4h10a2 2 0 002-2v-6a2 2 0 00-2-2H9a2 2 0 00-2 2v6a2 2 0 002 2zm7-5a2 2 0 11-4 0 2 2 0 014 0z"
-                />
-              </svg>
-            </div>
-            <h2 className="mb-2 text-xl font-semibold text-gray-400">Connect Your Wallet</h2>
-            <p className="max-w-md text-center text-sm text-gray-500">
-              Connect your Solana wallet to view your concentrated liquidity positions and track
-              your portfolio performance.
-            </p>
-          </div>
-        ) : error?.hasError ? (
+        {error?.hasError ? (
           // Error state
           <div className="flex flex-col items-center justify-center py-16" role="alert">
             <div
@@ -79,8 +51,16 @@ export function DashboardLayout() {
             )}
           </div>
         ) : (
-          // Connected state with data
+          // Dashboard content - always visible with demo data
           <>
+            {!connected && (
+              <div className="mb-6 rounded-lg border border-yellow-500/20 bg-yellow-500/10 p-4">
+                <p className="text-sm text-yellow-300">
+                  <span className="font-semibold">Demo Mode:</span> Connect your wallet to view your actual positions. Currently showing sample data.
+                </p>
+              </div>
+            )}
+
             {/* Summary Cards - Load independently */}
             {summary ? (
               <SummaryCards summary={summary} loading={loading} />
@@ -104,7 +84,7 @@ export function DashboardLayout() {
             ) : (
               <div className="mt-8">
                 <h2 className="mb-4 text-lg font-semibold text-white">
-                  Your Positions ({positions.length})
+                  {connected ? 'Your Positions' : 'Demo Positions'} ({positions.length})
                 </h2>
                 <PositionList positions={positions} loading={loading} />
               </div>
@@ -115,3 +95,4 @@ export function DashboardLayout() {
     </div>
   );
 }
+
