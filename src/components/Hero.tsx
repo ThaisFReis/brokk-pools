@@ -28,18 +28,18 @@ export const Hero = () => {
           {/* Title */}
           <h1
             id="hero-title"
-            className="animate-fade-in-delayed font-title text-4xl font-bold leading-tight sm:text-6xl md:text-7xl lg:text-8xl"
+            className="animate-fade-in-delayed font-title2 text-4xl font-bold leading-tight sm:text-6xl md:text-7xl lg:text-8xl"
           >
             {heroContent.title}
           </h1>
 
           {/* Subtitle */}
-          <p className="max-w-3xl animate-fade-in-delayed font-body text-xl font-medium leading-relaxed text-gray-300 sm:text-2xl md:text-3xl lg:text-4xl">
+          <p className="max-w-3xl animate-fade-in-delayed font-title text-[34px] font-medium leading-relaxed text-gray-300">
             {heroContent.subtitle}
           </p>
 
           {/* Description */}
-          <p className="max-w-xl animate-fade-in-delayed font-body text-base leading-relaxed text-pretty text-gray-300 sm:text-lg">
+          <p className="max-w-3xl animate-fade-in-delayed font-body text-xl leading-relaxed text-pretty text-gray-400">
             {heroContent.description}
           </p>
         </div>

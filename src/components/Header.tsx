@@ -34,7 +34,7 @@ export const Header = () => {
   ];
 
   return (
-    <header className="fixed left-1/2 top-4 z-50 w-full px-32 -translate-x-1/2">
+    <header className="fixed left-1/2 top-4 z-50 w-full px-40 -translate-x-1/2">
       <div className="relative w-full overflow-visible rounded-full bg-white/5 px-3 py-3 shadow-md shadow-solana-gray/30 backdrop-blur-lg sm:px-6 sm:py-4">
         {/* Metallic top edge */}
         <div className="absolute left-0 top-0 h-[2px] w-full rounded-full bg-gradient-to-r from-transparent via-forge-steel/50 to-transparent" />
@@ -55,7 +55,7 @@ export const Header = () => {
               height={20}
               className="brightness-0 invert transition-transform duration-300 group-hover:rotate-12"
             />
-            <div className="relative z-10 flex flex-col whitespace-nowrap font-title text-[8px] font-bold uppercase leading-none tracking-wider text-gray-300 transition-colors duration-300 group-hover:text-gray-100">
+            <div className="relative z-10 flex flex-col whitespace-nowrap font-title2 text-[8px] font-bold uppercase leading-none tracking-wider text-gray-300 transition-colors duration-300 group-hover:text-gray-100">
               <span className="relative z-10">BROKK</span>
               <span className="relative z-10">POOLS</span>
             </div>

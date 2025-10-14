@@ -1,6 +1,6 @@
 node_modules
 .vercel
-.claude
+.claude/
 .specify/
 .specify/memory
 .specify/scripts
@@ -9,3 +9,4 @@ dist/
 CLAUDE.md
 quickstart.md
 specs/
+docs/

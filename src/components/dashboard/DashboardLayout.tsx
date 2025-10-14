@@ -53,13 +53,13 @@ export function DashboardLayout() {
         ) : (
           // Dashboard content - always visible with demo data
           <>
-            {!connected && (
+            {/*!connected && (
               <div className="mb-6 rounded-lg border border-yellow-500/20 bg-yellow-500/10 p-4">
                 <p className="text-sm text-yellow-300">
                   <span className="font-semibold">Demo Mode:</span> Connect your wallet to view your actual positions. Currently showing sample data.
                 </p>
               </div>
-            )}
+            )*/}
 
             {/* Summary Cards - Load independently */}
             {summary ? (
