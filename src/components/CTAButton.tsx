@@ -21,10 +21,14 @@ function CTAButton({ text, href, ariaLabel, className = '' }: CTAButtonProps) {
         bg-gradient-to-br
         from-forge-metaldark/70
         to-forge-deepblack/40
-        px-8
+        px-4
         py-3
+        sm:px-6
+        md:px-8
         font-display
-        text-lg
+        text-sm
+        sm:text-base
+        md:text-lg
         font-bold
         text-gray-200
         shadow-lg
@@ -48,7 +52,7 @@ function CTAButton({ text, href, ariaLabel, className = '' }: CTAButtonProps) {
       {/* Bottom forge glow */}
       <div className="absolute bottom-0 left-0 h-[1px] w-0 bg-gradient-to-r from-solana-purple/20 to-solana-purple/40 transition-all duration-700 group-hover:w-full" />
 
-      <span className="relative font-display text-base font-medium tracking-wide text-gray-300/70 group-hover:text-gray-100">
+      <span className="relative font-display text-sm sm:text-base font-medium tracking-wide text-gray-300/70 group-hover:text-gray-100">
         {text}
       </span>
     </a>

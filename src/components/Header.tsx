@@ -34,7 +34,7 @@ export const Header = () => {
   ];
 
   return (
-    <header className="fixed left-1/2 top-4 z-50 w-full px-40 -translate-x-1/2">
+    <header className="fixed left-1/2 top-4 z-50 w-full px-4 sm:px-8 md:px-16 lg:px-24 xl:px-40 -translate-x-1/2">
       <div className="relative w-full overflow-visible rounded-full bg-white/5 px-3 py-3 shadow-md shadow-solana-gray/30 backdrop-blur-lg sm:px-6 sm:py-4">
         {/* Metallic top edge */}
         <div className="absolute left-0 top-0 h-[2px] w-full rounded-full bg-gradient-to-r from-transparent via-forge-steel/50 to-transparent" />

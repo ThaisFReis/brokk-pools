@@ -99,7 +99,7 @@ export function PositionCard({ position, onClick, isExpanded = false }: Position
       </div>
 
       {/* Action Buttons */}
-      <div className="mt-4 grid grid-cols-2 gap-2 md:grid-cols-4">
+      <div className="mt-4 grid grid-cols-1 gap-2 sm:grid-cols-2 md:grid-cols-4">
         <button
           disabled
           className="group relative flex cursor-not-allowed items-center justify-center gap-2 rounded-lg border border-forge-steel bg-forge-metalgray/50 px-3 py-2 text-xs font-medium text-gray-500 opacity-60 transition-all"
