@@ -4,12 +4,17 @@ import { useWallet } from '@solana/wallet-adapter-react';
 import { WalletMultiButton } from '@solana/wallet-adapter-react-ui';
 import Logo from './Logo';
 import icon from '../../public/logo.svg';
+import { TopPosition } from './TopPosition';
+import { useRanking } from '../hooks/useRanking';
 
 export const Header = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
-  const { connected } = useWallet();
+  const { connected, publicKey } = useWallet();
   const navigate = useNavigate();
   const location = useLocation();
+
+  // Load ranking data - auto-refresh every 30 seconds
+  const { userRanking, loading } = useRanking(publicKey?.toString(), 30000);
 
   const toggleMenu = () => setIsMenuOpen(!isMenuOpen);
 
@@ -29,7 +34,7 @@ export const Header = () => {
   ];
 
   return (
-    <header className="fixed left-1/2 top-4 z-50 w-[95%] max-w-[1200px] -translate-x-1/2">
+    <header className="fixed left-1/2 top-4 z-50 w-full px-4 sm:px-8 md:px-16 lg:px-24 xl:px-40 -translate-x-1/2">
       <div className="relative w-full overflow-visible rounded-full bg-white/5 px-3 py-3 shadow-md shadow-solana-gray/30 backdrop-blur-lg sm:px-6 sm:py-4">
         {/* Metallic top edge */}
         <div className="absolute left-0 top-0 h-[2px] w-full rounded-full bg-gradient-to-r from-transparent via-forge-steel/50 to-transparent" />
@@ -50,7 +55,7 @@ export const Header = () => {
               height={20}
               className="brightness-0 invert transition-transform duration-300 group-hover:rotate-12"
             />
-            <div className="relative z-10 flex flex-col whitespace-nowrap font-title text-[8px] font-bold uppercase leading-none tracking-wider text-gray-300 transition-colors duration-300 group-hover:text-gray-100">
+            <div className="relative z-10 flex flex-col whitespace-nowrap font-title2 text-[8px] font-bold uppercase leading-none tracking-wider text-gray-300 transition-colors duration-300 group-hover:text-gray-100">
               <span className="relative z-10">BROKK</span>
               <span className="relative z-10">POOLS</span>
             </div>
@@ -73,6 +78,13 @@ export const Header = () => {
 
           {/* Wallet Button, Dashboard Button & Social Media & Mobile Menu - Right side */}
           <div className="ml-auto flex items-center gap-3">
+            {/* Top Position Badge - Desktop (only when connected) */}
+            {connected && (
+              <div className="hidden lg:block">
+                <TopPosition ranking={userRanking} loading={loading} />
+              </div>
+            )}
+
             {/* Wallet Connect Button - Desktop */}
             <div className="hidden lg:block">
               <WalletMultiButton />
@@ -172,6 +184,13 @@ export const Header = () => {
                 </a>
               ))}
 */}
+              {/* Top Position Badge - Mobile (only when connected) */}
+              {connected && (
+                <div className="flex justify-center">
+                  <TopPosition ranking={userRanking} loading={loading} />
+                </div>
+              )}
+
               {/* Dashboard Button - Mobile */}
               <a
                 href="/dashboard"

@@ -1,19 +1,11 @@
 import { Feature } from '../types/Feature';
-import { ChartLine, Shield, Zap } from 'lucide-react';
 
 interface FeatureCardProps {
   feature: Feature;
 }
 
-const iconMap = {
-  analytics: ChartLine,
-  yields: Zap,
-  security: Shield,
-};
-
 function FeatureCard({ feature }: FeatureCardProps) {
   const animationDelay = `${feature.order * 100}ms`;
-  const Icon = feature.icon ? iconMap[feature.icon as keyof typeof iconMap] : null;
 
   return (
     <div
@@ -33,28 +25,25 @@ function FeatureCard({ feature }: FeatureCardProps) {
       {/* Purple holographic glow */}
       <div className="absolute -left-20 -top-20 h-40 w-40 rounded-full bg-solana-purple/15 opacity-0 blur-3xl transition-opacity duration-500 group-hover:opacity-100" />
 
-      {/* Icon - forged weapon style */}
-      {Icon && (
-        <div className="relative transition-transform duration-500 group-hover:scale-110">
-          <Icon
-            className="relative h-10 w-10 text-solana-purple transition-all duration-500"
-            strokeWidth={0.5}
-          />
-        </div>
-      )}
-
-      {/* Title - legendary weapon name */}
-      <h3 className="relative font-body text-xl font-medium text-gray-200 transition-all duration-500 group-hover:text-gray-100 sm:text-2xl">
-        {feature.title}
+      {/* Title with enhanced effects */}
+      <h3 className="relative font-body text-xl font-medium text-gray-200 transition-all duration-500 group-hover:scale-105 group-hover:text-white group-hover:drop-shadow-lg sm:text-2xl">
+        <span className="relative z-10">{feature.title}</span>
+        <div className="absolute inset-0 animate-pulse bg-gradient-to-r from-transparent via-white/5 to-transparent opacity-0 transition-opacity duration-500 group-hover:opacity-100" />
       </h3>
 
-      {/* Description */}
-      <p className="relative text-sm leading-relaxed text-gray-400 transition-colors duration-300 group-hover:text-gray-300 sm:text-base">
+      {/* Description with smooth reveal */}
+      <p className="relative mb-4 text-sm leading-relaxed text-gray-400 transition-all duration-500 group-hover:scale-[1.02] group-hover:text-gray-200 sm:text-base">
         {feature.description}
       </p>
 
-      {/* Bottom forge accent - heated metal effect */}
-      <div className="absolute bottom-0 left-0 h-[1px] w-0 bg-gradient-to-r from-solana-purple/10 to-solana-purple/60 transition-all duration-700 group-hover:w-full" />
+      {/* Enhanced bottom forge accent */}
+      <div className="absolute bottom-0 left-0 h-[2px] w-0 bg-gradient-to-r from-solana-purple/20 via-solana-purple/80 to-forge-steel/60 transition-all duration-1000 group-hover:w-full group-hover:shadow-lg group-hover:shadow-solana-purple/30" />
+
+      {/* Secondary accent line */}
+      <div
+        className="absolute bottom-[2px] left-0 h-[1px] w-0 bg-gradient-to-r from-white/20 to-transparent transition-all duration-700 group-hover:w-1/2"
+        style={{ transitionDelay: '0.3s' }}
+      />
     </div>
   );
 }

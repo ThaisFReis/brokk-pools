@@ -41,12 +41,6 @@ export function usePositions(walletConnected: boolean = false): UsePositionsRetu
    * Load positions from mock data
    */
   const loadPositions = useCallback(async () => {
-    if (!walletConnected) {
-      setPositions([]);
-      setSummary(null);
-      return;
-    }
-
     setLoading(true);
     setError(null);
 
@@ -54,7 +48,7 @@ export function usePositions(walletConnected: boolean = false): UsePositionsRetu
       // Simulate network delay for realistic UX
       await new Promise((resolve) => setTimeout(resolve, 300));
 
-      // Load mock positions
+      // Load mock positions (always show dashboard with demo data)
       const mockPositions = loadMockPositions();
       setPositions(mockPositions);
 
@@ -76,7 +70,7 @@ export function usePositions(walletConnected: boolean = false): UsePositionsRetu
     } finally {
       setLoading(false);
     }
-  }, [walletConnected]);
+  }, []);
 
   /**
    * Refetch positions data

@@ -1,0 +1,192 @@
+{
+  "metadata": {
+    "version": "1.0.0",
+    "generatedAt": "2025-10-13T10:00:00Z",
+    "totalMiners": 1523,
+    "description": "Mock mining ranking data for development"
+  },
+  "miners": [
+    {
+      "minerId": "9xKLPq7Rf8vN2mYhBc5DwTg3EaHsVp6UjWxZnQk4FtL1",
+      "hashrate": 8500000000000,
+      "displayName": "Titan Miner",
+      "isCurrentUser": false
+    },
+    {
+      "minerId": "7mNpQr3Wx8Yt5ZaBvDc2FgHj4KsLu6MnPo9RqTk1VwX7",
+      "hashrate": 7200000000000,
+      "displayName": "Crypto King",
+      "isCurrentUser": false
+    },
+    {
+      "minerId": "5kPqRs2Vt6Ux9WaYb3Dc7Fg1Hj8Km4Lo5Mp0Nq2Tr3Yz",
+      "hashrate": 6800000000000,
+      "displayName": null,
+      "isCurrentUser": false
+    },
+    {
+      "minerId": "3jMnOp1Qr4Ss7Tt9Uv2Wx6Ya0Zb5Dc8Eg3Fh7Ij1Kl4Nm",
+      "hashrate": 6500000000000,
+      "displayName": "Hash Master",
+      "isCurrentUser": false
+    },
+    {
+      "minerId": "8lPqRt2Vu5Wx9Ya1Zb6Dc0Eg4Fh8Ij3Kl7Nm2Op6Qr1Ss",
+      "hashrate": 6200000000000,
+      "displayName": null,
+      "isCurrentUser": false
+    },
+    {
+      "minerId": "6kNpQs3Tt7Uv1Wx5Ya9Zb2Dc6Eg0Fh4Ij8Kl3Nm7Op2Qr",
+      "hashrate": 5900000000000,
+      "displayName": "Solana Whale",
+      "isCurrentUser": false
+    },
+    {
+      "minerId": "4jMoRs2Tt6Uv0Wx4Ya8Zb3Dc7Eg1Fh5Ij9Kl4Nm8Op3Qr",
+      "hashrate": 5600000000000,
+      "displayName": null,
+      "isCurrentUser": false
+    },
+    {
+      "minerId": "2iLnQs1Tt5Uv9Wx3Ya7Zb2Dc6Eg0Fh4Ij8Kl3Nm7Op2Qr",
+      "hashrate": 5300000000000,
+      "displayName": "Diamond Hands",
+      "isCurrentUser": false
+    },
+    {
+      "minerId": "1hKmPr0Ss4Tt8Uv2Wx6Ya1Zb5Dc9Eg3Fh7Ij2Kl6Nm1Op",
+      "hashrate": 5000000000000,
+      "displayName": null,
+      "isCurrentUser": false
+    },
+    {
+      "minerId": "9gJlOs9Rr3Ss7Tt1Uv5Wx0Ya4Zb8Dc2Eg6Fh1Ij5Kl9Nm",
+      "hashrate": 4700000000000,
+      "displayName": "GPU Farm",
+      "isCurrentUser": false
+    },
+    {
+      "minerId": "Gk3fY2zXw5Ht8Kp2Lq6Mr9Ns1Ot4Pu7Qv0Rw3Sx6Ty9Uz",
+      "hashrate": 3800000000000,
+      "displayName": null,
+      "isCurrentUser": true
+    },
+    {
+      "minerId": "7fIkNr8Os2Pr6Qs0Rt4Su8Tv2Uv6Wx0Ya4Zb8Dc2Eg6Fh",
+      "hashrate": 3500000000000,
+      "displayName": "Mining Pro",
+      "isCurrentUser": false
+    },
+    {
+      "minerId": "5dGhMs6Nr0Os4Pr8Qs2Rt6Su0Tv4Uv8Wx2Ya6Zb0Dc4Eg",
+      "hashrate": 3200000000000,
+      "displayName": null,
+      "isCurrentUser": false
+    },
+    {
+      "minerId": "3bEfKr4Ms8Nr2Os6Pr0Qs4Rt8Su2Tv6Uv0Wx4Ya8Zb2Dc",
+      "hashrate": 2900000000000,
+      "displayName": "Hash Ninja",
+      "isCurrentUser": false
+    },
+    {
+      "minerId": "1aCdJq2Lr6Ms0Nr4Os8Pr2Qs6Rt0Su4Tv8Uv2Wx6Ya0Zb",
+      "hashrate": 2600000000000,
+      "displayName": null,
+      "isCurrentUser": false
+    },
+    {
+      "minerId": "9zBcIp0Kq4Lr8Ms2Nr6Os0Pr4Qs8Rt2Su6Tv0Uv4Wx8Ya",
+      "hashrate": 2300000000000,
+      "displayName": "Crypto Miner",
+      "isCurrentUser": false
+    },
+    {
+      "minerId": "7xAbHo8Jp2Kq6Lr0Ms4Nr8Os2Pr6Qs0Rt4Su8Tv2Uv6Wx",
+      "hashrate": 2000000000000,
+      "displayName": null,
+      "isCurrentUser": false
+    },
+    {
+      "minerId": "5vZaGn6Io0Jp4Kq8Lr2Ms6Nr0Os4Pr8Qs2Rt6Su0Tv4Uv",
+      "hashrate": 1700000000000,
+      "displayName": "Blockchain Miner",
+      "isCurrentUser": false
+    },
+    {
+      "minerId": "3tYzFm4Hn8Io2Jp6Kq0Lr4Ms8Nr2Os6Pr0Qs4Rt8Su2Tv",
+      "hashrate": 1500000000000,
+      "displayName": null,
+      "isCurrentUser": false
+    },
+    {
+      "minerId": "1rXyEl2Gm6Hn0Io4Jp8Kq2Lr6Ms0Nr4Os8Pr2Qs6Rt0Su",
+      "hashrate": 1200000000000,
+      "displayName": "Hash Hunter",
+      "isCurrentUser": false
+    },
+    {
+      "minerId": "8qWxDk0Fl4Gm8Hn2Io6Jp0Kq4Lr8Ms2Nr6Os0Pr4Qs8Rt",
+      "hashrate": 1000000000000,
+      "displayName": null,
+      "isCurrentUser": false
+    },
+    {
+      "minerId": "6pVwCj8Ek2Fl6Gm0Hn4Io8Jp2Kq6Lr0Ms4Nr8Os2Pr6Qs",
+      "hashrate": 900000000000,
+      "displayName": "Solo Miner",
+      "isCurrentUser": false
+    },
+    {
+      "minerId": "4nUvBi6Dj0Ek4Fl8Gm2Hn6Io0Jp4Kq8Lr2Ms6Nr0Os4Pr",
+      "hashrate": 800000000000,
+      "displayName": null,
+      "isCurrentUser": false
+    },
+    {
+      "minerId": "2mTuAh4Ci8Dj2Ek6Fl0Gm4Hn8Io2Jp6Kq0Lr4Ms8Nr2Os",
+      "hashrate": 700000000000,
+      "displayName": "GPU Warrior",
+      "isCurrentUser": false
+    },
+    {
+      "minerId": "0lStZg2Bh6Ci0Dj4Ek8Fl2Gm6Hn0Io4Jp8Kq2Lr6Ms0Nr",
+      "hashrate": 600000000000,
+      "displayName": null,
+      "isCurrentUser": false
+    },
+    {
+      "minerId": "9kRsYf0Ag4Bh8Ci2Dj6Ek0Fl4Gm8Hn2Io6Jp0Kq4Lr8Ms",
+      "hashrate": 550000000000,
+      "displayName": "Crypto Farmer",
+      "isCurrentUser": false
+    },
+    {
+      "minerId": "7jQrXe8Zf2Ag6Bh0Ci4Dj8Ek2Fl6Gm0Hn4Io8Jp2Kq6Lr",
+      "hashrate": 500000000000,
+      "displayName": null,
+      "isCurrentUser": false
+    },
+    {
+      "minerId": "5iPqWd6Ye0Zf4Ag8Bh2Ci6Dj0Ek4Fl8Gm2Hn6Io0Jp4Kq",
+      "hashrate": 450000000000,
+      "displayName": "Mining Rig",
+      "isCurrentUser": false
+    },
+    {
+      "minerId": "3hOpVc4Xd8Ye2Zf6Ag0Bh4Ci8Dj2Ek6Fl0Gm4Hn8Io2Jp",
+      "hashrate": 400000000000,
+      "displayName": null,
+      "isCurrentUser": false
+    },
+    {
+      "minerId": "1gNoUb2Wc6Xd0Ye4Zf8Ag2Bh6Ci0Dj4Ek8Fl2Gm6Hn0Io",
+      "hashrate": 350000000000,
+      "displayName": "Hash Generator",
+      "isCurrentUser": false
+    }
+  ],
+  "totalNetworkHashrate": 137550000000000,
+  "lastUpdated": "2025-10-13T10:00:00Z"
+}

@@ -28,24 +28,24 @@ export const Hero = () => {
           {/* Title */}
           <h1
             id="hero-title"
-            className="animate-fade-in-delayed font-title text-4xl font-bold leading-tight sm:text-6xl md:text-7xl lg:text-8xl"
+            className="animate-fade-in-delayed font-title2 font-bold leading-tight text-5xl md:text-6xl lg:text-7xl xl:text-8xl text-gray-100"
           >
             {heroContent.title}
           </h1>
 
           {/* Subtitle */}
-          <p className="max-w-3xl animate-fade-in-delayed font-body text-xl font-medium leading-relaxed text-gray-300 sm:text-2xl md:text-3xl lg:text-4xl">
+          <p className="max-w-3xl animate-fade-in-delayed font-title text-base font-medium leading-relaxed text-gray-200 sm:text-xl md:text-2xl lg:text-3xl xl:text-[34px] text-pretty">
             {heroContent.subtitle}
           </p>
 
           {/* Description */}
-          <p className="max-w-xl animate-fade-in-delayed font-body text-base leading-relaxed text-pretty text-gray-300 sm:text-lg">
+          <p className="max-w-3xl animate-fade-in-delayed font-body text-sm leading-relaxed text-pretty text-gray-300 sm:text-lg md:text-xl">
             {heroContent.description}
           </p>
         </div>
 
         {/* CTA Button */}
-        <div className="mt-4 flex animate-fade-in-delayed flex-col items-center justify-center gap-4 sm:flex-row sm:gap-6 md:gap-20">
+        <div className="mt-4 flex animate-fade-in-delayed flex-col items-center justify-center gap-4 sm:flex-row sm:gap-6 lg:gap-12 xl:gap-20">
           <CTAButton
             text={heroContent.cta[0].text}
             href={heroContent.cta[0].href}
