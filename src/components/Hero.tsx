@@ -1,5 +1,5 @@
 import { heroContent } from '../content/hero';
-import CTAButton from './CTAButton';
+//import CTAButton from './CTAButton';
 
 export const Hero = () => {
   return (
