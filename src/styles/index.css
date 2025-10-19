@@ -4,6 +4,9 @@
 @tailwind components;
 @tailwind utilities;
 
+/* Jupiter Terminal Custom Styles */
+@import './jupiter-overrides.css';
+
 /* ... (Animações Globais e Keyframes permanecem os mesmos) ... */
 @keyframes dataStream {
   0% {
