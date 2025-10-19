@@ -16,6 +16,10 @@ import { About } from './components/About';
 // Dashboard components
 import { DashboardLayout } from './components/dashboard/DashboardLayout';
 
+// Demo/Test pages
+import { TopPositionDemo } from './pages/TopPositionDemo';
+import { TopPositions } from './pages/TopPositions';
+
 function LandingPage() {
   return (
     <main className="relative min-h-screen bg-solana-gray">
@@ -45,6 +49,8 @@ function App() {
             <Routes>
               <Route path="/" element={<LandingPage />} />
               <Route path="/dashboard" element={<DashboardLayout />} />
+              <Route path="/top-positions" element={<TopPositions />} />
+              <Route path="/demo/top-position" element={<TopPositionDemo />} />
             </Routes>
             <Footer />
           </BrowserRouter>

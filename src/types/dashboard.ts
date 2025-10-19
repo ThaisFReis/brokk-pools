@@ -482,84 +482,125 @@ export function hasValidAmounts(pooled: PooledAssets): boolean {
 }
 
 // ============================================================================
-// MINING RANKING TYPES
+// MINING RANKING TYPES (Top Position Ranking Feature)
 // ============================================================================
 
 /**
  * Hashrate units for display
+ * Used by formatHashrate() utility for automatic unit selection
  */
 export enum HashrateUnit {
-  H = 'H/s',
-  KH = 'KH/s',
-  MH = 'MH/s',
-  GH = 'GH/s',
-  TH = 'TH/s',
+  TH_S = 'TH/s',  // Terahash per second (10^12)
+  GH_S = 'GH/s',  // Gigahash per second (10^9)
+  MH_S = 'MH/s',  // Megahash per second (10^6)
+  KH_S = 'KH/s',  // Kilohash per second (10^3)
+  H_S = 'H/s'     // Hash per second (10^0)
 }
 
 /**
  * Individual miner data for ranking
+ * Represents an individual miner in the global leaderboard
  */
 export interface MinerData {
-  /** Unique miner identifier (wallet address) */
-  minerId: string;
+  /**
+   * Unique wallet address (Solana public key)
+   * Used for identification and matching
+   */
+  address: string;
 
-  /** Total hashrate in H/s */
+  /**
+   * Total hashrate in H/s (base unit)
+   * Always stored in smallest unit for consistent calculations
+   */
   hashrate: number;
 
-  /** Miner display name (optional, falls back to shortened address) */
-  displayName?: string;
-
-  /** Whether this is the current user */
-  isCurrentUser: boolean;
+  /**
+   * Optional flag to mark the current user
+   * Used in mock data to identify which miner is the logged-in user
+   */
+  isCurrentUser?: boolean;
 }
 
 /**
  * User's ranking information
+ * Represents the calculated ranking position and statistics for the current user
  */
 export interface UserRanking {
-  /** Current position in the global ranking (1-indexed) */
+  /**
+   * User's position in the global leaderboard (1-indexed)
+   * Rank 1 = highest hashrate
+   * Ties: multiple users can have same rank
+   */
   position: number;
 
-  /** Total number of active miners */
+  /**
+   * Total number of miners in the ranking dataset
+   * Used to display "position X of Y miners"
+   */
   totalMiners: number;
 
-  /** User's total hashrate in H/s */
+  /**
+   * User's hashrate in base unit (H/s)
+   * Converted to appropriate display unit by formatter
+   */
   hashrate: number;
 
-  /** Formatted hashrate string with unit (e.g., "2.5 TH/s") */
-  hashrateFormatted: string;
+  /**
+   * User's percentage of total network hashrate
+   * Range: 0-100 (not 0-1)
+   * Formatted with dynamic decimal precision
+   */
+  networkShare: number;
 
-  /** Whether user is in top 10 */
+  /**
+   * Whether user is in top 10 positions
+   * Used for special "Elite Miner" badge and golden styling
+   */
   isTopTen: boolean;
-
-  /** Percentage of total network hashrate */
-  networkPercentage: number;
 }
 
 /**
  * Loading state for ranking data
+ * State management for async operations
  */
 export interface RankingLoadingState {
-  /** Whether ranking data is being loaded */
-  isLoading: boolean;
+  /**
+   * Whether data is currently being fetched
+   * true: show loading indicator
+   * false: data loaded or error occurred
+   */
+  loading: boolean;
 
-  /** Error message if loading failed */
-  error?: string;
+  /**
+   * Error message if fetch failed
+   * null: no error
+   * string: error message to display
+   */
+  error: string | null;
+
+  /**
+   * Loaded ranking data
+   * null: not yet loaded or error occurred
+   * MiningRankingData: successfully loaded
+   */
+  data: MiningRankingData | null;
 }
 
 /**
  * Complete ranking data for the mining network
+ * Represents the complete dataset of all miners and total network statistics
  */
 export interface MiningRankingData {
-  /** All miners in the network sorted by hashrate */
+  /**
+   * Array of all miners in the network
+   * Unordered in storage, sorted during ranking calculation
+   */
   miners: MinerData[];
 
-  /** Current user's ranking information */
-  userRanking: UserRanking | null;
-
-  /** Last updated timestamp (ISO 8601) */
-  lastUpdated: string;
-
-  /** Total network hashrate in H/s */
+  /**
+   * Sum of all miners' hashrates
+   * Used for network share percentage calculation
+   * Unit: H/s (base unit)
+   */
   totalNetworkHashrate: number;
 }
