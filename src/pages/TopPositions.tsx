@@ -6,11 +6,12 @@
 
 import React, { useState, useEffect } from 'react';
 import { useWallet } from '@solana/wallet-adapter-react';
-import { Star, TrendingUp, Hash, Zap, Trophy, Medal, Award } from 'lucide-react';
+import { Star, TrendingUp, Trophy, Medal, Award } from 'lucide-react';
 import { loadMockRankingData } from '../utils/mockRankingData';
 import { calculateRankings, formatHashrate, formatNetworkShare } from '../utils/ranking';
 import type { MiningRankingData } from '../types/dashboard';
 import { SummaryCard } from '../components/dashboard/SummaryCards';
+import CTAButton from '../components/CTAButton';
 
 interface RankedMiner {
   rank: number;
@@ -175,7 +176,7 @@ export const TopPositions: React.FC = () => {
         )}
 
         {/* Filters */}
-        <div className="mb-6 rounded-lg border border-gray-700 bg-gray-800 p-4">
+        <div className="mb-6 rounded-lg bg-deep-gradient-transparent p-6 shadow-md shadow-solana-gray backdrop-blur-xl transition-colors hover:border-solana-purple/30">
           <div className="flex flex-col gap-4 md:flex-row">
             <div className="flex-1">
               <input
@@ -183,26 +184,22 @@ export const TopPositions: React.FC = () => {
                 placeholder="Search by wallet address..."
                 value={searchTerm}
                 onChange={(e) => setSearchTerm(e.target.value)}
-                className="w-full rounded-lg border border-gray-700 bg-gray-900 px-4 py-2 text-white placeholder-gray-500 focus:outline-none focus:ring-2 focus:ring-purple-500"
+                className="w-full rounded-lg  bg-transparent px-4 py-2 text-white placeholder-gray-500 !shadow-[inset_0px_2px_3px_2px_rgba(6,6,6,0.4)] focus:outline-none focus:ring-1 focus:ring-purple-500 "
               />
             </div>
-            <button
+            <CTAButton
               onClick={() => setFilterTopTen(!filterTopTen)}
-              className={`rounded-lg px-6 py-2 font-medium transition-colors ${
-                filterTopTen ? 'bg-yellow-600 hover:bg-yellow-700' : 'bg-gray-700 hover:bg-gray-600'
-              }`}
-            >
-              {filterTopTen ? '⭐ Top 10 Only' : 'Show All'}
-            </button>
+              text={filterTopTen ? 'Show All' : 'Top 10 Only'}
+            />
           </div>
         </div>
 
         {/* Ranking Table */}
-        <div className="overflow-hidden rounded-lg border border-gray-700 bg-gray-800">
+        <div className="overflow-hidden rounded-lg bg-deep-gradient-transparent shadow-inner-glow">
           {/* Table Header */}
-          <div className="border-b border-gray-700 bg-gray-900 px-6 py-4">
-            <div className="grid grid-cols-12 gap-4 text-sm font-semibold text-gray-400">
-              <div className="col-span-1 text-center">Rank</div>
+          <div className="border-b border-solana-gray/40 px-6 py-4">
+            <div className="grid grid-cols-12 gap-4 text-base font-semibold text-white">
+              <div className="col-span-1">Rank</div>
               <div className="col-span-5 md:col-span-4">Address</div>
               <div className="col-span-3 text-right md:col-span-3">Hashrate</div>
               <div className="col-span-3 text-right md:col-span-3">Network Share</div>
@@ -211,7 +208,7 @@ export const TopPositions: React.FC = () => {
           </div>
 
           {/* Table Body */}
-          <div className="max-h-[600px] divide-y divide-gray-700 overflow-y-auto">
+          <div className="max-h-[600px] divide-y divide-solana-gray/40 overflow-y-auto">
             {filteredMiners.length === 0 ? (
               <div className="px-6 py-12 text-center text-gray-500">
                 No miners found matching your filters
@@ -224,8 +221,8 @@ export const TopPositions: React.FC = () => {
                 return (
                   <div
                     key={miner.address}
-                    className={`px-6 py-4 transition-colors hover:bg-gray-700/50 ${
-                      miner.isCurrentUser ? 'border-l-4 border-purple-500 bg-purple-900/20' : ''
+                    className={`px-6 py-4 transition-colors hover:bg-forge-deepblack ${
+                      miner.isCurrentUser ? 'border-l-4 border-purple-500 ' : ''
                     }`}
                   >
                     <div className="grid grid-cols-12 items-center gap-4">
