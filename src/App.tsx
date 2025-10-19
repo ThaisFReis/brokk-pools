@@ -17,7 +17,6 @@ import { About } from './components/About';
 import { DashboardLayout } from './components/dashboard/DashboardLayout';
 
 // Demo/Test pages
-import { TopPositionDemo } from './pages/TopPositionDemo';
 import { TopPositions } from './pages/TopPositions';
 
 function LandingPage() {
