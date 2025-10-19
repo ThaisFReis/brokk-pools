@@ -1,144 +1,153 @@
 /**
  * Mining Ranking Utilities
- * Feature: Top Position Display
- * Calculates user ranking based on hashrate and handles tie scenarios
+ * Feature: Top Position Ranking
+ * Provides functions for ranking calculation, formatting, and data processing
  */
 
 import type { MinerData, UserRanking, MiningRankingData } from '../types/dashboard';
 import { HashrateUnit } from '../types/dashboard';
 
 /**
- * Formats hashrate to human-readable string with appropriate unit
- * @param hashrate - Hashrate in H/s
- * @returns Formatted string (e.g., "2.5 TH/s", "150 GH/s")
+ * T008: Formats hashrate with automatic unit selection
+ * Selects appropriate unit (TH/s, GH/s, MH/s, KH/s, H/s) based on magnitude
+ *
+ * @param hashrate - Hashrate in H/s (base unit)
+ * @returns Object with value and unit
+ *
+ * @example
+ * formatHashrate(4500000000000) // { value: 4.5, unit: 'TH/s' }
+ * formatHashrate(3200000000) // { value: 3.2, unit: 'GH/s' }
  */
-export function formatHashrate(hashrate: number): string {
-  const units: Array<{ threshold: number; unit: HashrateUnit }> = [
-    { threshold: 1e12, unit: HashrateUnit.TH },
-    { threshold: 1e9, unit: HashrateUnit.GH },
-    { threshold: 1e6, unit: HashrateUnit.MH },
-    { threshold: 1e3, unit: HashrateUnit.KH },
-    { threshold: 1, unit: HashrateUnit.H },
+export function formatHashrate(hashrate: number): { value: number; unit: HashrateUnit } {
+  const units = [
+    { threshold: 1e12, unit: HashrateUnit.TH_S },
+    { threshold: 1e9, unit: HashrateUnit.GH_S },
+    { threshold: 1e6, unit: HashrateUnit.MH_S },
+    { threshold: 1e3, unit: HashrateUnit.KH_S },
+    { threshold: 1, unit: HashrateUnit.H_S },
   ];
 
   for (const { threshold, unit } of units) {
     if (hashrate >= threshold) {
-      const value = hashrate / threshold;
-      // Format with 1-2 decimal places, trimming trailing zeros
-      const formatted = value.toFixed(2).replace(/\.?0+$/, '');
-      return `${formatted} ${unit}`;
+      return {
+        value: hashrate / threshold,
+        unit,
+      };
     }
   }
 
-  return `0 ${HashrateUnit.H}`;
+  return { value: hashrate, unit: HashrateUnit.H_S };
 }
 
 /**
- * Calculates user ranking from miner data
- * Handles tie scenarios: miners with the same hashrate receive the same rank
- * @param miners - Array of all miners with hashrate data
- * @param currentUserAddress - Wallet address of current user
- * @returns UserRanking or null if user not found
+ * T009: Formats network share percentage with dynamic decimal precision
+ * Uses 2 decimals for ≥1%, 4 decimals for <1%
+ *
+ * @param share - Network share as percentage (0-100)
+ * @returns Formatted string with appropriate precision
+ *
+ * @example
+ * formatNetworkShare(2.3456) // "2.35%"
+ * formatNetworkShare(0.4237) // "0.4237%"
+ */
+export function formatNetworkShare(share: number): string {
+  const decimals = share >= 1 ? 2 : 4;
+  return `${share.toFixed(decimals)}%`;
+}
+
+/**
+ * T010: Calculates rankings for all miners with tie handling
+ * Implements O(n log n) sort-based algorithm
+ * Case-insensitive address matching
+ *
+ * @param miners - Array of miner data
+ * @returns Map of address (lowercase) to ranking position
+ *
+ * @example
+ * // Hashrates: [100, 100, 50] → Ranks: [1, 1, 3]
+ * const rankings = calculateRankings(miners);
+ * rankings.get('address1') // 1
+ */
+export function calculateRankings(miners: MinerData[]): Map<string, number> {
+  if (miners.length === 0) {
+    return new Map();
+  }
+
+  // Sort descending by hashrate (O(n log n))
+  const sorted = [...miners].sort((a, b) => b.hashrate - a.hashrate);
+
+  const rankings = new Map<string, number>();
+  let currentRank = 1;
+  let currentHashrate = sorted[0].hashrate;
+
+  sorted.forEach((miner, index) => {
+    // If hashrate decreased, update rank to current index + 1
+    if (miner.hashrate < currentHashrate) {
+      currentRank = index + 1;
+      currentHashrate = miner.hashrate;
+    }
+
+    // Store with lowercase address for case-insensitive matching
+    rankings.set(miner.address.toLowerCase(), currentRank);
+  });
+
+  return rankings;
+}
+
+/**
+ * T011: Calculates user ranking from mining data
+ * Derives UserRanking from MiningRankingData + user address
+ * Handles "not found" and hashrate < 1 MH/s cases
+ *
+ * @param rankingData - Complete mining ranking dataset
+ * @param userAddress - User's wallet address
+ * @returns UserRanking or null if not found or hashrate too low
+ *
+ * @example
+ * const userRanking = calculateUserRanking(data, "Gk3f...Uz");
+ * if (userRanking) {
+ *   console.log(`Position: ${userRanking.position}`);
+ * }
  */
 export function calculateUserRanking(
-  miners: MinerData[],
-  currentUserAddress: string
+  rankingData: MiningRankingData,
+  userAddress: string
 ): UserRanking | null {
-  if (miners.length === 0) {
-    return null;
-  }
-
-  // Sort miners by hashrate descending (highest first)
-  const sortedMiners = [...miners].sort((a, b) => b.hashrate - a.hashrate);
-
-  // Find current user
-  const userIndex = sortedMiners.findIndex(
-    (miner) => miner.minerId.toLowerCase() === currentUserAddress.toLowerCase()
+  // Find user's miner data (case-insensitive)
+  const userMiner = rankingData.miners.find(
+    (m) => m.address.toLowerCase() === userAddress.toLowerCase()
   );
 
-  if (userIndex === -1) {
+  // Return null if user not found
+  if (!userMiner) {
     return null;
   }
 
-  const currentUser = sortedMiners[userIndex];
-
-  // Calculate position accounting for ties
-  // Miners with same hashrate get same position
-  let position = 1;
-  for (let i = 0; i < userIndex; i++) {
-    if (sortedMiners[i].hashrate > currentUser.hashrate) {
-      position++;
-    }
+  // Return null if hashrate < 1 MH/s (1,000,000 H/s)
+  if (userMiner.hashrate < 1e6) {
+    return null;
   }
 
-  // Calculate total network hashrate
-  const totalNetworkHashrate = sortedMiners.reduce((sum, miner) => sum + miner.hashrate, 0);
+  // Calculate all rankings
+  const rankings = calculateRankings(rankingData.miners);
 
-  // Calculate network percentage
-  const networkPercentage =
-    totalNetworkHashrate > 0 ? (currentUser.hashrate / totalNetworkHashrate) * 100 : 0;
+  // Get user's position
+  const position = rankings.get(userAddress.toLowerCase());
+  if (!position) {
+    return null; // Should not happen, but type safety
+  }
+
+  // Calculate network share
+  const networkShare =
+    rankingData.totalNetworkHashrate > 0
+      ? (userMiner.hashrate / rankingData.totalNetworkHashrate) * 100
+      : 0;
 
   return {
     position,
-    totalMiners: miners.length,
-    hashrate: currentUser.hashrate,
-    hashrateFormatted: formatHashrate(currentUser.hashrate),
+    totalMiners: rankingData.miners.length,
+    hashrate: userMiner.hashrate,
+    networkShare,
     isTopTen: position <= 10,
-    networkPercentage,
   };
-}
-
-/**
- * Sorts miners by hashrate (descending) and adds ranking positions
- * @param miners - Array of miners to sort
- * @returns Sorted array with ranking information
- */
-export function sortMinersByHashrate(miners: MinerData[]): MinerData[] {
-  return [...miners].sort((a, b) => b.hashrate - a.hashrate);
-}
-
-/**
- * Validates mining ranking data
- * @param data - Mining ranking data to validate
- * @returns true if valid, false otherwise
- */
-export function isValidRankingData(data: unknown): data is MiningRankingData {
-  const d = data as MiningRankingData;
-  return (
-    Array.isArray(d?.miners) &&
-    d.miners.every(
-      (m) => typeof m.minerId === 'string' && typeof m.hashrate === 'number' && m.hashrate >= 0
-    ) &&
-    typeof d?.lastUpdated === 'string' &&
-    typeof d?.totalNetworkHashrate === 'number'
-  );
-}
-
-/**
- * Generates a shortened wallet address for display
- * @param address - Full wallet address
- * @param prefixLength - Number of characters to show at start (default: 4)
- * @param suffixLength - Number of characters to show at end (default: 4)
- * @returns Shortened address (e.g., "Gk3f...xY2z")
- */
-export function shortenAddress(
-  address: string,
-  prefixLength: number = 4,
-  suffixLength: number = 4
-): string {
-  if (address.length <= prefixLength + suffixLength) {
-    return address;
-  }
-  return `${address.slice(0, prefixLength)}...${address.slice(-suffixLength)}`;
-}
-
-/**
- * Calculates the percentile rank of a user
- * @param position - User's position (1-indexed)
- * @param totalMiners - Total number of miners
- * @returns Percentile (0-100)
- */
-export function calculatePercentile(position: number, totalMiners: number): number {
-  if (totalMiners <= 0) return 0;
-  return ((totalMiners - position + 1) / totalMiners) * 100;
 }
