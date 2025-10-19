@@ -28,7 +28,7 @@ export const Header = () => {
   const menuItems = [
     { href: '/dashboard', label: 'dashboard' },
     { href: '/top-positions', label: 'top positions' },
-    //   { href: '#swap', label: 'swap' },
+    { href: '/swap', label: 'swap' },
     //   { href: '#simule', label: 'simule' },
     //   { href: '#rebalance', label: 'rebalance' },
   ];
@@ -64,16 +64,25 @@ export const Header = () => {
           {/* Desktop Navigation - Center */}
 
           <nav className="absolute left-1/2 hidden -translate-x-1/2 items-center justify-center gap-4 lg:flex xl:gap-6">
-            {menuItems.map((item) => (
-              <a
-                key={item.href}
-                href={item.href}
-                className="group relative whitespace-nowrap text-xs font-medium uppercase tracking-wider text-gray-300 transition-all duration-300 hover:text-gray-100"
-              >
-                <span className="relative z-10">{item.label}</span>
-                <div className="absolute -bottom-1 left-0 h-[2px] w-0 bg-gradient-to-r from-solana-purple/20 to-solana-purple/30 transition-all duration-300 group-hover:w-full" />
-              </a>
-            ))}
+            {menuItems.map((item) => {
+              const isActive = location.pathname === item.href;
+              return (
+                <a
+                  key={item.href}
+                  href={item.href}
+                  className={`group relative whitespace-nowrap text-xs font-medium uppercase tracking-wider transition-all duration-300 ${
+                    isActive ? 'text-gray-100' : 'text-gray-300 hover:text-gray-100'
+                  }`}
+                >
+                  <span className="relative z-10">{item.label}</span>
+                  <div
+                    className={`absolute -bottom-1 left-0 h-[2px] bg-gradient-to-r from-solana-purple/20 to-solana-purple/30 transition-all duration-300 ${
+                      isActive ? 'w-full' : 'w-0 group-hover:w-full'
+                    }`}
+                  />
+                </a>
+              );
+            })}
           </nav>
 
           {/* Wallet Button, Dashboard Button & Social Media & Mobile Menu - Right side */}

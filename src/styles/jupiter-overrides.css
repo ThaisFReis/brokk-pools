@@ -64,10 +64,24 @@
   /* Flip/reverse button */
   .jupiter-terminal button[data-testid="flip-button"],
   .jupiter-terminal button[aria-label*="flip" i],
-  .jupiter-terminal button[aria-label*="reverse" i] {
-    @apply text-gray-400 hover:text-purple-400;
-    @apply transition-all duration-300;
-    @apply hover:rotate-180;
+  .jupiter-terminal button[aria-label*="reverse" i],
+  .jupiter-terminal button[aria-label*="swap" i]:not([type="submit"]) {
+    @apply text-gray-400 hover:text-purple-500;
+    @apply bg-transparent hover:bg-purple-500/10;
+    @apply border border-transparent hover:border-purple-500/30;
+    @apply rounded-full;
+    @apply transition-all duration-300 ease-in-out;
+    @apply hover:rotate-180 hover:scale-110;
+    @apply active:scale-95;
+    @apply p-2;
+  }
+
+  /* Flip button icon rotation animation */
+  .jupiter-terminal button[data-testid="flip-button"]:active svg,
+  .jupiter-terminal button[aria-label*="flip" i]:active svg,
+  .jupiter-terminal button[aria-label*="reverse" i]:active svg {
+    @apply transition-transform duration-500 ease-in-out;
+    transform: rotate(180deg);
   }
 
   /* ========================================

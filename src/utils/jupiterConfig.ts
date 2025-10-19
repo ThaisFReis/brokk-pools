@@ -33,11 +33,6 @@ export const JUPITER_CONFIG = {
  * - Shadow: Purple glow for depth
  */
 export const BROKKR_THEME_CLASSES = [
-  // Container background and border
-  'bg-gradient-to-b from-[#0A0A0A] to-[#1a1a1a]',
-  'border border-[#3a3a3a]',
-  'rounded-2xl',
-  'shadow-2xl shadow-purple-500/20',
 
   // Spacing and sizing
   'w-full max-w-lg',
@@ -48,6 +43,9 @@ export const BROKKR_THEME_CLASSES = [
 
   // Additional styling
   'transition-all duration-300',
+
+  //z-index
+  'z-0',
 
   // Token selector specific (applies to entire terminal including modals)
   'jupiter-terminal',
