@@ -13,8 +13,8 @@ export const Header = () => {
   const navigate = useNavigate();
   const location = useLocation();
 
-  // Load ranking data - auto-refresh every 30 seconds
-  const { userRanking, loading } = useRanking(publicKey?.toString(), 30000);
+  // Load ranking data
+  const { userRanking, loading, error, refetch } = useRanking(publicKey?.toString());
 
   const toggleMenu = () => setIsMenuOpen(!isMenuOpen);
 
@@ -27,9 +27,9 @@ export const Header = () => {
 
   const menuItems = [
     { href: '/dashboard', label: 'dashboard' },
+    { href: '/top-positions', label: 'top positions' },
     //   { href: '#swap', label: 'swap' },
     //   { href: '#simule', label: 'simule' },
-    //   { href: '#top-position', label: 'top position' },
     //   { href: '#rebalance', label: 'rebalance' },
   ];
 
@@ -81,7 +81,7 @@ export const Header = () => {
             {/* Top Position Badge - Desktop (only when connected) */}
             {connected && (
               <div className="hidden lg:block">
-                <TopPosition ranking={userRanking} loading={loading} />
+                <TopPosition ranking={userRanking} loading={loading} error={error} onRetry={refetch} />
               </div>
             )}
 
@@ -187,7 +187,7 @@ export const Header = () => {
               {/* Top Position Badge - Mobile (only when connected) */}
               {connected && (
                 <div className="flex justify-center">
-                  <TopPosition ranking={userRanking} loading={loading} />
+                  <TopPosition ranking={userRanking} loading={loading} error={error} onRetry={refetch} />
                 </div>
               )}
 

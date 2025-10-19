@@ -31,7 +31,7 @@ interface UsePositionsReturn {
  *
  * return <SummaryCards summary={summary} />;
  */
-export function usePositions(walletConnected: boolean = false): UsePositionsReturn {
+export function usePositions(_walletConnected: boolean = false): UsePositionsReturn {
   const [positions, setPositions] = useState<Position[]>([]);
   const [summary, setSummary] = useState<SummaryMetrics | null>(null);
   const [loading, setLoading] = useState(false);
