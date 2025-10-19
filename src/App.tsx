@@ -50,7 +50,7 @@ function App() {
               <Route path="/" element={<LandingPage />} />
               <Route path="/dashboard" element={<DashboardLayout />} />
               <Route path="/top-positions" element={<TopPositions />} />
-              <Route path="/demo/top-position" element={<TopPositionDemo />} />
+              {/*<Route path="/demo/top-position" element={<TopPositionDemo />} />*/}
             </Routes>
             <Footer />
           </BrowserRouter>
