@@ -1,12 +1,12 @@
 import { heroContent } from '../content/hero';
-import CTAButton from './CTAButton';
+//import CTAButton from './CTAButton';
 
 export const Hero = () => {
   return (
     <section
       id="hero"
       aria-labelledby="hero-title"
-      className="relative flex min-h-screen w-full flex-col items-center justify-center px-6 py-12 text-center md:px-12"
+      className="relative flex min-h-screen w-full flex-col items-center justify-center px-6 py-12 text-center"
     >
       {/* Background image with overlay */}
       <div className="absolute inset-0 bg-[url('/assets/background3.png')] bg-cover bg-top bg-no-repeat" />
@@ -15,10 +15,10 @@ export const Hero = () => {
       <div className="absolute inset-x-0 bottom-0 h-60 bg-gradient-to-b from-transparent via-solana-gray/70 to-solana-gray" />
 
       {/* Content */}
-      <div className="relative z-10 flex max-w-5xl flex-col items-center gap-8">
+      <div className="relative z-10 flex max-w-5xl flex-col items-center gap-8 mb-24">
         {/* Badge */}
         <div
-          className="animate-slide-in-bottom inline-flex  items-center gap-2 rounded-full border border-gray-300/10 px-4 py-2 backdrop-blur-sm bg-solana-gray/5"
+          className="animate-slide-in-bottom inline-flex  items-center gap-2 rounded-full border border-gray-300/10 bg-solana-gray/5 px-4 py-2 backdrop-blur-sm"
           style={{ animationDelay: '0.1s' }}
         >
           <div className="h-1 w-1 animate-pulse rounded-full bg-solana-green" />
@@ -28,24 +28,24 @@ export const Hero = () => {
           {/* Title */}
           <h1
             id="hero-title"
-            className="animate-fade-in-delayed font-title2 font-bold leading-tight text-5xl md:text-6xl lg:text-7xl xl:text-8xl text-gray-100"
+            className="animate-fade-in-delayed font-title2 text-5xl font-bold leading-tight text-gray-100 md:text-6xl lg:text-7xl xl:text-8xl"
           >
             {heroContent.title}
           </h1>
 
           {/* Subtitle */}
-          <p className="max-w-3xl animate-fade-in-delayed font-title text-base font-medium leading-relaxed text-gray-200 sm:text-xl md:text-2xl lg:text-3xl xl:text-[34px] text-pretty">
+          <p className="max-w-3xl animate-fade-in-delayed text-pretty font-title text-base font-medium leading-relaxed text-gray-200 sm:text-xl md:text-2xl lg:text-3xl xl:text-[34px]">
             {heroContent.subtitle}
           </p>
 
           {/* Description */}
-          <p className="max-w-3xl animate-fade-in-delayed font-body text-sm leading-relaxed text-pretty text-gray-300 sm:text-lg md:text-xl">
+          <p className="max-w-3xl animate-fade-in-delayed text-pretty font-body text-sm leading-relaxed text-gray-300 sm:text-lg md:text-xl">
             {heroContent.description}
           </p>
         </div>
 
         {/* CTA Button */}
-        <div className="mt-4 flex animate-fade-in-delayed flex-col items-center justify-center gap-4 sm:flex-row sm:gap-6 lg:gap-12 xl:gap-20">
+        {/*        <div className="mt-4 flex animate-fade-in-delayed flex-col items-center justify-center gap-4 sm:flex-row sm:gap-6 lg:gap-12 xl:gap-20">
           <CTAButton
             text={heroContent.cta[0].text}
             href={heroContent.cta[0].href}
@@ -56,7 +56,7 @@ export const Hero = () => {
             href={heroContent.cta[1].href}
             ariaLabel={heroContent.cta[1].ariaLabel}
           />
-        </div>
+        </div>*/}
       </div>
 
       {/* Decorative elements */}
