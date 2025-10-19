@@ -19,7 +19,7 @@ interface SummaryCardProps {
   loading?: boolean;
 }
 
-function SummaryCard({ label, value, subtext, valueColor, loading }: SummaryCardProps) {
+export function SummaryCard({ label, value, subtext, valueColor, loading }: SummaryCardProps) {
   if (loading) {
     return (
       <article

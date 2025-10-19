@@ -1,15 +1,17 @@
 interface CTAButtonProps {
   text: string;
-  href: string;
-  ariaLabel: string;
+  href?: string;
+  onClick?: () => void;
+  ariaLabel?: string;
   className?: string;
 }
 
-function CTAButton({ text, href, ariaLabel, className = '' }: CTAButtonProps) {
+function CTAButton({ text, href, ariaLabel, className = '', onClick }: CTAButtonProps) {
   return (
     <a
       href={href}
       aria-label={ariaLabel}
+      onClick={onClick}
       className={`
         ${className}
         group

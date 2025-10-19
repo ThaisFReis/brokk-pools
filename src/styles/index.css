@@ -188,6 +188,74 @@
     background: linear-gradient(to bottom, transparent, rgba(153, 69, 255, 0.8), transparent);
     animation: dataStream 3s linear infinite;
   }
+
+  /* Mobile Chart Selector Styles */
+  .mobile-chart-button {
+    @apply transform transition-all duration-300 ease-in-out;
+    min-width: 100px;
+    touch-action: manipulation;
+  }
+
+  .mobile-chart-button:active {
+    @apply scale-95;
+  }
+
+  .mobile-chart-button-active {
+    @apply bg-solana-purple text-white shadow-lg;
+    box-shadow: 0 10px 25px -5px rgba(153, 69, 255, 0.3),
+                0 8px 10px -6px rgba(153, 69, 255, 0.3);
+  }
+
+  .mobile-chart-button-inactive {
+    @apply bg-forge-metaldark/50 text-gray-400;
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  }
+
+  .mobile-chart-button-inactive:hover {
+    @apply bg-forge-metalgray text-white;
+    transform: translateY(-1px);
+  }
+
+  /* Mobile chart container animations */
+  .mobile-chart-container {
+    animation: fadeInChart 0.4s ease-in-out;
+  }
+
+  @keyframes fadeInChart {
+    0% {
+      opacity: 0;
+      transform: translateY(10px);
+    }
+    100% {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+
+  /* Touch-friendly scroll for button container */
+  .mobile-chart-buttons-container {
+    scrollbar-width: none;
+    -ms-overflow-style: none;
+  }
+
+  .mobile-chart-buttons-container::-webkit-scrollbar {
+    display: none;
+  }
+
+  /* Chart indicator dots animation */
+  .chart-indicator-dot {
+    @apply transition-all duration-200 ease-in-out;
+  }
+
+  .chart-indicator-dot-active {
+    @apply bg-solana-purple;
+    transform: scale(1.2);
+  }
+
+  .chart-indicator-dot-inactive {
+    @apply bg-gray-600;
+    transform: scale(1);
+  }
 }
 
 /*

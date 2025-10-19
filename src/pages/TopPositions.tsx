@@ -6,10 +6,12 @@
 
 import React, { useState, useEffect } from 'react';
 import { useWallet } from '@solana/wallet-adapter-react';
-import { Star, TrendingUp, Hash, Zap, Trophy, Medal, Award } from 'lucide-react';
+import { Star, TrendingUp, Trophy, Medal, Award } from 'lucide-react';
 import { loadMockRankingData } from '../utils/mockRankingData';
 import { calculateRankings, formatHashrate, formatNetworkShare } from '../utils/ranking';
 import type { MiningRankingData } from '../types/dashboard';
+import { SummaryCard } from '../components/dashboard/SummaryCards';
+import CTAButton from '../components/CTAButton';
 
 interface RankedMiner {
   rank: number;
@@ -68,7 +70,7 @@ export const TopPositions: React.FC = () => {
   }, [publicKey]);
 
   // Filter miners based on search and top 10 filter
-  const filteredMiners = rankedMiners.filter(miner => {
+  const filteredMiners = rankedMiners.filter((miner) => {
     const matchesSearch = miner.address.toLowerCase().includes(searchTerm.toLowerCase());
     const matchesFilter = !filterTopTen || miner.isTopTen;
     return matchesSearch && matchesFilter;
@@ -78,11 +80,11 @@ export const TopPositions: React.FC = () => {
   const getMedalIcon = (rank: number) => {
     switch (rank) {
       case 1:
-        return <Trophy className="w-5 h-5 text-yellow-400" />;
+        return <Trophy className="h-5 w-5 text-yellow-400" />;
       case 2:
-        return <Medal className="w-5 h-5 text-gray-300" />;
+        return <Medal className="h-5 w-5 text-gray-300" />;
       case 3:
-        return <Award className="w-5 h-5 text-amber-600" />;
+        return <Award className="h-5 w-5 text-amber-600" />;
       default:
         return null;
     }
@@ -96,9 +98,9 @@ export const TopPositions: React.FC = () => {
 
   if (loading) {
     return (
-      <div className="min-h-screen bg-gray-900 flex items-center justify-center">
+      <div className="flex min-h-screen items-center justify-center bg-gray-900">
         <div className="text-center">
-          <div className="animate-spin rounded-full h-12 w-12 border-b-2 border-purple-500 mx-auto mb-4"></div>
+          <div className="mx-auto mb-4 h-12 w-12 animate-spin rounded-full border-b-2 border-purple-500"></div>
           <p className="text-gray-400">Loading rankings...</p>
         </div>
       </div>
@@ -107,12 +109,12 @@ export const TopPositions: React.FC = () => {
 
   if (error) {
     return (
-      <div className="min-h-screen bg-gray-900 flex items-center justify-center">
+      <div className="flex min-h-screen items-center justify-center bg-gray-900">
         <div className="text-center">
-          <p className="text-red-400 mb-4">{error}</p>
+          <p className="mb-4 text-red-400">{error}</p>
           <button
             onClick={() => window.location.reload()}
-            className="px-4 py-2 bg-purple-600 hover:bg-purple-700 rounded-lg transition-colors"
+            className="rounded-lg bg-purple-600 px-4 py-2 transition-colors hover:bg-purple-700"
           >
             Retry
           </button>
@@ -121,100 +123,92 @@ export const TopPositions: React.FC = () => {
     );
   }
 
+  const stats = [
+    {
+      label: 'Total Network Hashrate',
+      value: 'Total Network Hashrate',
+      subtext: `${rankingData && formatHashrate(rankingData.totalNetworkHashrate).value.toFixed(2)} ${rankingData && formatHashrate(rankingData.totalNetworkHashrate).unit}`,
+    },
+    {
+      label: 'Active Miners',
+      value: rankedMiners.length.toLocaleString(),
+    },
+    {
+      label: 'Elite Miners (Top 10)',
+      value: '10',
+    },
+  ];
+
   return (
-    <div className="min-h-screen bg-gray-900 text-white pt-24 pb-12 px-4 sm:px-6 lg:px-8">
-      <div className="max-w-7xl mx-auto">
+    <div className="min-h-screen px-4 pb-12 pt-24 text-white sm:px-6 lg:px-8">
+      <div className="mx-auto max-w-7xl">
         {/* Header */}
         <div className="mb-8">
-          <div className="flex items-center gap-3 mb-2">
-            <TrendingUp className="w-8 h-8 text-purple-500" />
-            <h1 className="text-4xl font-bold bg-gradient-to-r from-purple-400 via-pink-500 to-blue-500 bg-clip-text text-transparent">
+          <div className="mb-2 flex items-center gap-3">
+            <TrendingUp className="h-8 w-8 text-purple-500" />
+            <h1 className="bg-clip-text font-title text-2xl font-bold text-transparent text-white">
               Top Positions
             </h1>
           </div>
-          <p className="text-gray-400 text-lg">
+          <p className="text-lg text-gray-400">
             Global mining leaderboard - {rankedMiners.length} active miners
           </p>
         </div>
 
         {/* Stats Cards */}
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-4 mb-8">
-          <div className="bg-gray-800 rounded-lg p-6 border border-gray-700">
-            <div className="flex items-center justify-between">
-              <div>
-                <p className="text-gray-400 text-sm mb-1">Total Network Hashrate</p>
-                <p className="text-2xl font-bold text-white">
-                  {rankingData && formatHashrate(rankingData.totalNetworkHashrate).value.toFixed(2)}{' '}
-                  {rankingData && formatHashrate(rankingData.totalNetworkHashrate).unit}
-                </p>
-              </div>
-              <Hash className="w-8 h-8 text-purple-500" />
-            </div>
+        {loading ? (
+          <div className="mb-8 grid grid-cols-1 gap-4 md:grid-cols-3">
+            <SummaryCard label="Total Network Hashrate" value="" loading />
+            <SummaryCard label="Active Miners" value="" loading />
+            <SummaryCard label="Elite Miners (Top 10)" value="" loading />
           </div>
-
-          <div className="bg-gray-800 rounded-lg p-6 border border-gray-700">
-            <div className="flex items-center justify-between">
-              <div>
-                <p className="text-gray-400 text-sm mb-1">Active Miners</p>
-                <p className="text-2xl font-bold text-white">
-                  {rankedMiners.length.toLocaleString()}
-                </p>
-              </div>
-              <Zap className="w-8 h-8 text-blue-500" />
-            </div>
+        ) : (
+          <div className="mb-8 grid grid-cols-1 gap-4 md:grid-cols-3">
+            {stats.map((stat) => (
+              <SummaryCard
+                key={stat.label}
+                label={stat.label}
+                value={stat.value}
+                subtext={stat.subtext}
+              />
+            ))}
           </div>
-
-          <div className="bg-gray-800 rounded-lg p-6 border border-gray-700">
-            <div className="flex items-center justify-between">
-              <div>
-                <p className="text-gray-400 text-sm mb-1">Elite Miners (Top 10)</p>
-                <p className="text-2xl font-bold text-yellow-400">10</p>
-              </div>
-              <Star className="w-8 h-8 text-yellow-400" />
-            </div>
-          </div>
-        </div>
+        )}
 
         {/* Filters */}
-        <div className="bg-gray-800 rounded-lg p-4 mb-6 border border-gray-700">
-          <div className="flex flex-col md:flex-row gap-4">
+        <div className="mb-6 rounded-lg bg-deep-gradient-transparent p-6 shadow-md shadow-solana-gray backdrop-blur-xl transition-colors hover:border-solana-purple/30">
+          <div className="flex flex-col gap-4 md:flex-row">
             <div className="flex-1">
               <input
                 type="text"
                 placeholder="Search by wallet address..."
                 value={searchTerm}
                 onChange={(e) => setSearchTerm(e.target.value)}
-                className="w-full px-4 py-2 bg-gray-900 border border-gray-700 rounded-lg text-white placeholder-gray-500 focus:outline-none focus:ring-2 focus:ring-purple-500"
+                className="w-full rounded-lg  bg-transparent px-4 py-2 text-white placeholder-gray-500 !shadow-[inset_0px_2px_3px_2px_rgba(6,6,6,0.4)] focus:outline-none focus:ring-1 focus:ring-purple-500 "
               />
             </div>
-            <button
+            <CTAButton
               onClick={() => setFilterTopTen(!filterTopTen)}
-              className={`px-6 py-2 rounded-lg font-medium transition-colors ${
-                filterTopTen
-                  ? 'bg-yellow-600 hover:bg-yellow-700'
-                  : 'bg-gray-700 hover:bg-gray-600'
-              }`}
-            >
-              {filterTopTen ? '⭐ Top 10 Only' : 'Show All'}
-            </button>
+              text={filterTopTen ? 'Show All' : 'Top 10 Only'}
+            />
           </div>
         </div>
 
         {/* Ranking Table */}
-        <div className="bg-gray-800 rounded-lg border border-gray-700 overflow-hidden">
+        <div className="overflow-hidden rounded-lg bg-deep-gradient-transparent shadow-inner-glow">
           {/* Table Header */}
-          <div className="bg-gray-900 px-6 py-4 border-b border-gray-700">
-            <div className="grid grid-cols-12 gap-4 text-sm font-semibold text-gray-400">
-              <div className="col-span-1 text-center">Rank</div>
+          <div className="border-b border-solana-gray/40 px-6 py-4">
+            <div className="grid grid-cols-12 gap-4 text-base font-semibold text-white">
+              <div className="col-span-1">Rank</div>
               <div className="col-span-5 md:col-span-4">Address</div>
-              <div className="col-span-3 md:col-span-3 text-right">Hashrate</div>
-              <div className="col-span-3 md:col-span-3 text-right">Network Share</div>
-              <div className="hidden md:block md:col-span-1 text-center">Status</div>
+              <div className="col-span-3 text-right md:col-span-3">Hashrate</div>
+              <div className="col-span-3 text-right md:col-span-3">Network Share</div>
+              <div className="hidden text-center md:col-span-1 md:block">Status</div>
             </div>
           </div>
 
           {/* Table Body */}
-          <div className="divide-y divide-gray-700 max-h-[600px] overflow-y-auto">
+          <div className="max-h-[600px] divide-y divide-solana-gray/40 overflow-y-auto">
             {filteredMiners.length === 0 ? (
               <div className="px-6 py-12 text-center text-gray-500">
                 No miners found matching your filters
@@ -227,11 +221,11 @@ export const TopPositions: React.FC = () => {
                 return (
                   <div
                     key={miner.address}
-                    className={`px-6 py-4 hover:bg-gray-700/50 transition-colors ${
-                      miner.isCurrentUser ? 'bg-purple-900/20 border-l-4 border-purple-500' : ''
+                    className={`px-6 py-4 transition-colors hover:bg-forge-deepblack ${
+                      miner.isCurrentUser ? 'border-l-4 border-purple-500 ' : ''
                     }`}
                   >
-                    <div className="grid grid-cols-12 gap-4 items-center">
+                    <div className="grid grid-cols-12 items-center gap-4">
                       {/* Rank */}
                       <div className="col-span-1 text-center">
                         <div className="flex items-center justify-center gap-2">
@@ -239,10 +233,10 @@ export const TopPositions: React.FC = () => {
                           <span
                             className={`font-bold ${
                               miner.rank <= 3
-                                ? 'text-yellow-400 text-lg'
+                                ? 'text-lg text-yellow-400'
                                 : miner.isTopTen
-                                ? 'text-yellow-300'
-                                : 'text-gray-400'
+                                  ? 'text-yellow-300'
+                                  : 'text-gray-400'
                             }`}
                           >
                             #{miner.rank}
@@ -254,17 +248,19 @@ export const TopPositions: React.FC = () => {
                       <div className="col-span-5 md:col-span-4">
                         <div className="flex items-center gap-2">
                           {miner.isTopTen && (
-                            <Star className="w-4 h-4 text-yellow-400" fill="currentColor" />
+                            <Star className="h-4 w-4 text-yellow-400" fill="currentColor" />
                           )}
                           <span
                             className={`font-mono ${
-                              miner.isCurrentUser ? 'text-purple-300 font-semibold' : 'text-gray-300'
+                              miner.isCurrentUser
+                                ? 'font-semibold text-purple-300'
+                                : 'text-gray-300'
                             }`}
                           >
                             {formatAddress(miner.address)}
                           </span>
                           {miner.isCurrentUser && (
-                            <span className="px-2 py-0.5 bg-purple-600 text-xs rounded-full">
+                            <span className="rounded-full bg-purple-600 px-2 py-0.5 text-xs">
                               You
                             </span>
                           )}
@@ -272,21 +268,21 @@ export const TopPositions: React.FC = () => {
                       </div>
 
                       {/* Hashrate */}
-                      <div className="col-span-3 md:col-span-3 text-right">
+                      <div className="col-span-3 text-right md:col-span-3">
                         <span className="font-semibold text-white">
                           {hashrateFormatted.value.toFixed(2)} {hashrateFormatted.unit}
                         </span>
                       </div>
 
                       {/* Network Share */}
-                      <div className="col-span-3 md:col-span-3 text-right">
+                      <div className="col-span-3 text-right md:col-span-3">
                         <span className="text-gray-300">{networkShareFormatted}</span>
                       </div>
 
                       {/* Status Badge (Desktop only) */}
-                      <div className="hidden md:flex md:col-span-1 justify-center">
+                      <div className="hidden justify-center md:col-span-1 md:flex">
                         {miner.isTopTen && (
-                          <span className="px-3 py-1 bg-yellow-500/10 border border-yellow-500/30 rounded-full text-xs font-medium text-yellow-300">
+                          <span className="rounded-full border border-yellow-500/30 bg-yellow-500/10 px-3 py-1 text-xs font-medium text-yellow-300">
                             Elite
                           </span>
                         )}
@@ -304,7 +300,7 @@ export const TopPositions: React.FC = () => {
           <p>Rankings update every 30 seconds automatically</p>
           <p className="mt-1">
             Elite Miners (Top 10) are highlighted with{' '}
-            <Star className="w-4 h-4 text-yellow-400 inline" fill="currentColor" /> badges
+            <Star className="inline h-4 w-4 text-yellow-400" fill="currentColor" /> badges
           </p>
         </div>
       </div>

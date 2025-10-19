@@ -6,6 +6,7 @@
 import { Suspense, lazy } from 'react';
 import type { Position } from '../../types/dashboard';
 import { MetricsTable } from './MetricsTable';
+import { MobileChartSelector } from './MobileChartSelector';
 
 // Lazy load chart components to reduce initial bundle size (T087)
 const LiquidityChart = lazy(() =>
@@ -61,8 +62,18 @@ export function PositionDetail({ position, onCollapse }: PositionDetailProps) {
         )}
       </div>
 
-      {/* Charts Grid */}
-      <div className="grid grid-cols-1 gap-6 lg:grid-cols-2">
+      {/* Mobile Chart Selector (visible on small screens) */}
+      <div className="lg:hidden">
+        <MobileChartSelector position={position} />
+        
+        {/* Metrics Table for Mobile */}
+        <div className="mt-6">
+          <MetricsTable position={position} />
+        </div>
+      </div>
+
+      {/* Desktop Charts Grid (hidden on small screens) */}
+      <div className="hidden grid-cols-1 gap-6 lg:grid lg:grid-cols-2">
         {/* Liquidity Distribution Chart */}
         <div className="rounded-lg bg-forge-metaldark p-4 shadow-inner-glow">
           <h3 className="mb-4 text-sm font-semibold text-white">Liquidity Distribution</h3>
