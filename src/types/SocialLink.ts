@@ -1,4 +1,4 @@
-export type SocialPlatform = 'x' | 'discord' | 'docs';
+export type SocialPlatform = 'x' | 'telegram' | 'docs';
 
 export interface SocialLink {
   id: string;

@@ -1,5 +1,5 @@
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
-import { useMemo, lazy, Suspense } from 'react';
+import { useMemo } from 'react';
 import { ConnectionProvider, WalletProvider } from '@solana/wallet-adapter-react';
 import { WalletAdapterNetwork } from '@solana/wallet-adapter-base';
 import { WalletModalProvider } from '@solana/wallet-adapter-react-ui';
@@ -15,12 +15,6 @@ import { About } from './components/About';
 
 // Dashboard components
 import { DashboardLayout } from './components/dashboard/DashboardLayout';
-
-// Demo/Test pages
-import { TopPositions } from './pages/TopPositions';
-
-// Lazy-loaded pages for code splitting
-const SwapPage = lazy(() => import('./pages/SwapPage').then(mod => ({ default: mod.SwapPage })));
 
 function LandingPage() {
   return (
@@ -51,16 +45,6 @@ function App() {
             <Routes>
               <Route path="/" element={<LandingPage />} />
               <Route path="/dashboard" element={<DashboardLayout />} />
-              <Route path="/top-positions" element={<TopPositions />} />
-              {/*<Route path="/demo/top-position" element={<TopPositionDemo />} />*/}
-              <Route
-                path="/swap"
-                element={
-                  <Suspense fallback={<div className="min-h-screen bg-solana-gray flex items-center justify-center"><div className="text-gray-400">Loading...</div></div>}>
-                    <SwapPage />
-                  </Suspense>
-                }
-              />
             </Routes>
             <Footer />
           </BrowserRouter>

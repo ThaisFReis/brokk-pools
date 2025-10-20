@@ -19,3 +19,6 @@ specs
 specs/
 specs/002-construir-o-dashboard/
 docs/
+
+# Deploy credentials
+.deploy-password

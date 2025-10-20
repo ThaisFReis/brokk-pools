@@ -1,5 +1,6 @@
 import { heroContent } from '../content/hero';
 //import CTAButton from './CTAButton';
+import { Info } from 'lucide-react';
 
 export const Hero = () => {
   return (
@@ -17,12 +18,14 @@ export const Hero = () => {
       {/* Content */}
       <div className="relative z-10 flex max-w-5xl flex-col items-center gap-8 mb-24">
         {/* Badge */}
-        <div
-          className="animate-slide-in-bottom inline-flex  items-center gap-2 rounded-full border border-gray-300/10 bg-solana-gray/5 px-4 py-2 backdrop-blur-sm"
-          style={{ animationDelay: '0.1s' }}
-        >
-          <div className="h-1 w-1 animate-pulse rounded-full bg-solana-green" />
-          <span className="text-xs">{heroContent.badge}</span>
+        <div className="flex flex-col gap-3 items-center">
+          <div
+            className="animate-slide-in-bottom inline-flex  items-center gap-2 rounded-full border border-gray-300/10 bg-solana-gray/5 px-4 py-2 backdrop-blur-sm"
+            style={{ animationDelay: '0.1s' }}
+          >
+            <div className="h-1 w-1 animate-pulse rounded-full bg-solana-green" />
+            <span className="text-xs">{heroContent.badge}</span>
+          </div>
         </div>
         <div className="flex flex-col items-center">
           {/* Title */}
@@ -34,15 +37,23 @@ export const Hero = () => {
           </h1>
 
           {/* Subtitle */}
-          <p className="max-w-3xl animate-fade-in-delayed text-pretty font-title text-base font-medium leading-relaxed text-gray-200 sm:text-xl md:text-2xl lg:text-3xl xl:text-[34px]">
+          <p className="max-w-3xl animate-fade-in-delayed text-pretty font-title text-base font-medium leading-relaxed text-gray-200 sm:text-xl md:text-2xl lg:text-3xl xl:text-[34px] my-1">
             {heroContent.subtitle}
           </p>
 
           {/* Description */}
-          <p className="max-w-3xl animate-fade-in-delayed text-pretty font-body text-sm leading-relaxed text-gray-300 sm:text-lg md:text-xl">
+          <p className="max-w-3xl animate-fade-in-delayed text-pretty font-body text-xs leading-relaxed text-gray-300 sm:text-sm md:text-[13px] uppercase font-light">
             {heroContent.description}
           </p>
         </div>
+                  {/* Development Notice */}
+                  <div
+            className="animate-slide-in-bottom inline-flex items-center gap-2 rounded-xl border border-white/30 bg-transparent px-4 py-2 backdrop-blur-lg"
+            style={{ animationDelay: '0.2s' }}
+          >
+            <Info className='w-3 h-3 text-forge-glow animate-pulse' />
+            <span className="text-xs text-white">Dashboard under development</span>
+          </div>
 
         {/* CTA Button */}
         {/*        <div className="mt-4 flex animate-fade-in-delayed flex-col items-center justify-center gap-4 sm:flex-row sm:gap-6 lg:gap-12 xl:gap-20">
