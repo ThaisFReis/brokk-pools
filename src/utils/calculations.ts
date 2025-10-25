@@ -124,16 +124,23 @@ export function calculateAggregatedMetrics(positions: Position[]): SummaryMetric
     };
   }
 
+  console.log(positions);
+  const results = positions.map((item) => item.analytics.variables);
+
+
+  const asset = results.reduce((sum, pos) => sum + pos.V_pos.value, 0);
+  console.log(asset);
+
   // Aggregate values
-  const totalAssetsValue = positions.reduce((sum, pos) => sum + pos.pooledAssets.totalValueUSD, 0);
+  const totalAssetsValue = results.reduce((sum, pos) => sum + pos.V_pos.value, 0);
 
-  const totalPnL = positions.reduce((sum, pos) => sum + pos.metrics.totalPnL, 0);
+  const totalPnL = results.reduce((sum, pos) => sum + pos.PnL.value, 0);
+  
+  const totalUncollectedFees = results.reduce((sum, pos) => sum + pos.F_uncol.value, 0);
 
-  const totalUncollectedFees = positions.reduce((sum, pos) => sum + pos.fees.uncollected, 0);
+  const positionsInRange = 100; //positions.filter((pos) => pos.status.inRange).length;
 
-  const positionsInRange = positions.filter((pos) => pos.status.inRange).length;
-
-  const positionsOutOfRange = positions.filter((pos) => !pos.status.inRange).length;
+  const positionsOutOfRange = 100; //positions.filter((pos) => !pos.status.inRange).length;
 
   return {
     totalAssetsValue,

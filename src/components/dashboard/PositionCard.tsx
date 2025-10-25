@@ -13,13 +13,15 @@ export interface PositionCardProps {
 }
 
 export function PositionCard({ position, onClick, isExpanded = false }: PositionCardProps) {
-  const { tokenPair, protocol, priceRange, status, pooledAssets, metrics, fees } = position;
+  const { protocol } = position;
+
+  console.log(position);
 
   // Determine PnL color (green for positive, red for negative)
   const pnlColor =
-    metrics.totalPnL > 0
+    position.analytics.variables.PnL.value > 0
       ? 'text-solana-green'
-      : metrics.totalPnL < 0
+      : position.analytics.variables.PnL.value < 0
         ? 'text-red-500'
         : 'text-white';
 
@@ -36,17 +38,19 @@ export function PositionCard({ position, onClick, isExpanded = false }: Position
       <div className="mb-4 flex flex-col gap-2 sm:flex-row sm:items-center sm:justify-between">
         <div className="flex items-center gap-3">
           <h3 className="text-lg font-bold text-white">
-            {tokenPair.tokenA.symbol}/{tokenPair.tokenB.symbol}
+            {/* {tokenPair.tokenA.symbol}/{tokenPair.tokenB.symbol} */}
           </h3>
           <span className="rounded-full bg-solana-purple/20 px-3 py-1 text-xs font-medium text-solana-purple">
-            {protocol}
+            $$SOLANA$$
+            {/* {protocol} */}
           </span>
         </div>
 
         {/* Status Tags */}
         <div className="flex flex-wrap gap-2">
           {/* Range Status */}
-          {status.inRange ? (
+          {/* {status.inRange ? ( */}
+          {true ? (
             <span className="rounded-full bg-solana-green/20 px-3 py-1 text-xs font-medium text-solana-green">
               IN RANGE
             </span>
@@ -57,7 +61,8 @@ export function PositionCard({ position, onClick, isExpanded = false }: Position
           )}
 
           {/* Auto-Compound Tag */}
-          {status.autoCompound && (
+          {/* {status.autoCompound && ( */}
+          {true && (
             <span className="rounded-full bg-solana-cyan/20 px-3 py-1 text-xs font-medium text-solana-cyan">
               AUTO-COMPOUND
             </span>
@@ -71,7 +76,7 @@ export function PositionCard({ position, onClick, isExpanded = false }: Position
         <div className="flex flex-col">
           <span className="mb-1 text-xs text-gray-400">Pooled Assets</span>
           <span className="text-base font-semibold text-white">
-            {formatUSD(pooledAssets.totalValueUSD)}
+          {position.analytics.variables.V_pos.value}        
           </span>
         </div>
 
@@ -79,7 +84,7 @@ export function PositionCard({ position, onClick, isExpanded = false }: Position
         <div className="flex flex-col">
           <span className="mb-1 text-xs text-gray-400">PnL</span>
           <span className={`text-base font-semibold ${pnlColor}`}>
-            {formatUSD(metrics.totalPnL, { showPositiveSign: true })}
+            {position.analytics.variables.PnL.value}
           </span>
         </div>
 
@@ -87,14 +92,14 @@ export function PositionCard({ position, onClick, isExpanded = false }: Position
         <div className="flex flex-col">
           <span className="mb-1 text-xs text-gray-400">APR</span>
           <span className="text-base font-semibold text-white">
-            {formatPercentage(metrics.totalAPR)}
+            {position.analytics.variables.TotalAPR.value}
           </span>
         </div>
 
         {/* Uncollected Fees */}
         <div className="flex flex-col">
           <span className="mb-1 text-xs text-gray-400">Uncollected Fees</span>
-          <span className="text-base font-semibold text-white">{formatUSD(fees.uncollected)}</span>
+          <span className="text-base font-semibold text-white">{position.analytics.variables.F_uncol.value}</span>
         </div>
       </div>
 
@@ -176,9 +181,11 @@ export function PositionCard({ position, onClick, isExpanded = false }: Position
       <div className="mt-4 flex items-center justify-between border-t border-forge-steel pt-4 text-xs">
         <div className="text-gray-400">
           <span>
-            Range: {formatUSD(priceRange.min)} - {formatUSD(priceRange.max)}
+            Range: xxx - yyy
+            {/* Range: {formatUSD(priceRange.min)} - {formatUSD(priceRange.max)} */}
           </span>
-          <span className="ml-4">Current: {formatUSD(priceRange.current)}</span>
+          {/* <span className="ml-4">Current: {formatUSD(priceRange.current)}</span> */}
+          <span className="ml-4">Current: xyz.xyz</span>
         </div>
 
         {onClick && (

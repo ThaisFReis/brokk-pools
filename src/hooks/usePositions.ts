@@ -37,6 +37,8 @@ export function usePositions(_walletConnected: boolean = false): UsePositionsRet
   const [loading, setLoading] = useState(false);
   const [error, setError] = useState<ErrorState | null>(null);
 
+  const baseUrl = "https://api.brokkpools.xyz"
+
   /**
    * Load positions from mock data
    */
@@ -49,11 +51,20 @@ export function usePositions(_walletConnected: boolean = false): UsePositionsRet
       await new Promise((resolve) => setTimeout(resolve, 300));
 
       // Load mock positions (always show dashboard with demo data)
-      const mockPositions = loadMockPositions();
-      setPositions(mockPositions);
+      
+      const liquidityResponse = await (await fetch(`${baseUrl}/liquidity/2mu3kyTmEvdjPUeb9CPHMqDWT7jZEWqiyqtrJyMHHhuc`)).json();
+      const positions = liquidityResponse.positions;
+
+      const requests = positions.map((item) =>
+        fetch(`${baseUrl}/analytics/${item.whirlpool}/2mu3kyTmEvdjPUeb9CPHMqDWT7jZEWqiyqtrJyMHHhuc?positionId=${item.positionMint}`).then((r) => r.json())      
+      );
+
+      const results = await Promise.all(requests);
+      
+      setPositions(results);
+      const aggregatedMetrics = calculateAggregatedMetrics(results);
 
       // Calculate aggregated metrics
-      const aggregatedMetrics = calculateAggregatedMetrics(mockPositions);
       setSummary(aggregatedMetrics);
     } catch (err) {
       const errorMessage = err instanceof Error ? err.message : 'Failed to load positions';
